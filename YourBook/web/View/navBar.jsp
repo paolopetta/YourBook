@@ -9,7 +9,6 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="script" href="JS/HomePage.js">
     <title>Title</title>
 </head>
 <body>
@@ -24,21 +23,22 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/home.jsp">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/prodotti" >Inserisci Titolo</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/InsertBook.jsp" >Inserisci Titolo</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/CartServlet">Libri</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
             </li>
         </ul>
 
     </div>
 </nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="JS/HomePage.js"></script>
 </body>
 </html>
