@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Trova il tuo libro</title>
 </head>
 <body>
+<%@ include file= "navBar.jsp" %>
 
 </body>
 </html>

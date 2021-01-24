@@ -149,7 +149,7 @@ sup {
 }
 
 a {
-    color: #fed136;
+    color: #f89c1c;
     text-decoration: none;
     background-color: transparent;
 }
@@ -10416,7 +10416,7 @@ header.masthead .masthead-heading {
 
 section#contact {
     background-color: #212529;
-    background-image: url("../assets/img/map-image.png");
+    background-image: url("");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -10473,3 +10473,90 @@ section#contact form#contactForm :-ms-input-placeholder {
     font-size: 0.9rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+#cercaNavbar{
+    display: none;
+}
+
+#mainNav.navbar-shrink #cercaNavbar{
+    display: inline-block;
+}
+
+#inputCerca{
+    margin-right: 10px;
+}
+
+.btn-outline-success{
+    color: #44d3fb;
+    border-color: #44d3fb;
+}
+
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 40px;
+    background-color: #353b48;
+    border-radius: 30px;
+}
+
+.search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 100px;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+}
+
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+}
+.testata {
+    height: 200px;
+    background-image: url("../../Immagini/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.inserisciTitolo{
+    padding-top: 20px;
+    text-align: center;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 500px){
+    .inserisciTitolo{
+        width: 80%;
+    }
+}
+
+.text-Inserisci h1, .text-Inserisci h3 {
+    padding: 15px;
+}
+

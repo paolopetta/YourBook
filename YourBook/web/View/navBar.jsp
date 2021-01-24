@@ -9,7 +9,11 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
     <title>Title</title>
+    <link rel="stylesheet" href="CSS/HomePage.css">
 </head>
 <body>
 
@@ -22,6 +26,16 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item" id="cercaNavbar">
+                <div class="container h-100">
+                    <div class="d-flex justify-content-center h-100">
+                        <div class="searchbar">
+                            <input class="search_input" type="text" name="" placeholder="Cerca...">
+                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span class="sr-only">(current)</span></a>
             </li>

@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
-<%@ include file= "navBar.jsp" %>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -22,10 +21,46 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <title>$Title$</title>
+    <title>HomePage</title>
     <link rel="stylesheet" href="CSS/HomePage.css">
   </head>
   <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand js-scroll-trigger" href="#"><img src="https://i.imgur.com/o5ODS7P.png" alt="logo YourBook"></a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item" id="cercaNavbar">
+          <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Cerca...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/InsertBook.jsp" >Inserisci Titolo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
 
   <!-- Masthead-->
   <header class="masthead">
@@ -259,6 +294,8 @@
       </div>
     </div>
   </section>
+
+  <%@ include file= "footer.jsp" %>
 
   <!-- Bootstrap core JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
