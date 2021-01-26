@@ -57,6 +57,7 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
+    min-height: 100vh;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10558,5 +10559,11 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .text-Inserisci h1, .text-Inserisci h3 {
     padding: 15px;
+}
+
+footer{
+    width: 100%;
+    position: sticky;
+    top: 100%;
 }
 

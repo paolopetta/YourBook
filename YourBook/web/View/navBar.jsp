@@ -12,7 +12,6 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
-    <title>Title</title>
     <link rel="stylesheet" href="CSS/HomePage.css">
 </head>
 <body>
