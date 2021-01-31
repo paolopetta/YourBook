@@ -47,19 +47,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/libriManagement.jsp">
                             <i class="ni ni-books text-orange"></i>
                             <span class="nav-link-text">Gestisci libri</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/map.html">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
                             <i class="ni ni-circle-08 text-primary "></i>
                             <span class="nav-link-text">Gestisci utenti</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/profile.html">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/adminProfileManagement.jsp">
                             <i class="ni ni-single-02 text-yellow"></i>
                             <span class="nav-link-text">Gestisci admin</span>
                         </a>
@@ -116,7 +116,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Traffico totale</h5>
                                         <span class="h2 font-weight-bold mb-0">350,897</span>
                                     </div>
                                     <div class="col-auto">
@@ -127,7 +127,7 @@
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
+                                    <span class="text-nowrap">Ultimo mese</span>
                                 </p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Nuovi utenti</h5>
                                         <span class="h2 font-weight-bold mb-0">2,356</span>
                                     </div>
                                     <div class="col-auto">
@@ -149,7 +149,7 @@
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
+                                    <span class="text-nowrap">Ultimo mese</span>
                                 </p>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Vendite</h5>
                                         <span class="h2 font-weight-bold mb-0">924</span>
                                     </div>
                                     <div class="col-auto">
@@ -171,7 +171,7 @@
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
+                                    <span class="text-nowrap">Ultimo mese</span>
                                 </p>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
+                                    <span class="text-nowrap">Ultimo mese</span>
                                 </p>
                             </div>
                         </div>
@@ -211,19 +211,19 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
-                                <h5 class="h3 text-white mb-0">Sales value</h5>
+                                <h5 class="h3 text-white mb-0">Valore vendite</h5>
                             </div>
                             <div class="col">
                                 <ul class="nav nav-pills justify-content-end">
                                     <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales-dark" data-update='{"data":{"datasets":[{"data":[0, 20, 10, 30, 15, 40, 20, 60, 60]}]}}' data-prefix="$" data-suffix="k">
                                         <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
-                                            <span class="d-none d-md-block">Month</span>
+                                            <span class="d-none d-md-block">Mese</span>
                                             <span class="d-md-none">M</span>
                                         </a>
                                     </li>
                                     <li class="nav-item" data-toggle="chart" data-target="#chart-sales-dark" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
                                         <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
-                                            <span class="d-none d-md-block">Week</span>
+                                            <span class="d-none d-md-block">Settimana</span>
                                             <span class="d-md-none">W</span>
                                         </a>
                                     </li>
@@ -246,7 +246,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                                <h5 class="h3 mb-0">Total orders</h5>
+                                <h5 class="h3 mb-0">Ordini totali</h5>
                             </div>
                         </div>
                     </div>
@@ -265,10 +265,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Page visits</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <h3 class="mb-0">Pagine visitate</h3>
                             </div>
                         </div>
                     </div>
@@ -277,16 +274,16 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">Page name</th>
-                                <th scope="col">Visitors</th>
-                                <th scope="col">Unique users</th>
-                                <th scope="col">Bounce rate</th>
+                                <th scope="col">Nome pagina</th>
+                                <th scope="col">Visitatori</th>
+                                <th scope="col">Visitatore unico</th>
+                                <th scope="col">Conversioni</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <th scope="row">
-                                    /argon/
+                                    /index.jsp/
                                 </th>
                                 <td>
                                     4,569
@@ -300,7 +297,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    /argon/index.html
+                                    /libri.jsp
                                 </th>
                                 <td>
                                     3,985
@@ -314,7 +311,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    /argon/charts.html
+                                    /profilo.jsp
                                 </th>
                                 <td>
                                     3,513
@@ -324,34 +321,6 @@
                                 </td>
                                 <td>
                                     <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    /argon/tables.html
-                                </th>
-                                <td>
-                                    2,050
-                                </td>
-                                <td>
-                                    147
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    /argon/profile.html
-                                </th>
-                                <td>
-                                    1,795
-                                </td>
-                                <td>
-                                    190
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
                                 </td>
                             </tr>
                             </tbody>
@@ -364,10 +333,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Social traffic</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <h3 class="mb-0">Traffico social</h3>
                             </div>
                         </div>
                     </div>
@@ -376,8 +342,8 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">Referral</th>
-                                <th scope="col">Visitors</th>
+                                <th scope="col">Social</th>
+                                <th scope="col">Visitatori</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
