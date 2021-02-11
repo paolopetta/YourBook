@@ -47,19 +47,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/libriManagement.jsp">
                             <i class="ni ni-books text-orange"></i>
                             <span class="nav-link-text">Gestisci libri</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/map.html">
+                        <a class="nav-link active" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
                             <i class="ni ni-circle-08 text-primary "></i>
                             <span class="nav-link-text">Gestisci utenti</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/profile.html">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/adminProfileManagement.jsp">
                             <i class="ni ni-single-02 text-yellow"></i>
                             <span class="nav-link-text">Gestisci admin</span>
                         </a>
@@ -99,11 +99,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Dashboard</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Gestione Utenti</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                                <li class="breadcrumb-item"><a href="#">Gestione Utenti</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -113,21 +113,21 @@
     <div class="container-fluid mt--6">
         <div class="row">
             <div class="col">
-                <div class="card" id="tabellaLibri">
+                <div class="card" id="tabellaUtenti">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Libri</h3>
+                        <h3 class="mb-0">Utenti</h3>
                     </div>
                     <!-- Light table -->
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">Titolo</th>
-                                <th scope="col" class="sort" data-sort="isbn">Isbn</th>
-                                <th scope="col" class="sort" data-sort="autore">Autore</th>
-                                <th scope="col" class="sort" data-sort="anno">Anno</th>
-                                <th scope="col" class="sort" data-sort="pubblicazione">Pubblicazione</th>
+                                <th scope="col" class="sort" data-sort="id">Id</th>
+                                <th scope="col" class="sort" data-sort="nome">Nome</th>
+                                <th scope="col" class="sort" data-sort="cognome">Cognome</th>
+                                <th scope="col" class="sort" data-sort="paese">Paese</th>
+                                <th scope="col" class="sort" data-sort="anni">Anni</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>

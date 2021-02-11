@@ -53,13 +53,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
                             <i class="ni ni-circle-08 text-primary "></i>
                             <span class="nav-link-text">Gestisci utenti</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/adminProfileManagement.jsp">
+                        <a class="nav-link active" href="${pageContext.request.contextPath}/View/Admin/adminProfileManagement.jsp">
                             <i class="ni ni-single-02 text-yellow"></i>
                             <span class="nav-link-text">Gestisci admin</span>
                         </a>
@@ -99,11 +99,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Gestione Utenti</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Gestione Admin</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Gestione Utenti</a></li>
+                                <li class="breadcrumb-item"><a href="#">Gestione Admin</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -116,7 +116,7 @@
                 <div class="card" id="tabellaUtenti">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Utenti</h3>
+                        <h3 class="mb-0">Admin</h3>
                     </div>
                     <!-- Light table -->
                     <div class="table-responsive">
