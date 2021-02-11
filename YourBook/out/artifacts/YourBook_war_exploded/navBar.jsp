@@ -36,16 +36,19 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/index.jsp">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/InsertBook.jsp" >Inserisci Titolo</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp" >Inserisci Titolo</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/Libri">Libri</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
             </li>
         </ul>
 

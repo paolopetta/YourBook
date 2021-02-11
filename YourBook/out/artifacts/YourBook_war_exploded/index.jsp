@@ -49,13 +49,16 @@
           <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/View/InsertBook.jsp" >Inserisci Titolo</a>
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp" >Inserisci Titolo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
         </li>
       </ul>
 
@@ -264,7 +267,7 @@
         <div class="col-lg-4">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" />
-            <h4>Petta Paolo</h4>
+            <h4>Paolo Petta</h4>
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>

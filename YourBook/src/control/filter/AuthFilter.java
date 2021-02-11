@@ -1,6 +1,7 @@
 package control.filter;
-
+/*
 import it.unisa.model.UserBean;
+import model.UserBean;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -52,4 +53,4 @@ public class AuthFilter implements Filter {
 
     }
 
-}
+}*/

@@ -9,9 +9,11 @@
 <html>
 <head>
     <title>Inserisci Libro</title>
+    <link rel="stylesheet" href="CSS/HomePage.css">
 </head>
 <body>
 <%@ include file= "navBar.jsp" %>
+
 <header class="testata"></header>
 <div class="text-Inserisci">
     <h1 align="center">Inserisci il titolo che hai letto</h1>
