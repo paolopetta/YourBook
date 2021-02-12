@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<%--
-=======
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="model.LibriBean" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.Collection" %><%--
->>>>>>> 1de11f920cfc0295de5608b79ede3c8494839566
   Created by IntelliJ IDEA.
   User: pavil
   Date: 25/01/2021
@@ -13,8 +9,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<<<<<<< HEAD
-=======
 
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
@@ -25,15 +19,11 @@
     LibriBean libro = (LibriBean) request.getAttribute("Libro");
 %>
 
->>>>>>> 1de11f920cfc0295de5608b79ede3c8494839566
 <html>
 <head>
     <title>Libri</title>
 </head>
 <body>
-<<<<<<< HEAD
-
-=======
 <%@ include file= "navBar.jsp" %>
 <header class="testata"></header>
 
@@ -77,6 +67,5 @@
 <script src="assets/mail/jqBootstrapValidation.js"></script>
 <script src="assets/mail/contact_me.js"></script>
 <script src="JS/HomePage.js"></script>
->>>>>>> 1de11f920cfc0295de5608b79ede3c8494839566
 </body>
 </html>
