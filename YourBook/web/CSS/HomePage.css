@@ -10110,7 +10110,7 @@ header.masthead {
     padding-bottom: 6rem;
     text-align: center;
     color: #fff;
-    background-image: url("../Immagini/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+    background-image: url("../Immagini/bookBackground.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -10536,7 +10536,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 .testata {
     height: 200px;
-    background-image: url("../Immagini/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+    background-image: url("../Immagini/bookBackground.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
