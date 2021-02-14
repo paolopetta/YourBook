@@ -48,6 +48,9 @@
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/myWishlist.jsp">Wishlist</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
             </li>
         </ul>

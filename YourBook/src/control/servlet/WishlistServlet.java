@@ -30,7 +30,7 @@ public class WishlistServlet extends HttpServlet {
         HttpSession session = request.getSession();
         WishlistBean wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
     //}}//chiusura temporanea per prova
-         if(wishlist == null){
+        if(wishlist == null){
             wishlist= new WishlistBean();
             request.getSession().setAttribute("wishlist", wishlist);
         }
@@ -66,6 +66,6 @@ public class WishlistServlet extends HttpServlet {
         }
 
         session.setAttribute("wishlist", wishlist);
-
+        response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/myWishlist.jsp"));
     }
 }

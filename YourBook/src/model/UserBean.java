@@ -17,7 +17,7 @@ public class UserBean implements Serializable, Cloneable {
         this.email = email;
         this.nome = nome;
         this.nazionalita = nazionalita;
-        this.auth = auth;
+        this.auth = auth; //false = utente normale
     }
 
     public int getId_utente() {
@@ -59,6 +59,7 @@ public class UserBean implements Serializable, Cloneable {
     public void setAuth(Boolean auth) {
         this.auth = auth;
     }
+
 
     @Override
     public String toString() {

@@ -23,7 +23,7 @@ public class LibroDao implements LibriModel<LibriBean>{
         try {
             connection = DriverManagerConnectionPool.getConnection();
             preparedStatement = connection.prepareStatement(selectSQL);
-            preparedStatement.setInt(1, Integer.parseInt(isbn));
+            preparedStatement.setString(1, isbn);
 
             System.out.println("doRetrieveByKey:" + preparedStatement.toString());
             ResultSet rs = preparedStatement.executeQuery();
@@ -33,6 +33,7 @@ public class LibroDao implements LibriModel<LibriBean>{
                 bean.setIsbn(rs.getString("isbn"));
                 bean.setTitolo(rs.getString("titolo"));
                 bean.setAutore(rs.getString("autore"));
+                bean.setCasaEditrice(rs.getString("casaEditrice"));
                 bean.setImmagine(rs.getString("immagine"));
                 bean.setGenere(rs.getString("genere"));
                 bean.setAnno_pubb(rs.getInt("anno_pubb"));
@@ -72,6 +73,7 @@ public class LibroDao implements LibriModel<LibriBean>{
                 bean.setIsbn(rs.getString("isbn"));
                 bean.setTitolo(rs.getString("titolo"));
                 bean.setAutore(rs.getString("autore"));
+                bean.setCasaEditrice(rs.getString("casaEditrice"));
                 bean.setImmagine(rs.getString("immagine"));
                 bean.setGenere(rs.getString("genere"));
                 bean.setAnno_pubb(rs.getInt("anno_pubb"));

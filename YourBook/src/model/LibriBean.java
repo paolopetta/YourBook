@@ -9,6 +9,7 @@ public class LibriBean implements Serializable {
     String isbn;
     String titolo;
     String autore;
+    String casaEditrice;
     String immagine;
     String genere;
     int anno_pubb;
@@ -45,6 +46,10 @@ public class LibriBean implements Serializable {
     public void setAutore(String autore) {
         this.autore = autore;
     }
+
+    public String getCasaEditrice(){return casaEditrice;}
+
+    public void setCasaEditrice(String casaEditrice){this.casaEditrice= casaEditrice;}
 
     public String getImmagine() {
         return immagine;

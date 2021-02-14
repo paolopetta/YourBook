@@ -10,8 +10,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
     <title>Admin Dashboard</title>
     <!-- Favicon -->
     <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
@@ -41,25 +39,25 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="${pageContext.request.contextPath}/View/Admin/adminManagement.jsp">
+                        <a class="nav-link active" href="${pageContext.request.contextPath}/Admin/adminManagement.jsp">
                             <i class="ni ni-tv-2 text-primary"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/libriManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/Admin/libriManagement.jsp">
                             <i class="ni ni-books text-orange"></i>
                             <span class="nav-link-text">Gestisci libri</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/userManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/Admin/userManagement.jsp">
                             <i class="ni ni-circle-08 text-primary "></i>
                             <span class="nav-link-text">Gestisci utenti</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/View/Admin/adminProfileManagement.jsp">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/Admin/adminProfileManagement.jsp">
                             <i class="ni ni-single-02 text-yellow"></i>
                             <span class="nav-link-text">Gestisci admin</span>
                         </a>

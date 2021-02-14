@@ -29842,3 +29842,9 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 #tabellaLibri, #tabellaUtenti{
     margin-top: 50px;
 }
+
+.media-body{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
