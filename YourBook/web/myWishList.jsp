@@ -1,4 +1,14 @@
+<%@ page import="java.util.Collection" %>
+<%@ page import="model.LibriBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="model.WishlistBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    WishlistBean wishlist = (WishlistBean) session.getAttribute("wishlist");
+    if(wishlist == null ) {
+        response.sendRedirect(response.encodeRedirectURL("./WishlistServlet"));
+        return;
+    }%>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -21,51 +31,43 @@
 <%@ include file="navBar.jsp" %>
 <header class="testata"></header>
 
+<%
+    List<LibriBean> libriWishlist = wishlist.getItems();
+%>
+
 <!-- Page Content -->
 <div class="container2">
 
     <!-- Blog Entries Column -->
     <div class="colmd8">
 
-        <h1 class="my-4">WishList</h1>
+        <h1 class="my-4" id="wishlist">WishList</h1>
+        <button onclick="window.location.href='<%=response.encodeURL("WishlistServlet?action=clearWishlist")%>'" class="btn btn-primary" id="svuotaWish">Svuota</button>
+
+        <%
+            if(libriWishlist.size() > 0) {
+                for(LibriBean libro: libriWishlist) {
+        %>
 
         <!-- Blog Post -->
         <div class="card2 mb4">
-            <img class="card-img-top2" src="http://placehold.it/60" alt="Card image cap">
+            <img class="card-img-top2" src="<%=libro.getImmagine()%>" alt="Copertina">
             <div class="card-body2">
-                <h2 class="card-title">Titolo 3</h2>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque,
-                    nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus
-                    possimus, veniam magni quis!</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                <h2 class="card-title"><%=libro.getTitolo()%></h2>
+                <p class="card-text"><strong>Isbn: </strong><%=libro.getIsbn()%></p>
+                <p class="card-text"><strong>Pubblicazione: </strong><%=libro.getAnno_pubb()%></p>
+                <p class="card-text"><strong>Autore: </strong><%=libro.getAutore()%></p>
+                <a href="WishlistServlet?action=deleteBook&id=<%=libro.getIsbn()%>" class="btn btn-primary">Elimina</a>
             </div>
         </div>
 
-        <!-- Blog Post -->
-        <div class="card2 mb4">
-            <img class="card-img-top2" src="http://placehold.it/60" alt="Card image cap">
-            <div class="card-body2">
-                <h2 class="card-title">Titolo 2</h2>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque,
-                    nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus
-                    possimus, veniam magni quis!</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-        </div>
+        <%}}
+        else{%>
+            <h3>Non ci sono articoli</h3>
+        <%}%>
 
-        <!-- Blog Post -->
-        <div class="card2 mb4">
-            <img class="card-img-top2" src="http://placehold.it/60" alt="Card image cap">
-            <div class="card-body2">
-                <h2 class="card-title">Titolo 3</h2>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque,
-                    nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus
-                    possimus, veniam magni quis!</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-        </div>
 
-        <!-- Pagination -->
+        <!-- Pagination --><!--
         <ul class="pagination justify-content-center mb4">
             <li class="page-item">
                 <a class="page-link" href="#">&larr; Older</a>
@@ -73,10 +75,10 @@
             <li class="page-item disabled">
                 <a class="page-link" href="#">Newer &rarr;</a>
             </li>
-        </ul>
-
+        </ul>-->
     </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
     <%@ include file="footer.jsp" %>
 
@@ -85,6 +87,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
+    <script src="JS/HomePage.js"></script>
 </body>
 </html>

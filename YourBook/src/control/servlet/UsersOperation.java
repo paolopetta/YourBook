@@ -22,7 +22,7 @@ public class UsersOperation extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+        /*HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
         //System.out.println("Dentro UserOperation");
@@ -66,6 +66,6 @@ public class UsersOperation extends HttpServlet {
             }
             request.setAttribute("message", "Prodotto " + user.getNome() + " eliminato");
             response.sendRedirect(request.getContextPath() + "/utenti");
-        }
+        }*/
     }
 }

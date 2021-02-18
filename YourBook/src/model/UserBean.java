@@ -25,6 +25,8 @@ public class UserBean extends Bean implements Serializable, Cloneable {
         this.nome = nome;
         this.nazionalita = nazionalita;
         this.auth = auth; //false = utente normale
+    }
+    
     public UserBean() {
         id_utente = -1;
         nome = email = password = nazionalita = "";

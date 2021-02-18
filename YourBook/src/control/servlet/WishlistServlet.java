@@ -5,6 +5,7 @@ import manager.LibroDao;
 import model.LibriBean;
 import model.WishlistBean;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +27,7 @@ public class WishlistServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        @SuppressWarnings("unchecked")
+
         HttpSession session = request.getSession();
         WishlistBean wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
     //}}//chiusura temporanea per prova
@@ -50,8 +51,9 @@ public class WishlistServlet extends HttpServlet {
                     }
                 } else if(action.equals("clearWishlist")) {
                     wishlist.deleteAll();
+                    System.out.println("svuota");
                     request.setAttribute("message", "wishlist cleaned");
-                } else if(action.equals("deleteWishlist")) {
+                } else if(action.equals("deleteBook")) {
                     String id = request.getParameter("id");
                     LibriBean bean = model.doRetriveByKey(id);
                     if(bean != null && !bean.isEmpty()) {
@@ -65,7 +67,8 @@ public class WishlistServlet extends HttpServlet {
             request.setAttribute("error", e.getMessage());
         }
 
-        session.setAttribute("wishlist", wishlist);
-        response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/myWishlist.jsp"));
+        session.setAttribute("wishlistTemp", wishlist);
+        response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/myWishList.jsp"));
+
     }
 }

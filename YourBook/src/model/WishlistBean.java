@@ -14,7 +14,7 @@ public class WishlistBean {
 
     public void deleteItem(LibriBean item) {
        for(LibriBean it: items) {
-            if(it.equals(items)){
+            if(it.getIsbn().equals(item.getIsbn())){
                 items.remove(it);
                 break;
             }
