@@ -3,15 +3,53 @@ package manager;
 import control.servlet.DriverManagerConnectionPool;
 import model.LibriBean;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javax.sql.ConnectionPoolDataSource;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class LibroDao implements LibriModel<LibriBean>{
     private static final String TABLE_NAME = "Libro";
+
+    public class LibroDao implements LibriModel<LibriBean> {
+
+    @Override
+    public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        Collection<LibriBean> libri = new ArrayList<LibriBean>();
+
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            preparedStatement = connection.prepareStatement(
+                    "SELECT isbn, titolo, autore, immagine, genere, anno_pubb FROM Libro WHERE LOWER(libro.titolo) LIKE ?");
+
+            preparedStatement.setString(1, titolo + "%");
+
+            System.out.println("doRetrieveByAllFragment:" + preparedStatement.toString());
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()) {
+                LibriBean bean = new LibriBean();
+
+                bean.setIsbn(rs.getString("isbn"));
+                bean.setTitolo(rs.getString("titolo"));
+                bean.setAutore(rs.getString("autore"));
+                bean.setImmagine(rs.getString("immagine"));
+                bean.setGenere(rs.getString("genere"));
+                bean.setAnno_pubb(rs.getInt("anno_pubb"));
+
+                libri.add(bean);
+            }
+        } catch(SQLException e) {
+            throw new
+        RuntimeException(e);
+    }
+        return libri;
+}
+
+
     @Override
     public LibriBean doRetrieveByKey(String isbn) throws SQLException {
         Connection connection = null;
