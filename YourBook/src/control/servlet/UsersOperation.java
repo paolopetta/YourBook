@@ -1,6 +1,5 @@
 package control.servlet;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,20 +8,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
 
-import model.UserBean;
 import manager.UtenteDao;
+import model.UserBean;
 
-@WebServlet("/UserOperation")
+
+@WebServlet("/Utenti")
 public class UsersOperation extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    static UtenteDao model = new UtenteDao();
+
+    public UsersOperation() {super();}
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*HttpSession session = request.getSession();
+        HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
         //System.out.println("Dentro UserOperation");
@@ -38,7 +43,7 @@ public class UsersOperation extends HttpServlet {
             bean.setEmail(email);
             bean.setPasswordhash(pwd);
             bean.setNazionalita(naz);
-//MODIFICHE DA FARE
+
             try {
                 model.doSave(bean);
             } catch (SQLException throwables) {
@@ -50,22 +55,19 @@ public class UsersOperation extends HttpServlet {
         }
 
         if (action != null && action.equals("Delete")) {
-            String email = request.getParameter("email");
-
+            String idUtente = request.getParameter("id_utente");
             UserBean user = null;
 
             try {
-                user = model.doRetrieveByKey(email);
-                if (email.contains()) {
-                    model.doDelete(user, "pneumatici");
-                    model.doDelete(user, "prodotto");
-                } throw new SQLException();
+                user = (UserBean) model.doRetrieveByKey(Collections.singletonList(idUtente));
+                model.doDelete((List<String>) user);
+                throw new SQLException();
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
             request.setAttribute("message", "Prodotto " + user.getNome() + " eliminato");
-            response.sendRedirect(request.getContextPath() + "/utenti");
-        }*/
+            response.sendRedirect(request.getContextPath() + "/utenti.jsp");
+        }
     }
 }

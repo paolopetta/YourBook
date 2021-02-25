@@ -100,7 +100,6 @@ public class UserBean extends Bean implements Serializable, Cloneable {
         this.auth = auth;
     }
 
-
     @Override
     public UserBean clone() {
         UserBean bean = null;
