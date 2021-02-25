@@ -14,6 +14,6 @@ public interface LibriModel<T> {
 
     public void doUpdate(T libro) throws SQLException;
 
-    public void doDelete(T libro, String table) throws SQLException;
+    public void doDelete(T libro) throws SQLException;
 
 }

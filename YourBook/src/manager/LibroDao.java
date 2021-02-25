@@ -167,10 +167,10 @@ public class LibroDao implements LibriModel<LibriBean>{
     }
 
     @Override
-    public void doDelete(LibriBean libro, String table) throws SQLException {
+    public void doDelete(LibriBean libro) throws SQLException {
         String isbn = libro.getIsbn();
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
-            String sql = "DELETE FROM "+ table+ " WHERE isbn=?";
+            String sql = "DELETE FROM Libro WHERE isbn=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
             ps.executeUpdate();
