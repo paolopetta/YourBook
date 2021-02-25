@@ -42,7 +42,7 @@ public class WishlistServlet extends HttpServlet {
             if(action != null) {
                 if(action.equals("addBook")) {
                     String id = request.getParameter("id");
-                    LibriBean bean = model.doRetriveByKey(id);
+                    LibriBean bean = model.doRetrieveByKey(id);
                     if(bean != null && !bean.isEmpty()) {
                         if(wishlist.alReadyIn(bean)) {}
                         else
@@ -55,7 +55,7 @@ public class WishlistServlet extends HttpServlet {
                     request.setAttribute("message", "wishlist cleaned");
                 } else if(action.equals("deleteBook")) {
                     String id = request.getParameter("id");
-                    LibriBean bean = model.doRetriveByKey(id);
+                    LibriBean bean = model.doRetrieveByKey(id);
                     if(bean != null && !bean.isEmpty()) {
                         wishlist.deleteItem(bean);
                         request.setAttribute("message", "Product "+ bean.getTitolo()+" deleted from Wishlist");

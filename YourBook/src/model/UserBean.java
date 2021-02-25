@@ -17,18 +17,21 @@ public class UserBean extends Bean implements Serializable, Cloneable {
     private String nome;
     private String password;
     private String nazionalita;
+    private int eta;
     private Boolean auth;
 
-    public UserBean(int id_utente, String email, String nome, String nazionalita, Boolean auth) {
+    public UserBean(int id_utente, String email, String nome, int eta, String nazionalita, Boolean auth) {
         this.id_utente = id_utente;
         this.email = email;
         this.nome = nome;
+        this.eta= eta;
         this.nazionalita = nazionalita;
         this.auth = auth; //false = utente normale
     }
     
     public UserBean() {
         id_utente = -1;
+        eta = -1;
         nome = email = password = nazionalita = "";
         auth = false;
     }
@@ -55,6 +58,14 @@ public class UserBean extends Bean implements Serializable, Cloneable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getEta() {
+        return eta;
+    }
+
+    public void setEta(int eta) {
+        this.eta = eta;
     }
 
     public void setPasswordhash(String passwordNew) {

@@ -1,6 +1,7 @@
 package control.admin;
 
 import manager.LibroDao;
+import model.LibriBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,25 +29,83 @@ public class LibriOperationAdmin extends HttpServlet {
         String action = request.getParameter("action");
 
         if(action != null && action.equals("insertBook")){
-            //Assegna i campi dei libri
+            String titolo= request.getParameter("titolo");
+            String isbn= request.getParameter("isbn");
+            String autore= request.getParameter("autore");
+            int anno= Integer.parseInt(request.getParameter("anno"));
+            String pubblicazione= request.getParameter("pubblicazione");
+            String immagine= request.getParameter("immagine");
+
+            LibriBean bean= new LibriBean();
+            bean.setTitolo(titolo);
+            bean.setIsbn(isbn);
+            bean.setAutore(autore);
+            bean.setAnno_pubb(anno);
+            bean.setCasaEditrice(pubblicazione);
+            bean.setImmagine(immagine);
+
+            try{
+                model.doSave(bean);
+            } catch (SQLException throwables){
+                throwables.printStackTrace();
+            }
+            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
+
         }
 
         if(action != null && action.equals("deleteBook")){
-            //elimina il libro
+            String isbn = request.getParameter("isbn");
+            LibriBean libro= null;
+            try {
+                libro = model.doRetrieveByKey(isbn);
+                model.doDelete(libro, "Libri");
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            request.setAttribute("message", "Prodotto "+ libro.getTitolo()+" Eliminato");
+            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
         }
 
         if(action != null && action.equals("modifyBook")){
-            //modifica il libro
+            String titolo= request.getParameter("titolo");
+            String isbn= request.getParameter("isbn");
+            String autore= request.getParameter("autore");
+            int anno= Integer.parseInt(request.getParameter("anno"));
+            String pubblicazione= request.getParameter("pubblicazione");
+            String immagine= request.getParameter("immagine");
+
+            LibriBean bean= new LibriBean();
+            bean.setTitolo(titolo);
+            bean.setIsbn(isbn);
+            bean.setAutore(autore);
+            bean.setAnno_pubb(anno);
+            bean.setCasaEditrice(pubblicazione);
+            bean.setImmagine(immagine);
+
+            try{
+                model.doUpdate(bean);
+            } catch (SQLException throwables){
+                throwables.printStackTrace();
+            }
+            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
+
+
+
         }
 
-        try {
-            request.setAttribute("libri", model.doRetriveAll());
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(action != null && action.equals("retrieveAll")) {
+            try {
+                request.setAttribute("libri", model.doRetriveAll());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Admin/libriManagement.jsp");
+            dispatcher.forward(request, response);
         }
 
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Admin/libriManagement.jsp");
-        dispatcher.forward(request, response);
+
 
     }
 

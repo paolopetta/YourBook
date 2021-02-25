@@ -9773,3 +9773,8 @@ a.text-dark:hover, a.text-dark:focus {
 #wishlist{
   display: inline-block;
 }
+
+#svuotaWish{
+  marign-top: -20px;
+  margin-left: 20px;
+}

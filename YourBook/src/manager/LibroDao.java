@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class LibroDao implements LibriModel<LibriBean>{
+    private static final String TABLE_NAME = "Libro";
     @Override
-    public LibriBean doRetriveByKey(String isbn) throws SQLException {
+    public LibriBean doRetrieveByKey(String isbn) throws SQLException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
@@ -102,7 +103,7 @@ public class LibroDao implements LibriModel<LibriBean>{
         PreparedStatement preparedStatement = null;
 
         String insertSQL = "INSERT INTO Libro" +
-                "(isbn, titolo, autore, immagine, genere, anno_pubb) VALUES (?, ?, ?, ?, ?, ?);";
+                "(isbn, titolo, autore, casaEditrice, immagine, anno_pubb) VALUES (?, ?, ?, ?, ?, ?);";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -111,8 +112,8 @@ public class LibroDao implements LibriModel<LibriBean>{
             preparedStatement.setString(1, libro.getIsbn());
             preparedStatement.setString(2, libro.getTitolo());
             preparedStatement.setString(3, libro.getAutore());
-            preparedStatement.setString(4, libro.getImmagine());
-            preparedStatement.setString(5, libro.getGenere());
+            preparedStatement.setString(4, libro.getCasaEditrice());
+            preparedStatement.setString(5, libro.getImmagine());
             preparedStatement.setInt(6, libro.getAnno_pubb());
 
 
@@ -136,19 +137,21 @@ public class LibroDao implements LibriModel<LibriBean>{
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String updateSQL = "UPDATE Libro SET" +
-                "isbn= ?, titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ?;";
+        /*String updateSQL = "UPDATE Libro " +
+                "SET isbn= ?, titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? " +
+                "WHERE isbn=?;";*/
+        String updateSQL= "UPDATE Libro SET titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? WHERE isbn= ?;";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
             preparedStatement = connection.prepareStatement(updateSQL);
 
-            preparedStatement.setString(1, libro.getIsbn());
-            preparedStatement.setString(2, libro.getTitolo());
-            preparedStatement.setString(3, libro.getAutore());
-            preparedStatement.setString(4, libro.getImmagine());
-            preparedStatement.setString(5, libro.getGenere());
-            preparedStatement.setInt(6, libro.getAnno_pubb());
+            preparedStatement.setString(1, libro.getTitolo());
+            preparedStatement.setString(2, libro.getAutore());
+            preparedStatement.setString(3, libro.getImmagine());
+            preparedStatement.setString(4, libro.getGenere());
+            preparedStatement.setInt(5, libro.getAnno_pubb());
+            preparedStatement.setString(6, libro.getIsbn());
 
 
             System.out.println("doUpdate: "+ preparedStatement.toString());
@@ -170,7 +173,7 @@ public class LibroDao implements LibriModel<LibriBean>{
     public void doDelete(LibriBean libro, String table) throws SQLException {
         String isbn = libro.getIsbn();
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
-            String sql = "DELETE FROM "+ table+ " WHERE isbn=?";
+            String sql = "DELETE FROM "+ TABLE_NAME + " WHERE isbn=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
             ps.executeUpdate();

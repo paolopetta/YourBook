@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public interface LibriModel<T> {
 
-    public T doRetriveByKey(String isbn) throws SQLException;
+    public T doRetrieveByKey(String isbn) throws SQLException;
 
     public Collection<T> doRetriveAll() throws SQLException;
 

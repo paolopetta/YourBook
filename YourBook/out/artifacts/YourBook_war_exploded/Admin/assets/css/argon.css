@@ -29848,3 +29848,14 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.testataTab{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.modalForm{
+    margin-top: 20px;
+}
+
+

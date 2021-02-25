@@ -27,6 +27,8 @@ public class LibriOperation extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        //Mostrare tutti i libri
         try {
             request.setAttribute("libri", model.doRetriveAll());
         } catch (SQLException e) {

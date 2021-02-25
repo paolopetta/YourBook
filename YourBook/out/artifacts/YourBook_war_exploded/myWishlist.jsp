@@ -42,7 +42,7 @@
     <div class="colmd8">
 
         <h1 class="my-4" id="wishlist">WishList</h1>
-        <button onclick="window.location.href='<%=response.encodeURL("WishlistServlet?action=clearWishlist")%>'" class="btn btn-primary">Svuota</button>
+        <button onclick="window.location.href='<%=response.encodeURL("WishlistServlet?action=clearWishlist")%>'" class="btn btn-primary" id="svuotaWish">Svuota</button>
 
         <%
             if(libriWishlist.size() > 0) {

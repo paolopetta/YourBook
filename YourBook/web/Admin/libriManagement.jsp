@@ -12,7 +12,7 @@
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
     if(libri == null ) {
-        response.sendRedirect(response.encodeRedirectURL("../LibriManagement"));
+        response.sendRedirect(response.encodeRedirectURL("../LibriManagement?action=retrieveAll"));
         return;
     }
 %>
@@ -125,7 +125,46 @@
                 <div class="card" id="tabellaLibri">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Libri</h3>
+                        <h3 class="mb-0 testataTab">Libri</h3>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Aggiungi Libri</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Aggiungi libro</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="${pageContext.request.contextPath}/LibriManagement?action=insertBook" method="POST">
+                                            <label>Titolo:</label><br>
+                                            <input name="titolo" type="text" maxlength="50" placeholder="Inserisci il titolo" required><br>
+
+                                            <label>Isbn:</label><br>
+                                            <input name="isbn" type="text" maxlength="50" placeholder="Inserisci l'isbn" required><br>
+
+                                            <label>Autore:</label><br>
+                                            <input name="autore" type="text" maxlength="50" placeholder="Inserisci l'autore" required><br>
+
+                                            <label>Anno:</label><br>
+                                            <input name="anno" type="number" maxlength="50" placeholder="Inserisci l'anno" required><br>
+
+                                            <label>Pubblicazione:</label><br>
+                                            <input name="pubblicazione" type="text" maxlength="50" placeholder="Inserisci la pubblicazione" required><br>
+
+                                            <label>Immagine:</label><br>
+                                            <input name="immagine" type="text" maxlength="255" placeholder="Inserisci il link"><br>
+
+                                            <button type="Submit" class="btn btn-primary modalForm">Aggiungi</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- Light table -->
@@ -133,13 +172,12 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">Modifica</th>
+                                <th scope="col" class="sort" data-sort="modifica">Modifica</th>
                                 <th scope="col" class="sort" data-sort="name">Titolo</th>
                                 <th scope="col" class="sort" data-sort="isbn">Isbn</th>
                                 <th scope="col" class="sort" data-sort="autore">Autore</th>
                                 <th scope="col" class="sort" data-sort="anno">Anno</th>
                                 <th scope="col" class="sort" data-sort="pubblicazione">Pubblicazione</th>
-                                <th scope="col"></th>
                             </tr>
                             </thead>
 
@@ -157,16 +195,47 @@
                             %>
 
                             <tr>
-                                <td class="text-right">
-                                    <div class="dropdown">
-                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="#">Modifica</a>
-                                            <a class="dropdown-item" href="#">Elimina</a>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2"><i class="fa fa-pencil-alt"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle2">Modifica</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="${pageContext.request.contextPath}/LibriManagement?action=modifyBook" method="POST">
+                                                        <label>Titolo:</label><br>
+                                                        <input name="titolo" type="text" maxlength="50" placeholder="Inserisci il titolo" required><br>
+
+                                                        <label>Isbn:</label><br>
+                                                        <input name="isbn" type="text" maxlength="50" placeholder="Inserisci l'isbn" required><br>
+
+                                                        <label>Autore:</label><br>
+                                                        <input name="autore" type="text" maxlength="50" placeholder="Inserisci l'autore" required><br>
+
+                                                        <label>Anno:</label><br>
+                                                        <input name="anno" type="number" maxlength="50" placeholder="Inserisci l'anno" required><br>
+
+                                                        <label>Pubblicazione:</label><br>
+                                                        <input name="pubblicazione" type="text" maxlength="50" placeholder="Inserisci la pubblicazione" required><br>
+
+                                                        <label>Immagine:</label><br>
+                                                        <input name="immagine" type="text" maxlength="255" placeholder="Inserisci il link"><br>
+
+                                                        <button type="Submit" class="btn btn-primary modalForm">Modifica</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <button class="btn btn-primary" href="${pageContext.request.contextPath}/LibriManagement?action=deleteBook&isbn=<%=bean.getIsbn()%>"><i class="fa fa-times"></i></button>
                                 </td>
                                 <th scope="row">
                                     <div class="media align-items-center">

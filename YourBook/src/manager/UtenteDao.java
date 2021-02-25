@@ -61,7 +61,7 @@ public class UtenteDao implements DaoModel {
         return bean;
     }
 
-    public synchronized void doSavePar(Bean bean) throws SQLException {
+    /*public synchronized void doSavePar(Bean bean) throws SQLException {
         PreparedStatement ps = null;
         Connection con = null;
 
@@ -90,14 +90,14 @@ public class UtenteDao implements DaoModel {
                 pool.releaseConnection(con);
             }
         }
-    }
+    }*/
 
     @Override
     public synchronized void doSave(Bean bean) throws SQLException {
         PreparedStatement ps = null;
         Connection con = null;
 
-        String insertQuery = "INSERT INTO " + TABLE_NAME + " (email, pwd, nome, nazionalita, auth) VALUES (?, SHA1(?), ?, ?, ?)";
+        String insertQuery = "INSERT INTO " + TABLE_NAME + " (email, pwd, nome, nazionalita, eta, auth) VALUES (?, SHA1(?), ?, ?, ?, ?)";
 
         try {
             con = pool.getConnection();
@@ -108,7 +108,8 @@ public class UtenteDao implements DaoModel {
             ps.setString(2, userBean.getPassword());
             ps.setString(3, userBean.getNome());
             ps.setString(4, userBean.getNazionalita());
-            ps.setBoolean(5, userBean.isAdmin());
+            ps.setInt(5, userBean.getEta());
+            ps.setBoolean(6, userBean.isAdmin());
 
             int result = ps.executeUpdate();
 
@@ -131,7 +132,7 @@ public class UtenteDao implements DaoModel {
         PreparedStatement ps = null;
         Connection con = null;
 
-        String updateQuery = "UPDATE " + TABLE_NAME + " SET email=?, password=?, nome=?, nazionalita=?, auth=?, active=? WHERE id=?";
+        String updateQuery = "UPDATE " + TABLE_NAME + " SET email=?, pwd=?, nome=?, nazionalita=?, eta= ?, auth=? WHERE id_utente=?";
 
         try {
             con = pool.getConnection();
@@ -142,7 +143,8 @@ public class UtenteDao implements DaoModel {
             ps.setString(2, userBean.getPassword());
             ps.setString(3, userBean.getNome());
             ps.setString(4, userBean.getNazionalita());
-            ps.setBoolean(5, userBean.isAdmin());
+            ps.setInt(5, userBean.getEta());
+            ps.setBoolean(6, userBean.isAdmin());
 
             int result = ps.executeUpdate();
 
@@ -160,29 +162,23 @@ public class UtenteDao implements DaoModel {
     }
 
     @Override
-    public synchronized boolean doDelete(List<String> keys) throws SQLException {
-        PreparedStatement ps = null;
-        Connection con = null;
-        int result = 0;
-        String deleteQuery = "DELETE FROM " + TABLE_NAME + " WHERE id=?";
+    public synchronized void doDelete(UserBean bean) throws SQLException {
 
-        try {
-            con = pool.getConnection();
-            ps = con.prepareStatement(deleteQuery);
+        int id_utente= bean.getId_utente();
+        String deleteQuery = "DELETE FROM " + TABLE_NAME + " WHERE id_utente=?";
 
-            ps.setLong(1, Long.parseLong(keys.get(0)));
-
-            result = ps.executeUpdate();
+        try (Connection con = DriverManagerConnectionPool.getConnection()) {
+            String sql = "DELETE FROM "+ TABLE_NAME+ " WHERE id_utente=?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id_utente);
+            ps.executeUpdate();
             con.commit();
-        } finally {
-            try {
-                if (ps != null)
-                    ps.close();
-            } finally {
-                pool.releaseConnection(con);
-            }
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return (result != 0);
+
     }
 
     @Override
@@ -191,7 +187,7 @@ public class UtenteDao implements DaoModel {
         Connection con = null;
         ResultSet rs = null;
         UserBean bean = null;
-        String selectQuery = (keys.size() == 2) ? "SELECT * FROM " + TABLE_NAME + " WHERE email=? and password=SHA1(?)" : "SELECT * FROM " + TABLE_NAME + " WHERE id=?";
+        String selectQuery = (keys.size() == 2) ? "SELECT * FROM " + TABLE_NAME + " WHERE email=? and password=SHA1(?)" : "SELECT * FROM " + TABLE_NAME + " WHERE id_utente=?";
 
         try {
             con = pool.getConnection();
@@ -263,7 +259,7 @@ public class UtenteDao implements DaoModel {
     }
 
     @Override
-    public synchronized List<Bean> doRetrieveAll(Comparator<Bean> comparator) throws SQLException {
+    public synchronized List<Bean> doRetrieveAll() throws SQLException {
         PreparedStatement ps = null;
         Connection con = null;
         ResultSet rs = null;
@@ -283,13 +279,12 @@ public class UtenteDao implements DaoModel {
                 bean.setEmail(rs.getString("email"));
                 bean.setAuth(rs.getBoolean("auth"));
                 bean.setPasswordhash(rs.getString("pwd"));
+                bean.setEta(rs.getInt("eta"));
                 bean.setNome(rs.getString("nome"));
                 bean.setNazionalita(rs.getString("nazionalita"));
                 list.add(bean);
             }
 
-            if (comparator != null)
-                list.sort(comparator);
 
         } finally {
             try {
