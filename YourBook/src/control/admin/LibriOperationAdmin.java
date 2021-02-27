@@ -28,15 +28,15 @@ public class LibriOperationAdmin extends HttpServlet {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
 
-        if(action != null && action.equals("insertBook")){
-            String titolo= request.getParameter("titolo");
-            String isbn= request.getParameter("isbn");
-            String autore= request.getParameter("autore");
-            int anno= Integer.parseInt(request.getParameter("anno"));
-            String pubblicazione= request.getParameter("pubblicazione");
-            String immagine= request.getParameter("immagine");
+        if (action != null && action.equals("insertBook")) {
+            String titolo = request.getParameter("titolo");
+            String isbn = request.getParameter("isbn");
+            String autore = request.getParameter("autore");
+            int anno = Integer.parseInt(request.getParameter("anno"));
+            String pubblicazione = request.getParameter("pubblicazione");
+            String immagine = request.getParameter("immagine");
 
-            LibriBean bean= new LibriBean();
+            LibriBean bean = new LibriBean();
             bean.setTitolo(titolo);
             bean.setIsbn(isbn);
             bean.setAutore(autore);
@@ -44,38 +44,38 @@ public class LibriOperationAdmin extends HttpServlet {
             bean.setCasaEditrice(pubblicazione);
             bean.setImmagine(immagine);
 
-            try{
+            try {
                 model.doSave(bean);
-            } catch (SQLException throwables){
+            } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
+            response.sendRedirect(request.getContextPath() + "/Admin/libriManagement.jsp");
 
         }
 
-        if(action != null && action.equals("deleteBook")){
+        if (action != null && action.equals("deleteBook")) {
             String isbn = request.getParameter("isbn");
-            LibriBean libro= null;
+            LibriBean libro = null;
             try {
                 libro = model.doRetrieveByKey(isbn);
-                model.doDelete(libro, "Libri");
+                model.doDelete(libro);
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            request.setAttribute("message", "Prodotto "+ libro.getTitolo()+" Eliminato");
-            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
+            request.setAttribute("message", "Prodotto " + libro.getTitolo() + " Eliminato");
+            response.sendRedirect(request.getContextPath() + "/Admin/libriManagement.jsp");
         }
 
-        if(action != null && action.equals("modifyBook")){
-            String titolo= request.getParameter("titolo");
-            String isbn= request.getParameter("isbn");
-            String autore= request.getParameter("autore");
-            int anno= Integer.parseInt(request.getParameter("anno"));
-            String pubblicazione= request.getParameter("pubblicazione");
-            String immagine= request.getParameter("immagine");
+        if (action != null && action.equals("modifyBook")) {
+            String titolo = request.getParameter("titolo");
+            String isbn = request.getParameter("isbn");
+            String autore = request.getParameter("autore");
+            int anno = Integer.parseInt(request.getParameter("anno"));
+            String pubblicazione = request.getParameter("pubblicazione");
+            String immagine = request.getParameter("immagine");
 
-            LibriBean bean= new LibriBean();
+            LibriBean bean = new LibriBean();
             bean.setTitolo(titolo);
             bean.setIsbn(isbn);
             bean.setAutore(autore);
@@ -83,18 +83,17 @@ public class LibriOperationAdmin extends HttpServlet {
             bean.setCasaEditrice(pubblicazione);
             bean.setImmagine(immagine);
 
-            try{
+            try {
                 model.doUpdate(bean);
-            } catch (SQLException throwables){
+            } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
-
+            response.sendRedirect(request.getContextPath() + "/Admin/libriManagement.jsp");
 
 
         }
 
-        if(action != null && action.equals("retrieveAll")) {
+        if (action != null && action.equals("retrieveAll")) {
             try {
                 request.setAttribute("libri", model.doRetriveAll());
             } catch (SQLException e) {
@@ -104,7 +103,6 @@ public class LibriOperationAdmin extends HttpServlet {
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Admin/libriManagement.jsp");
             dispatcher.forward(request, response);
         }
-
 
 
     }

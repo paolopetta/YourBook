@@ -60,7 +60,7 @@ public class UsersOperation extends HttpServlet {
 
             try {
                 user = (UserBean) model.doRetrieveByKey(Collections.singletonList(idUtente));
-                model.doDelete((List<String>) user);
+                model.doDelete(user);
                 throw new SQLException();
 
             } catch (SQLException e) {
