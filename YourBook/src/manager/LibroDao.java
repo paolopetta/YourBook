@@ -2,6 +2,8 @@ package manager;
 
 import control.servlet.DriverManagerConnectionPool;
 import model.LibriBean;
+import model.UserBean;
+import model.UtenteLibro;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -176,6 +178,26 @@ public class LibroDao implements LibriModel<LibriBean>{
             String sql = "DELETE FROM "+ TABLE_NAME + " WHERE isbn=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
+            ps.executeUpdate();
+            con.commit();
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void doSaveRating (UtenteLibro utenteLibro) throws SQLException{
+        String isbn = utenteLibro.getIsbn();
+        int id_utente= utenteLibro.getId_utente();
+        int rating= utenteLibro.getValutazione();
+        try (Connection con = DriverManagerConnectionPool.getConnection()) {
+            String sql = "INSERT INTO UtenteLibro (id_utente, isbn, valutazione) VALUES (?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id_utente);
+            ps.setString(2, isbn);
+            ps.setInt(3, rating);
             ps.executeUpdate();
             con.commit();
             ps.close();

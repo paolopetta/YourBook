@@ -3,6 +3,7 @@ package control.servlet;
 import manager.LibroDao;
 import model.LibriBean;
 import model.UserBean;
+import model.UtenteLibro;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,16 +32,31 @@ public class LibriOperation extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //Mostrare tutti i libri
-        try {
-            request.setAttribute("libri", model.doRetriveAll());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
-        //System.out.println("Dentro UserOperation");
+
+        if(action != null && action.equals("retrieveAll")) {
+            //Mostrare tutti i libri
+            try {
+                request.setAttribute("libri", model.doRetriveAll());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/libri.jsp");
+            dispatcher.forward(request, response);
+        }
+
+        if(action != null && action.equals("retrieveIns")) {
+            //Mostrare tutti i libri
+            try {
+                request.setAttribute("libri", model.doRetriveAll());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/InsertBook.jsp");
+            dispatcher.forward(request, response);
+        }
 
         if (action != null && action.equals("Insert")) {
             String isbn = request.getParameter("isbn");
@@ -75,7 +91,7 @@ public class LibriOperation extends HttpServlet {
             LibriBean libri = null;
 
             try {
-                libri = model.doRetriveByKey(isbn);
+                libri = model.doRetrieveByKey(isbn);
                 model.doDelete(libri);
                 throw new SQLException();
 
@@ -84,6 +100,25 @@ public class LibriOperation extends HttpServlet {
             }
             request.setAttribute("message", "Prodotto " + libri.getTitolo() + " eliminato");
             response.sendRedirect(request.getContextPath() + "/libri.jsp");
+        }
+
+        if (action != null && action.equals("insRating")){
+            String isbn = request.getParameter("isbn");
+            int rating= Integer.parseInt(request.getParameter("valutazione"));
+            int id_utente = Integer.parseInt(request.getParameter("id_utente"));
+
+            UtenteLibro utenteLibro= new UtenteLibro();
+            utenteLibro.setId_utente(id_utente);
+            utenteLibro.setIsbn(isbn);
+            utenteLibro.setValutazione(rating);
+
+            try {
+                model.doSaveRating(utenteLibro);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            response.sendRedirect(request.getContextPath() + "/InsertBook.jsp");
+
         }
     }
 }

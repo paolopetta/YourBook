@@ -54,6 +54,7 @@ CREATE TABLE Wishlist (
 CREATE TABLE UtenteLibro (
 	id_utente INT NOT NULL,
     isbn VARCHAR(255) NOT NULL,
+    valutazione INT NOT NULL,
 
     PRIMARY KEY(id_utente, isbn),
     FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),

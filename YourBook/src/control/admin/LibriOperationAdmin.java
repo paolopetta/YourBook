@@ -58,7 +58,7 @@ public class LibriOperationAdmin extends HttpServlet {
             LibriBean libro= null;
             try {
                 libro = model.doRetrieveByKey(isbn);
-                model.doDelete(libro, "Libri");
+                model.doDelete(libro);
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -89,9 +89,6 @@ public class LibriOperationAdmin extends HttpServlet {
                 throwables.printStackTrace();
             }
             response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
-
-
-
         }
 
         if(action != null && action.equals("retrieveAll")) {
