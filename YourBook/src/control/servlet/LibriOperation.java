@@ -5,6 +5,7 @@ import model.LibriBean;
 import model.UserBean;
 import model.UtenteLibro;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,7 +35,7 @@ public class LibriOperation extends HttpServlet {
 
         String action = request.getParameter("action");
 
-        if(action != null && action.equals("retrieveAll")) {
+        if (action != null && action.equals("retrieveAll")) {
             //Mostrare tutti i libri
             try {
                 request.setAttribute("libri", model.doRetriveAll());
@@ -45,7 +46,7 @@ public class LibriOperation extends HttpServlet {
             dispatcher.forward(request, response);
         }
 
-        if(action != null && action.equals("retrieveIns")) {
+        if (action != null && action.equals("retrieveIns")) {
             //Mostrare tutti i libri
             try {
                 request.setAttribute("libri", model.doRetriveAll());
@@ -100,12 +101,12 @@ public class LibriOperation extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/libri.jsp");
         }
 
-        if (action != null && action.equals("insRating")){
+        if (action != null && action.equals("insRating")) {
             String isbn = request.getParameter("isbn");
-            int rating= Integer.parseInt(request.getParameter("valutazione"));
+            int rating = Integer.parseInt(request.getParameter("valutazione"));
             int id_utente = Integer.parseInt(request.getParameter("id_utente"));
 
-            UtenteLibro utenteLibro= new UtenteLibro();
+            UtenteLibro utenteLibro = new UtenteLibro();
             utenteLibro.setId_utente(id_utente);
             utenteLibro.setIsbn(isbn);
             utenteLibro.setValutazione(rating);
@@ -116,7 +117,6 @@ public class LibriOperation extends HttpServlet {
                 throwables.printStackTrace();
             }
             response.sendRedirect(request.getContextPath() + "/InsertBook.jsp");
-
         }
     }
 }
