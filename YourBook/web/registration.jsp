@@ -16,37 +16,37 @@
 
 </head>
 <body>
-<%@ include file="navBar.jsp" %>
+<%@ include file="navBar.jsp"%>
 
 <div class="cont">
     <div class="formArea">
         <div class="formCol">
-            <form action="" method="post" name="registrazione">
+            <form action="register" method="POST" name="registration">
                 <table>
                     <tr>
                         <td><label for="nome">Nome</label></td>
-                        <td><input type="text" id="nome" name="nome" placeholder="Mario"></td>
+                        <td><input type="w3-text" id="nome" name="nome" placeholder="Mario" oninput="validaNome()"></td>
                     </tr>
 
                     <tr>
                         <td><label for="cognome">Cognome</label></td>
-                        <td><input type="text" id="cognome" name="cognome" placeholder="Rossi"></td>
+                        <td><input type="w3-text" id="cognome" name="cognome" placeholder="Rossi" oninput="validaCognome()"></td>
                     </tr>
 
                     <tr>
                         <td><label for="email">Email</label></td>
-                        <td><input type="email" id="email" name="email" placeholder="mariorossi@posta.it"></td>
+                        <td><input type="w3-text" id="email" name="email" placeholder="mariorossi@posta.it" oninput="validaEmail()"></td>
                     </tr>
 
                     <tr>
                         <td><label for="pwd">Password</label></td>
-                        <td><input type="password" id="pwd" name="pwd" placeholder="password"></td>
+                        <td><input type="password" id="pwd" name="pwd" placeholder="password" oninput="validaPassword()"></td>
                     </tr>
 
 
                     <tr>
-                        <td><label for="Confpwd">Conferma Password</label></td>
-                        <td><input type="password" id="Confpwd" name="Confpwd" placeholder="password"></td>
+                        <td><label for="pwdConf">Conferma Password</label></td>
+                        <td><input type="password" id="pwdConf" name="pwdConf" placeholder="password" oninput="validaPassword()"></td>
                     </tr>
 
                     <tr>
@@ -86,7 +86,7 @@
                 <output name="result" for="result">
                 </output>
 
-                <button type="bottone">Registrati!</button>
+                <button type="submit" class="btn login_btn" id="registrami" disabled>Registrati!</button>
             </form>
         </div>
         <div class="logoCol">
@@ -95,7 +95,7 @@
         </div>
     </div>
 </div>
-
 <%@ include file="footer.jsp" %>
+<script src="${pageContext.servletContext.contextPath}/JS/validate.js"></script>
 </body>
 </html>

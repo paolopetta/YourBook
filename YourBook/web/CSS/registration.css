@@ -25,12 +25,12 @@ body {
     margin-top: 210px;
     margin-bottom: 100px;
     display: flex;
-    flex-direction: row;
-    /*flex-wrap: wrap-reverse;*/
+    flex-flow: row-reverse wrap-reverse;
     width: fit-content;
     height: fit-content;
     border-radius: 20px;
     background-color: #fff;
+    padding: 0 20px;
 }
 
 .formArea > .formCol > form > table {
@@ -71,9 +71,14 @@ input:focus, select:focus {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.formArea > .logoCol {
+    order: 2;
+    flex: 0 1 auto;
+}
 
-.formArea > .logoCol, .formArea > .formCol {
-    width: 50%;
+.formArea > .formCol {
+    order: 1;
+    flex: 0 1 auto;
 }
 
 .formArea > .logoCol > h1 {
@@ -81,6 +86,7 @@ input:focus, select:focus {
     font-family: "Courier New", Courier, monospace;
     text-align: center;
     color: #5a5e62;
+    width: 100%;
 }
 
 .formArea > .logoCol > img {
