@@ -25,12 +25,7 @@
                 <table>
                     <tr>
                         <td><label for="nome">Nome</label></td>
-                        <td><input type="w3-text" id="nome" name="nome" placeholder="Mario" oninput="validaNome()"></td>
-                    </tr>
-
-                    <tr>
-                        <td><label for="cognome">Cognome</label></td>
-                        <td><input type="w3-text" id="cognome" name="cognome" placeholder="Rossi" oninput="validaCognome()"></td>
+                        <td><input type="w3-text" id="nome" name="nome" placeholder="Mario" oninput="validaNome()" autofocus></td>
                     </tr>
 
                     <tr>
@@ -42,7 +37,6 @@
                         <td><label for="pwd">Password</label></td>
                         <td><input type="password" id="pwd" name="pwd" placeholder="password" oninput="validaPassword()"></td>
                     </tr>
-
 
                     <tr>
                         <td><label for="pwdConf">Conferma Password</label></td>
@@ -69,16 +63,16 @@
                     <tr>
                         <td><label for="eta">Anno di nascita</label></td>
                         <td><select id="eta" name="eta">
-                            <option value="1998">1998</option>
-                            <option value="1999">1999</option>
-                            <option value="2000">2000</option>
-                            <option value="2001">2001</option>
-                            <option value="2002">2002</option>
-                            <option value="2003">2003</option>
-                            <option value="2004">2004</option>
-                            <option value="2005">2005</option>
-                            <option value="2006">2006</option>
-                            <option value="2007">2007</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="27">27</option>
+                            <option value="26">26</option>
                         </select></td>
                     </tr>
 

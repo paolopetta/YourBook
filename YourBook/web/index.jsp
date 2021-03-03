@@ -271,11 +271,10 @@
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
+            <img class="mx-auto rounded-circle" src="Immagini/fotoSerena.jpg" alt="" />
             <h4>Serena D'Urso</h4>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/robotbabe/"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/serena-d-urso-6b0994144/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="col-lg-4">

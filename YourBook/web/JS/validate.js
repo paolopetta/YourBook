@@ -2,7 +2,6 @@ var borderOk = '2px solid #080';
 var borderNo = '2px solid #f00';
 var passwordOk = false;
 var nomeOk = false;
-var cognomeOk = false;
 var emailOk = false;
 
 function validaPassword() {
@@ -25,21 +24,6 @@ function validaPassword() {
         inputpw.style.border = borderNo;
         inputpwconf.style.border = borderNo;
         passwordOk = false;
-    }
-
-    cambiaStatoRegistrami();
-}
-
-function validaCognome() {
-    var inputCognome = document.forms['registration']['cognome'];
-
-    if (inputCognome.value.trim().length > 0
-        && inputCognome.value.match(/^[ a-zA-Z\u00C0-\u00ff]+$/)) {
-        inputCognome.style.border = borderOk;
-        cognomeOk = true;
-    } else {
-        inputCognome.style.border = borderNo;
-        cognomeOk = false;
     }
 
     cambiaStatoRegistrami();
@@ -74,7 +58,7 @@ function validaEmail() {
 }
 
 function cambiaStatoRegistrami() {
-    if (passwordOk && nomeOk && emailOk && cognomeOk) {
+    if (passwordOk && nomeOk && emailOk) {
         document.getElementById('registrami').disabled = false;
         document.getElementById('result').innerHTML = 'Registrato con successo';
     } else {
