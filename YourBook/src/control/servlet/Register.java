@@ -1,8 +1,8 @@
 package control.servlet;
 
 import model.UserBean;
-import exception.IllegalArgumentException;
 import manager.UtenteDao;
+import exception.IllegalArgumentException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
