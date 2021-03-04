@@ -30,13 +30,12 @@ public class LibriOperation extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< Updated upstream
 
         //Mostrare tutti i libri
         try {
-=======
-        try {0
->>>>>>> Stashed changes
+
+        try {
+
             request.setAttribute("libri", model.doRetriveAll());
         } catch (SQLException e) {
             e.printStackTrace();

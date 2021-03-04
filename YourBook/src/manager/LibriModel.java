@@ -9,13 +9,11 @@ import java.util.Collection;
 
 public interface LibriModel<T> {
 
-<<<<<<< Updated upstream
     public T doRetrieveByKey(String isbn) throws SQLException;
-=======
-    public Collection<LibriBean> doRetriveByAllFragment(String isbn, String titolo, String autore, String immagine, String genere, String anno_pubb) throws SQLException;
+
+    public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException;
 
     public T doRetriveByKey(String isbn) throws SQLException;
->>>>>>> Stashed changes
 
     public Collection<T> doRetriveAll() throws SQLException;
 
