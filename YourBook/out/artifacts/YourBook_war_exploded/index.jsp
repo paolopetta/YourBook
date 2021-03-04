@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: pavil
-  Date: 07/01/2021
-  Time: 12:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
@@ -52,10 +45,10 @@
           <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp" >Inserisci Titolo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
+          <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+          <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/libri.jsp">Libri</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/myWishList.jsp">Wishlist</a>
@@ -103,15 +96,15 @@
         <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
                         </span>
-          <h4 class="my-3">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="my-3">Assistenza</h4>
+          <p class="text-muted">Offriamo assistenza 24/7</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- Portfolio Grid-->
+  <!-- Portfolio Grid
   <section class="page-section bg-light" id="portfolio">
     <div class="container">
       <div class="text-center">
@@ -205,7 +198,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- About-->
   <section class="page-section" id="about">
     <div class="container">
@@ -269,7 +262,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" />
+            <img class="mx-auto rounded-circle" src="Immagini/fotoPaolo.jpg" alt="" />
             <h4>Paolo Petta</h4>
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -278,11 +271,10 @@
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
+            <img class="mx-auto rounded-circle" src="Immagini/fotoSerena.jpg" alt="" />
             <h4>Serena D'Urso</h4>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/robotbabe/"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/serena-d-urso-6b0994144/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="col-lg-4">

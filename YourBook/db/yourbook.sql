@@ -12,6 +12,7 @@ GRANT ALL ON YourBook.* TO 'yourbook'@'localhost';
 
 -- auth, serve a identificare se un utente è un utente normale o avanzato
 -- false, significa che è un utente normale
+-- eta
 CREATE TABLE Utente (
 	id_utente INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(25) NOT NULL,
@@ -54,6 +55,7 @@ CREATE TABLE Wishlist (
 CREATE TABLE UtenteLibro (
 	id_utente INT NOT NULL,
     isbn VARCHAR(255) NOT NULL,
+    valutazione INT NOT NULL,
 
     PRIMARY KEY(id_utente, isbn),
     FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),
@@ -65,7 +67,7 @@ INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Franco@gmail.co
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Gianluca@gmail.com',sha1("prova"),'Gianluca','stockton, california, usa',18,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Smith@gmail.com',sha1("prova"),'Smith','moscow, yukon territory, russia',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Frank@gmail.com',sha1("prova"),'Frank','porto, v.n.gaia, portugal',17,0);
-INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Serena@gmail.com',sha1("prova"),'Serena','farnborough, hants, united kingdom',NULL,0);
+INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('serena@gmail.com',sha1("prova"),'Serena','farnborough, hants, united kingdom',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Paolo@gmail.com',sha1("prova"),'Paolo','santa monica, california, usa',61,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Riccardo@gmail.com',sha1("prova"),'Riccardo','washington, dc, usa',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Vincenzo@gmail.com',sha1("prova"),'Vincenzo','timmins, ontario, canada',NULL,0);

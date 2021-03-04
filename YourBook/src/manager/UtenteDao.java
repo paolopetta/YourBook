@@ -61,7 +61,7 @@ public class UtenteDao implements DaoModel {
         return bean;
     }
 
-    /*public synchronized void doSavePar(Bean bean) throws SQLException {
+    public synchronized void doSavePar(Bean bean) throws SQLException {
         PreparedStatement ps = null;
         Connection con = null;
 
@@ -90,7 +90,7 @@ public class UtenteDao implements DaoModel {
                 pool.releaseConnection(con);
             }
         }
-    }*/
+    }
 
     @Override
     public synchronized void doSave(Bean bean) throws SQLException {

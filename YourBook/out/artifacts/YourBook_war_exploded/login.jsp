@@ -8,14 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <title>Login</title>
     <link rel="stylesheet" href="CSS/Login.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
 <%@ include file= "navBar.jsp" %>
-<header class="testata"></header>
+
 <div class="container h-100">
     <div class="d-flex justify-content-center h-100">
         <div class="user_card">
@@ -50,12 +49,13 @@
                 </form>
             </div>
 
-            <div class="mt-4">
-                <div class="d-flex justify-content-center links"> Non hai un account?
+            <div class="coso">
+                <div class="d-flex justify-content-center links">
+                    <p>Non hai un account?</p>
                     <a href="#" class="ml-2 nonReg">Registrati</a>
                 </div>
                 <div class="d-flex justify-content-center links">
-                    <a href="#" class="nonReg">Password dimenticata?</a>
+                    <a href="#" class="nonReg"><p>Password dimenticata?</p></a>
                 </div>
             </div>
         </div>

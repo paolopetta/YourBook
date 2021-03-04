@@ -13,7 +13,7 @@
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
     if(libri == null ) {
-        response.sendRedirect(response.encodeRedirectURL("./Libri"));
+        response.sendRedirect(response.encodeRedirectURL("./Libri?action=retrieveAll"));
         return;
     }
     LibriBean libro = (LibriBean) request.getAttribute("Libro");

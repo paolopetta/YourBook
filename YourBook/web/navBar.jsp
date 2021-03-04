@@ -35,7 +35,7 @@
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp" >Inserisci Titolo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="ChiSiamo.jsp">Chi Siamo</a>
+                <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>

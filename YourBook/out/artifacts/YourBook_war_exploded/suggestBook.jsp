@@ -12,10 +12,10 @@
 
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
-    if(libri == null ) {
-        response.sendRedirect(response.encodeRedirectURL("./Libri?action=retrieveAll"));
+    /*if(libri == null ) {
+        response.sendRedirect(response.encodeRedirectURL("./Libri?action=retrieveSuggest"));
         return;
-    }
+    }*/
     LibriBean libro = (LibriBean) request.getAttribute("Libro");
 %>
 

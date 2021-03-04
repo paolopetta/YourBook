@@ -2,13 +2,15 @@ package manager;
 
 import control.servlet.DriverManagerConnectionPool;
 import model.LibriBean;
+import model.UserBean;
+import model.UtenteLibro;
 
 import javax.sql.ConnectionPoolDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class LibroDao implements LibriModel<LibriBean>{
+public class LibroDao implements LibriModel<LibriBean> {
     private static final String TABLE_NAME = "Libro";
 
     public class LibroDao implements LibriModel<LibriBean> {
@@ -55,9 +57,9 @@ public class LibroDao implements LibriModel<LibriBean>{
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        LibriBean bean= new LibriBean();
+        LibriBean bean = new LibriBean();
 
-        String selectSQL="SELECT * FROM libro WHERE isbn= ?";
+        String selectSQL = "SELECT * FROM Libro WHERE isbn=?";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -67,7 +69,7 @@ public class LibroDao implements LibriModel<LibriBean>{
             System.out.println("doRetrieveByKey:" + preparedStatement.toString());
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
 
                 bean.setIsbn(rs.getString("isbn"));
                 bean.setTitolo(rs.getString("titolo"));
@@ -80,7 +82,7 @@ public class LibroDao implements LibriModel<LibriBean>{
             }
         } finally {
             try {
-                if(preparedStatement != null)
+                if (preparedStatement != null)
                     preparedStatement.close();
             } finally {
                 DriverManagerConnectionPool.releaseConnection(connection);
@@ -97,7 +99,7 @@ public class LibroDao implements LibriModel<LibriBean>{
 
         Collection<LibriBean> libri = new ArrayList<LibriBean>();
 
-        String selectSQL = "SELECT * FROM libro";
+        String selectSQL = "SELECT * FROM Libro";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -106,7 +108,7 @@ public class LibroDao implements LibriModel<LibriBean>{
             System.out.println("doRetrieveAll:" + preparedStatement.toString());
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
                 LibriBean bean = new LibriBean();
 
                 bean.setIsbn(rs.getString("isbn"));
@@ -120,15 +122,14 @@ public class LibroDao implements LibriModel<LibriBean>{
 
                 libri.add(bean);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
-                if(preparedStatement != null)
+                if (preparedStatement != null)
                     preparedStatement.close();
                 DriverManagerConnectionPool.releaseConnection(connection);
-            }catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -155,14 +156,14 @@ public class LibroDao implements LibriModel<LibriBean>{
             preparedStatement.setInt(6, libro.getAnno_pubb());
 
 
-            System.out.println("doSave: "+ preparedStatement.toString());
+            System.out.println("doSave: " + preparedStatement.toString());
             preparedStatement.executeUpdate();
 
             connection.commit();
 
         } finally {
             try {
-                if(preparedStatement != null)
+                if (preparedStatement != null)
                     preparedStatement.close();
             } finally {
                 DriverManagerConnectionPool.releaseConnection(connection);
@@ -178,7 +179,7 @@ public class LibroDao implements LibriModel<LibriBean>{
         /*String updateSQL = "UPDATE Libro " +
                 "SET isbn= ?, titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? " +
                 "WHERE isbn=?;";*/
-        String updateSQL= "UPDATE Libro SET titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? WHERE isbn= ?;";
+        String updateSQL = "UPDATE Libro SET titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? WHERE isbn= ?;";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -192,14 +193,14 @@ public class LibroDao implements LibriModel<LibriBean>{
             preparedStatement.setString(6, libro.getIsbn());
 
 
-            System.out.println("doUpdate: "+ preparedStatement.toString());
+            System.out.println("doUpdate: " + preparedStatement.toString());
             preparedStatement.executeUpdate();
 
             connection.commit();
 
         } finally {
             try {
-                if(preparedStatement != null)
+                if (preparedStatement != null)
                     preparedStatement.close();
             } finally {
                 DriverManagerConnectionPool.releaseConnection(connection);
@@ -211,9 +212,29 @@ public class LibroDao implements LibriModel<LibriBean>{
     public void doDelete(LibriBean libro) throws SQLException {
         String isbn = libro.getIsbn();
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
-            String sql = "DELETE FROM "+ TABLE_NAME + " WHERE isbn=?";
+            String sql = "DELETE FROM Libro WHERE isbn=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
+            ps.executeUpdate();
+            con.commit();
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void doSaveRating (UtenteLibro utenteLibro) throws SQLException{
+        String isbn = utenteLibro.getIsbn();
+        int id_utente= utenteLibro.getId_utente();
+        int rating= utenteLibro.getValutazione();
+        try (Connection con = DriverManagerConnectionPool.getConnection()) {
+            String sql = "INSERT INTO UtenteLibro (id_utente, isbn, valutazione) VALUES (?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id_utente);
+            ps.setString(2, isbn);
+            ps.setInt(3, rating);
             ps.executeUpdate();
             con.commit();
             ps.close();

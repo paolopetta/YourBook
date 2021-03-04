@@ -1,7 +1,7 @@
 package control.filter;
 
 
-/*
+
 import model.UserBean;
 
 import javax.servlet.*;
@@ -27,22 +27,22 @@ public class AuthFilter implements Filter {
         String uri = request.getRequestURI();
         if (session != null) {
             if (uri.contains("/User/")) { //qualcuno tenta di accedere alle pagine utente
-                if (userBean != null && (userBean.getAuth() || !userBean.getAuth()))
+                if (userBean != null )
                     chain.doFilter(req, resp); //se registrato vado avanti con i filtri
                 else
                     response.sendRedirect(response.encodeRedirectURL(request.getContextPath()) + "/index.jsp"); //se non é reg rimanda alla home
             } else if (uri.contains("/Admin/")) { //qualcuno tenta di accedere alle pagine admin
-                if (userBean != null && (userBean.getAuth().equals(true))) chain.doFilter(req, resp);
+                if (userBean != null && (userBean.isAdmin().equals(true))) chain.doFilter(req, resp);
                 else response.sendRedirect(response.encodeRedirectURL(request.getContextPath()) + "/index.jsp");
             }
             else if(uri.contains("/UserServlet")) {
-                if (userBean != null && (userBean.getAuth() || !userBean.getAuth()))
+                if (userBean != null)
                     chain.doFilter(req, resp); //se registrato vado avanti con i filtri
                 else
                     response.sendRedirect(response.encodeRedirectURL(request.getContextPath()) + "/index.jsp"); //se non é reg rimanda alla home
             }
             else if(uri.contains("/AdminServlet")) {
-                if (userBean != null && (userBean.getAuth().equals("admin")))
+                if (userBean != null && (userBean.isAdmin().equals(true)))
                     chain.doFilter(req, resp); //se registrato vado avanti con i filtri
                 else
                     response.sendRedirect(response.encodeRedirectURL(request.getContextPath()) + "/index.jsp"); //se non é reg rimanda alla home
@@ -55,4 +55,3 @@ public class AuthFilter implements Filter {
     }
 
 }
-*/

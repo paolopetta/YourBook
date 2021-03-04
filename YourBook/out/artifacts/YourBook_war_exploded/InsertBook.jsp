@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.util.Collection" %>
+<%@ page import="model.LibriBean" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="model.UserBean" %><%--
   Created by IntelliJ IDEA.
   User: pavil
   Date: 17/01/2021
@@ -6,6 +9,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Collection<?> libri = (Collection<?>) request.getAttribute("libri");
+    UserBean userBean = (UserBean) session.getAttribute("user");
+    if(libri == null ) {
+        response.sendRedirect(response.encodeRedirectURL("./Libri?action=retrieveIns"));
+        return;
+    }
+%>
 <html>
 <head>
     <title>Inserisci Libro</title>
@@ -19,22 +30,46 @@
     <h1 align="center">Inserisci il titolo che hai letto</h1>
     <h3 align="center">Puoi scegliere il titolo che hai letto tra quelli presenti sul sito e lasciare la tua valutazione</h3>
 </div>
+<form action="${pageContext.request.contextPath}/Libri?action=insRating" method="POST">
+    <div class="inserisciTitolo">
+        <select name="libro" class="form-control">
+            <%
+                if(libri != null && libri.size() > 0) {
 
-<div class="inserisciTitolo">
-    <select class="form-control">
-        <option>Libri</option>
-    </select>
-    <a href="#">Il libro non é presente in questo elenco?</a>
-</div>
+                    Iterator<?> it  = libri.iterator();
+                while(it.hasNext()) {
+                    LibriBean bean = (LibriBean) it.next();
+            %>
+            <option value="<%=bean.getIsbn()%>"><%=bean.getTitolo()%></option>
 
-<div class="inserisciTitolo">
-    <select class="form-control">
-        <option>Valutazione</option>
-    </select>
-</div>
-<div class="inserisciTitolo">
-    <button type="submit" class="btn btn-primary mb-2">Valuta</button>
-</div>
+            <%}}%> //chiusura parentesi if e while
+        </select>
+        <a href="#">Il libro non é presente in questo elenco?</a>
+    </div>
+
+    <div class="inserisciTitolo">
+        <select name= "valutazione" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <%if(userBean != null){%>
+    <div class="inserisciTitolo">
+        <button type="submit" class="btn btn-primary mb-2">Valuta</button>
+    </div>
+    <%} else{%>
+        <br><p align="center">Per valutare accedi o registrati</p>
+    <%}%>
+</form>
 
 
 <%@ include file= "footer.jsp" %>
