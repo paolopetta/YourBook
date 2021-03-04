@@ -13,7 +13,7 @@
 <header class="testata"></header>
 
 <%
-    libri= request.getAttribute("libriaction");
+    Collection<LibriBean> libri= (Collection<LibriBean>) request.getAttribute("ricerca");
 
     if(libri != null && libri.size() > 0) {
 

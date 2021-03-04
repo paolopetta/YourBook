@@ -13,7 +13,6 @@ import java.util.Collection;
 public class LibroDao implements LibriModel<LibriBean> {
     private static final String TABLE_NAME = "Libro";
 
-    public class LibroDao implements LibriModel<LibriBean> {
 
     @Override
     public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException {

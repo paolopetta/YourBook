@@ -36,7 +36,7 @@ public class RicercaServlet extends HttpServlet {
             if (action.equals("findBook")) {
                 try {
                     String titolo = request.getParameter("titolo");
-                    request.setAttribute("libriaction", model.doRetriveByAllFragment(titolo));
+                    request.setAttribute("ricerca", model.doRetriveByAllFragment(titolo));
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

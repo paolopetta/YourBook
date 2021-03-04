@@ -16,8 +16,6 @@ public interface LibriModel<T> {
 
     public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException;
 
-    public T doRetriveByKey(String isbn) throws SQLException;
-
     public Collection<T> doRetriveAll() throws SQLException;
 
     public void doSave(T libro) throws SQLException;
