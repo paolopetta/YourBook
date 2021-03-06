@@ -5,7 +5,7 @@ CREATE DATABASE YourBook;
 USE YourBook;
 
 DROP user IF EXISTS 'yourbook'@'localhost';
-CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Admin';
+CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Admin00';
 GRANT ALL ON YourBook.* TO 'yourbook'@'localhost';
 
 -- Creazione tabelle

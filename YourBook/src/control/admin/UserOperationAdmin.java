@@ -1,6 +1,5 @@
 package control.admin;
 
-
 import manager.UtenteDao;
 import model.UserBean;
 
@@ -15,10 +14,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/UserManagement")
-public class UserOperationAdmin extends HttpServlet{
+public class UserOperationAdmin extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    static UtenteDao model = new UtenteDao(); //Da rivedere
-
+    static UtenteDao model = new UtenteDao();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
@@ -28,55 +26,55 @@ public class UserOperationAdmin extends HttpServlet{
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
 
-        if(action != null && action.equals("insertUser")){
-            String email= request.getParameter("email");
-            String nome= request.getParameter("nome");
-            String nazionalita= request.getParameter("nazionalita");
-            int anni= Integer.parseInt(request.getParameter("eta"));
+        if (action != null && action.equals("insertUser")) {
+            String email = request.getParameter("email");
+            String nome = request.getParameter("nome");
+            String nazionalita = request.getParameter("nazionalita");
+            int anni = Integer.parseInt(request.getParameter("eta"));
 
-            UserBean bean= new UserBean();
+            UserBean bean = new UserBean();
             bean.setEmail(email);
             bean.setNome(nome);
             bean.setNazionalita(nazionalita);
             bean.setEta(anni);
 
-            try{
+            try {
                 model.doSave(bean);
-            } catch (SQLException throwables){
+            } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            response.sendRedirect(request.getContextPath()+"/Admin/userManagement.jsp");
+            response.sendRedirect(request.getContextPath() + "/Admin/userManagement.jsp");
 
         }
 
-        if(action != null && action.equals("deleteUser")){
+        if (action != null && action.equals("deleteUser")) {
             //Elimina utente
         }
 
-        if(action != null && action.equals("modifyUser")){
-            String email= request.getParameter("email");
-            String nome= request.getParameter("nome");
-            String nazionalita= request.getParameter("nazionalita");
-            int anni= Integer.parseInt(request.getParameter("eta"));
-            int id_utente= Integer.parseInt(request.getParameter("id_utente"));
+        if (action != null && action.equals("modifyUser")) {
+            String email = request.getParameter("email");
+            String nome = request.getParameter("nome");
+            String nazionalita = request.getParameter("nazionalita");
+            int anni = Integer.parseInt(request.getParameter("eta"));
+            int id_utente = Integer.parseInt(request.getParameter("id_utente"));
 
-            UserBean bean= new UserBean();
+            UserBean bean = new UserBean();
             bean.setEmail(email);
             bean.setNome(nome);
             bean.setNazionalita(nazionalita);
             bean.setEta(anni);
             bean.setId_utente(id_utente);
 
-            try{
+            try {
                 model.doUpdate(bean);
-            } catch (SQLException throwables){
+            } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            response.sendRedirect(request.getContextPath()+"/Admin/userManagement.jsp");
+            response.sendRedirect(request.getContextPath() + "/Admin/userManagement.jsp");
 
         }
 
-        if(action != null && action.equals("retrieveAll")) {
+        if (action != null && action.equals("retrieveAll")) {
             try {
                 request.setAttribute("utenti", model.doRetrieveAll());
             } catch (SQLException e) {

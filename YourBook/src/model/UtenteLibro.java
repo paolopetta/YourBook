@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class UtenteLibro implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     String isbn;
     int id_utente;
     int valutazione;

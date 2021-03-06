@@ -1,8 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
-    <title>Login</title>
+    <title>Login | YourBook</title>
     <link rel="stylesheet" href="CSS/Login.css">
 </head>
 <body>
@@ -19,20 +18,22 @@
             </div>
 
             <div class="d-flex justify-content-center form_container">
-                <form action="login" method="POST" name="login">
+                <form action="login?action=login" method="POST" name="login">
 
                     <div class="input-group mb-3">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="email" name="email" class="form-control input_user" placeholder="email" oninput="validaEmailLogin()">
+                        <input type="email" name="email" class="form-control input_user" placeholder="email"
+                               oninput="validaEmailLogin()">
                     </div>
 
                     <div class="input-group mb-2">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" name="pwd" class="form-control input_pass" placeholder="password" oninput="validaPasswordLogin()">
+                        <input type="password" name="pwd" class="form-control input_pass" placeholder="password"
+                               oninput="validaPasswordLogin()">
                     </div>
 
                     <div class="form-group">
@@ -52,7 +53,7 @@
             <div class="coso">
                 <div class="d-flex justify-content-center links">
                     <p>Non hai un account?</p>
-                    <a href="#" class="ml-2 nonReg">Registrati</a>
+                    <a href="registration.jsp" class="ml-2 nonReg">Registrati</a>
                 </div>
 
                 <div class="d-flex justify-content-center links">

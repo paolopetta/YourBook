@@ -9,18 +9,18 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Collections;
-import java.util.List;
 
 import manager.UtenteDao;
 import model.UserBean;
-
 
 @WebServlet("/Utenti")
 public class UsersOperation extends HttpServlet {
     private static final long serialVersionUID = 1L;
     static UtenteDao model = new UtenteDao();
 
-    public UsersOperation() {super();}
+    public UsersOperation() {
+        super();
+    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

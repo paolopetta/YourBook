@@ -19,11 +19,6 @@ public class UtenteDao implements DaoModel {
     private static final String TABLE_NAME = "Utente";
     private static DriverManagerConnectionPool pool = null;
 
-
-   /* public UserDao(DriverManagerConnectionPool pool) {
-        this.pool = pool;
-    }*/
-
     public static synchronized UserBean doRetrieveByEmail(String email) throws SQLException {
         PreparedStatement ps = null;
         Connection con = null;
@@ -164,11 +159,11 @@ public class UtenteDao implements DaoModel {
     @Override
     public synchronized void doDelete(UserBean bean) throws SQLException {
 
-        int id_utente= bean.getId_utente();
+        int id_utente = bean.getId_utente();
         String deleteQuery = "DELETE FROM " + TABLE_NAME + " WHERE id_utente=?";
 
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
-            String sql = "DELETE FROM "+ TABLE_NAME+ " WHERE id_utente=?";
+            String sql = "DELETE FROM " + TABLE_NAME + " WHERE id_utente=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id_utente);
             ps.executeUpdate();

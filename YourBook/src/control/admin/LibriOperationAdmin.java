@@ -19,7 +19,6 @@ public class LibriOperationAdmin extends HttpServlet {
 
     static LibroDao model = new LibroDao();
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -88,7 +87,7 @@ public class LibriOperationAdmin extends HttpServlet {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            response.sendRedirect(request.getContextPath()+"/Admin/libriManagement.jsp");
+            response.sendRedirect(request.getContextPath() + "/Admin/libriManagement.jsp");
         }
 
         if (action != null && action.equals("retrieveAll")) {
@@ -104,5 +103,4 @@ public class LibriOperationAdmin extends HttpServlet {
 
 
     }
-
 }

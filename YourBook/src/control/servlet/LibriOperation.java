@@ -2,7 +2,6 @@ package control.servlet;
 
 import manager.LibroDao;
 import model.LibriBean;
-import model.UserBean;
 import model.UtenteLibro;
 
 import javax.servlet.RequestDispatcher;

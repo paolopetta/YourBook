@@ -16,7 +16,7 @@ public class DriverManagerConnectionPool {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("DB driver not found:"+ e.getMessage());
+            System.out.println("DB driver not found:" + e.getMessage());
         }
     }
 
@@ -28,9 +28,9 @@ public class DriverManagerConnectionPool {
         String username = "root";
         String password = "Admin";
 
-        System.out.println(DriverManager.getConnection("jdbc:mysql://localhost:3306/YourBook?serverTimezone=UTC",username, password));
-        newConnection = DriverManager.getConnection("jdbc:mysql://"+ ip+":"+
-                port+"/"+db+"?serverTimezone=UTC",username, password);
+        System.out.println(DriverManager.getConnection("jdbc:mysql://localhost:3306/YourBook?serverTimezone=UTC", username, password));
+        newConnection = DriverManager.getConnection("jdbc:mysql://" + ip + ":" +
+                port + "/" + db + "?serverTimezone=UTC", username, password);
 
         System.out.println("Create a new DB connection"); //set Transaction
         newConnection.setAutoCommit(false);
@@ -58,16 +58,13 @@ public class DriverManagerConnectionPool {
         return connection;
     }
 
-    public static synchronized void releaseConnection(Connection connection)
-            throws SQLException {
-        if(connection != null) freeDbConnections.add(connection);
+    public static synchronized void releaseConnection(Connection connection) throws SQLException {
+        if (connection != null) freeDbConnections.add(connection);
     }
 
-    public void destroyPool() throws SQLException{
-        for(Connection c : freeDbConnections)
-            if(c != null && c.isClosed())
+    public void destroyPool() throws SQLException {
+        for (Connection c : freeDbConnections)
+            if (c != null && c.isClosed())
                 c.close();
     }
-
-
 }

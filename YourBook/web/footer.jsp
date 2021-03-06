@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: pavil
-  Date: 17/01/2021
-  Time: 17:07
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!-- Footer -->
 <footer class="bg-light text-center text-lg-start">
     <div style="background-color: #44d3fb">
         <!-- Grid container -->
-        <div class="container p-4" >
+        <div class="container p-4">
             <!--Grid row-->
             <div class="row">
                 <!--Grid column-->
@@ -19,7 +12,7 @@
                     <h5 class="text-uppercase">Contattaci</h5>
 
                     <p>
-                       <strong> Bisogno di Aiuto?</strong><br>
+                        <strong> Bisogno di Aiuto?</strong><br>
                         Se hai bisogno di aiuto contattaci a assistenza@yourbook.com
                     </p>
                 </div>
@@ -47,7 +40,7 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" >
+        <div class="text-center p-3">
             © 2020 Copyright:
             <a class="text-dark" href="">YourBook.it</a>
         </div>
