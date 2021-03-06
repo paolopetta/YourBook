@@ -32,8 +32,12 @@
           <div class="container h-100">
             <div class="d-flex justify-content-center h-100">
               <div class="searchbar">
-                <input class="search_input" type="text" name="" placeholder="Cerca...">
-                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                <!--<input class="search_input" type="text" name="" placeholder="Cerca...">
+                <a href="\${pageContext.request.contextPath}/RicercaServlet" class="search_icon"><i class="fas fa-search"></i></a>-->
+                <form action="${pageContext.request.contextPath}/RicercaServlet?action=findbook">
+                  <input class="search_input" type="text" id="titolo" name="titolo">
+                  <input type="submit" value="Submit">
+                </form>
               </div>
             </div>
           </div>

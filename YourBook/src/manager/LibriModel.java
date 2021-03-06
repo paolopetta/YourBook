@@ -1,6 +1,8 @@
 package manager;
 
 import model.LibriBean;
+
+import java.sql.SQLClientInfoException;
 import model.UserBean;
 import model.UtenteLibro;
 
@@ -11,6 +13,8 @@ import java.util.Collection;
 public interface LibriModel<T> {
 
     public T doRetrieveByKey(String isbn) throws SQLException;
+
+    public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException;
 
     public Collection<T> doRetriveAll() throws SQLException;
 
