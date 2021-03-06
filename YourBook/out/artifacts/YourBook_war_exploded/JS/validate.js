@@ -29,6 +29,20 @@ function validaPassword() {
     cambiaStatoRegistrami();
 }
 
+function validaPasswordLogin() {
+    var inputpw = document.forms['login']['pwd'];
+    var password = inputpw.value;
+
+    if (password.length >= 8 && password.toUpperCase() != password
+        && password.toLowerCase() != password && /[0-9]/.test(password)) {
+        passwordOk = true;
+    } else {
+        passwordOk = false;
+    }
+
+    cambiaStatoLogme();
+}
+
 function validaNome() {
     var inputNome = document.forms['registration']['nome'];
 
@@ -57,12 +71,33 @@ function validaEmail() {
     cambiaStatoRegistrami();
 }
 
+function validaEmailLogin() {
+    var input = document.forms['login']['email'];
+    if (input.value.match(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w+)+$/)) {
+        emailOk = true;
+    } else {
+        emailOk = false;
+    }
+
+    cambiaStatoLogme();
+}
+
 function cambiaStatoRegistrami() {
     if (passwordOk && nomeOk && emailOk) {
         document.getElementById('registrami').disabled = false;
-        document.getElementById('result').innerHTML = 'Registrato con successo';
+        document.getElementById('result').innerHTML = '';
     } else {
         document.getElementById('registrami').disabled = true;
         document.getElementById('result').innerHTML = 'Verifica che tutti i campi siano in verde.';
+    }
+}
+
+function cambiaStatoLogme() {
+    if (passwordOk && emailOk) {
+        document.getElementById('logme').disabled = false;
+        document.getElementById('result').innerHTML = '';
+    } else {
+        document.getElementById('logme').disabled = true;
+        document.getElementById('result').innerHTML = 'Verifica email o password';
     }
 }
