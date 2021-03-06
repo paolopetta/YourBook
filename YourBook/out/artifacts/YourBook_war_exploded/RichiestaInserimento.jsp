@@ -35,7 +35,7 @@
       integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6 pb-5">
+        <div class="col-12 col-md-8 col-lg-6 p-3">
 
             <form action="mail.php" method="post">
                 <div class="card border-primary rounded-0">
