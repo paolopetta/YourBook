@@ -2,17 +2,14 @@ package manager;
 
 import control.servlet.DriverManagerConnectionPool;
 import model.LibriBean;
-import model.UserBean;
 import model.UtenteLibro;
 
-import javax.sql.ConnectionPoolDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class LibroDao implements LibriModel<LibriBean> {
     private static final String TABLE_NAME = "Libro";
-
 
     @Override
     public Collection<LibriBean> doRetriveByAllFragment(String titolo) throws SQLException {
@@ -31,7 +28,7 @@ public class LibroDao implements LibriModel<LibriBean> {
             System.out.println("doRetrieveByAllFragment:" + preparedStatement.toString());
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
                 LibriBean bean = new LibriBean();
 
                 bean.setIsbn(rs.getString("isbn"));
@@ -43,13 +40,12 @@ public class LibroDao implements LibriModel<LibriBean> {
 
                 libri.add(bean);
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             throw new
-        RuntimeException(e);
-    }
+                    RuntimeException(e);
+        }
         return libri;
-}
-
+    }
 
     @Override
     public LibriBean doRetrieveByKey(String isbn) throws SQLException {
@@ -223,11 +219,10 @@ public class LibroDao implements LibriModel<LibriBean> {
         }
     }
 
-
-    public void doSaveRating (UtenteLibro utenteLibro) throws SQLException{
+    public void doSaveRating(UtenteLibro utenteLibro) throws SQLException {
         String isbn = utenteLibro.getIsbn();
-        int id_utente= utenteLibro.getId_utente();
-        int rating= utenteLibro.getValutazione();
+        int id_utente = utenteLibro.getId_utente();
+        int rating = utenteLibro.getValutazione();
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
             String sql = "INSERT INTO UtenteLibro (id_utente, isbn, valutazione) VALUES (?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(sql);

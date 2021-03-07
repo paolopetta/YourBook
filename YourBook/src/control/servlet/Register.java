@@ -1,8 +1,8 @@
 package control.servlet;
 
 import model.UserBean;
-import exception.IllegalArgumentException;
 import manager.UtenteDao;
+import exception.IllegalArgumentException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,7 +31,7 @@ public class Register extends HttpServlet {
         String nazionalita = request.getParameter("nazionalita");
 
         String nome = request.getParameter("nome");
-        if (!(nome != null && nome.length() >= 3 && nome.matches("^[0-9a-zA-Z]+$"))) {
+        if (!(nome != null && nome.length() >= 3 && nome.matches("^[ a-zA-Z\\u00C0-\\u00ff]+$"))) {
             throw new IllegalArgumentException("Nome non valido.");
         }
 
@@ -47,7 +47,7 @@ public class Register extends HttpServlet {
         }
 
         String email = request.getParameter("email");
-        if (!(email != null && email.matches("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w+)+$"))) {
+        if (!(email != null && email.matches("^\\w+([\\.-]?\\w+)@\\w+([\\.-]?\\w+)(\\.\\w+)+$"))) {
             throw new IllegalArgumentException("Email non valida.");
         }
 
@@ -68,8 +68,7 @@ public class Register extends HttpServlet {
 
         request.setAttribute("message", "Registrazione effettuata con successo.");
 
-        //RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Message.jsp");
-        RequestDispatcher requestDispatcher = this.getServletContext().getRequestDispatcher("/Message.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("message.jsp");
         requestDispatcher.forward(request, response);
     }
 }

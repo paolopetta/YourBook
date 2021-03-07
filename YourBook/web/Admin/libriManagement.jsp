@@ -1,17 +1,11 @@
 <%@ page import="java.util.Collection" %>
 <%@ page import="model.LibriBean" %>
-<%@ page import="java.util.Iterator" %><%--
-  Created by IntelliJ IDEA.
-  User: pavil
-  Date: 17/01/2021
-  Time: 16:59
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
-    if(libri == null ) {
+    if (libri == null) {
         response.sendRedirect(response.encodeRedirectURL("../LibriManagement?action=retrieveAll"));
         return;
     }
@@ -27,8 +21,11 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/assets/vendor/nucleo/css/nucleo.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/Admin/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+          type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
@@ -91,10 +88,12 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-search"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Cerca" id="ricercaLibri" onkeyup="ricerca('ricercaLibri', 'listaLibri')" type="text">
+                            <input class="form-control" placeholder="Cerca" id="ricercaLibri"
+                                   onkeyup="ricerca('ricercaLibri', 'listaLibri')" type="text">
                         </div>
                     </div>
-                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
+                            aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </form>
@@ -118,194 +117,234 @@
                     </div>
                 </div>
 
-    <!-- Page content -->
-    <div class="container-fluid mt--6">
-        <div class="row">
-            <div class="col">
-                <div class="card" id="tabellaLibri">
-                    <!-- Card header -->
-                    <div class="card-header border-0">
-                        <h3 class="mb-0 testataTab">Libri</h3>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Aggiungi Libri</button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Aggiungi libro</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="${pageContext.request.contextPath}/LibriManagement?action=insertBook" method="POST">
-                                            <label>Titolo:</label><br>
-                                            <input name="titolo" type="text" maxlength="50" placeholder="Inserisci il titolo" required><br>
-
-                                            <label>Isbn:</label><br>
-                                            <input name="isbn" type="text" maxlength="50" placeholder="Inserisci l'isbn" required><br>
-
-                                            <label>Autore:</label><br>
-                                            <input name="autore" type="text" maxlength="50" placeholder="Inserisci l'autore" required><br>
-
-                                            <label>Anno:</label><br>
-                                            <input name="anno" type="number" maxlength="50" placeholder="Inserisci l'anno" required><br>
-
-                                            <label>Pubblicazione:</label><br>
-                                            <input name="pubblicazione" type="text" maxlength="50" placeholder="Inserisci la pubblicazione" required><br>
-
-                                            <label>Immagine:</label><br>
-                                            <input name="immagine" type="text" maxlength="255" placeholder="Inserisci il link"><br>
-
-                                            <button type="Submit" class="btn btn-primary modalForm">Aggiungi</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- Light table -->
-                    <div class="table-responsive">
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col" class="sort" data-sort="modifica">Modifica</th>
-                                <th scope="col" class="sort" data-sort="name">Titolo</th>
-                                <th scope="col" class="sort" data-sort="isbn">Isbn</th>
-                                <th scope="col" class="sort" data-sort="autore">Autore</th>
-                                <th scope="col" class="sort" data-sort="anno">Anno</th>
-                                <th scope="col" class="sort" data-sort="pubblicazione">Pubblicazione</th>
-                            </tr>
-                            </thead>
-
-                            <%
-                                if(libri != null && libri.size() > 0) {
-
-                                    Iterator<?> it  = libri.iterator();
-                            %>
-
-                            <tbody class="list" id="listaLibri">
-
-                            <%
-                                while(it.hasNext()) {
-                                    LibriBean bean = (LibriBean) it.next();
-                            %>
-
-                            <tr>
-                                <td>
+                <!-- Page content -->
+                <div class="container-fluid mt--6">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" id="tabellaLibri">
+                                <!-- Card header -->
+                                <div class="card-header border-0">
+                                    <h3 class="mb-0 testataTab">Libri</h3>
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2"><i class="fa fa-pencil-alt"></i></button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalLong">Aggiungi Libri
+                                    </button>
+
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle2">Modifica</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Aggiungi
+                                                        libro</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="${pageContext.request.contextPath}/LibriManagement?action=modifyBook" method="POST">
+                                                    <form action="${pageContext.request.contextPath}/LibriManagement?action=insertBook"
+                                                          method="POST">
                                                         <label>Titolo:</label><br>
-                                                        <input name="titolo" type="text" maxlength="50" placeholder="Inserisci il titolo" required><br>
+                                                        <input name="titolo" type="text" maxlength="50"
+                                                               placeholder="Inserisci il titolo" required><br>
 
                                                         <label>Isbn:</label><br>
-                                                        <input name="isbn" type="text" maxlength="50" placeholder="Inserisci l'isbn" required><br>
+                                                        <input name="isbn" type="text" maxlength="50"
+                                                               placeholder="Inserisci l'isbn" required><br>
 
                                                         <label>Autore:</label><br>
-                                                        <input name="autore" type="text" maxlength="50" placeholder="Inserisci l'autore" required><br>
+                                                        <input name="autore" type="text" maxlength="50"
+                                                               placeholder="Inserisci l'autore" required><br>
 
                                                         <label>Anno:</label><br>
-                                                        <input name="anno" type="number" maxlength="50" placeholder="Inserisci l'anno" required><br>
+                                                        <input name="anno" type="number" maxlength="50"
+                                                               placeholder="Inserisci l'anno" required><br>
 
                                                         <label>Pubblicazione:</label><br>
-                                                        <input name="pubblicazione" type="text" maxlength="50" placeholder="Inserisci la pubblicazione" required><br>
+                                                        <input name="pubblicazione" type="text" maxlength="50"
+                                                               placeholder="Inserisci la pubblicazione" required><br>
 
                                                         <label>Immagine:</label><br>
-                                                        <input name="immagine" type="text" maxlength="255" placeholder="Inserisci il link"><br>
+                                                        <input name="immagine" type="text" maxlength="255"
+                                                               placeholder="Inserisci il link"><br>
 
-                                                        <button type="Submit" class="btn btn-primary modalForm">Modifica</button>
+                                                        <button type="Submit" class="btn btn-primary modalForm">
+                                                            Aggiungi
+                                                        </button>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary" href="${pageContext.request.contextPath}/LibriManagement?action=deleteBook&isbn=<%=bean.getIsbn()%>"><i class="fa fa-times"></i></button>
-                                </td>
-                                <th scope="row">
-                                    <div class="media align-items-center">
-                                        <a href="#" class="avatar rounded-circle mr-3">
-                                            <img alt="Image placeholder" src="<%=bean.getImmagine()%>">
-                                        </a>
-                                        <div class="media-body">
-                                            <span class="name mb-0 text-sm"><%=bean.getTitolo()%></span>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td><%=bean.getIsbn()%></td>
-                                <td><%=bean.getAutore()%></td>
-                                <td><%=bean.getAnno_pubb()%></td>
-                                <td><%=bean.getCasaEditrice()%></td>
+                                </div>
+                                <!-- Light table -->
+                                <div class="table-responsive">
+                                    <table class="table align-items-center table-flush">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" class="sort" data-sort="modifica">Modifica</th>
+                                            <th scope="col" class="sort" data-sort="name">Titolo</th>
+                                            <th scope="col" class="sort" data-sort="isbn">Isbn</th>
+                                            <th scope="col" class="sort" data-sort="autore">Autore</th>
+                                            <th scope="col" class="sort" data-sort="anno">Anno</th>
+                                            <th scope="col" class="sort" data-sort="pubblicazione">Pubblicazione</th>
+                                        </tr>
+                                        </thead>
+
+                                        <%
+                                            if (libri != null && libri.size() > 0) {
+
+                                                Iterator<?> it = libri.iterator();
+                                        %>
+
+                                        <tbody class="list" id="listaLibri">
+
+                                        <%
+                                            while (it.hasNext()) {
+                                                LibriBean bean = (LibriBean) it.next();
+                                        %>
+
+                                        <tr>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#exampleModalLong2"><i
+                                                        class="fa fa-pencil-alt"></i></button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModalLong2" tabindex="-1"
+                                                     role="dialog" aria-labelledby="exampleModalLongTitle2"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle2">
+                                                                    Modifica</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="${pageContext.request.contextPath}/LibriManagement?action=modifyBook"
+                                                                      method="POST">
+                                                                    <label>Titolo:</label><br>
+                                                                    <input name="titolo" type="text" maxlength="50"
+                                                                           placeholder="Inserisci il titolo"
+                                                                           required><br>
+
+                                                                    <label>Isbn:</label><br>
+                                                                    <input name="isbn" type="text" maxlength="50"
+                                                                           placeholder="Inserisci l'isbn" required><br>
+
+                                                                    <label>Autore:</label><br>
+                                                                    <input name="autore" type="text" maxlength="50"
+                                                                           placeholder="Inserisci l'autore"
+                                                                           required><br>
+
+                                                                    <label>Anno:</label><br>
+                                                                    <input name="anno" type="number" maxlength="50"
+                                                                           placeholder="Inserisci l'anno" required><br>
+
+                                                                    <label>Pubblicazione:</label><br>
+                                                                    <input name="pubblicazione" type="text"
+                                                                           maxlength="50"
+                                                                           placeholder="Inserisci la pubblicazione"
+                                                                           required><br>
+
+                                                                    <label>Immagine:</label><br>
+                                                                    <input name="immagine" type="text" maxlength="255"
+                                                                           placeholder="Inserisci il link"><br>
+
+                                                                    <button type="Submit"
+                                                                            class="btn btn-primary modalForm">Modifica
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn btn-primary"
+                                                        href="${pageContext.request.contextPath}/LibriManagement?action=deleteBook&isbn=<%=bean.getIsbn()%>">
+                                                    <i class="fa fa-times"></i></button>
+                                            </td>
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+                                                    <a href="#" class="avatar rounded-circle mr-3">
+                                                        <img alt="Image placeholder" src="<%=bean.getImmagine()%>">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm"><%=bean.getTitolo()%></span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td><%=bean.getIsbn()%>
+                                            </td>
+                                            <td><%=bean.getAutore()%>
+                                            </td>
+                                            <td><%=bean.getAnno_pubb()%>
+                                            </td>
+                                            <td><%=bean.getCasaEditrice()%>
+                                            </td>
 
 
-                            </tr>
+                                        </tr>
 
-                            <% 		} %>
+                                        <% } %>
 
-                            </tbody>
-                            <% 		} %>
-                        </table>
-                    </div>
+                                        </tbody>
+                                        <% } %>
+                                    </table>
+                                </div>
 
-                    <!-- Card footer -->
-                    <div class="card-footer py-4">
-                        <nav aria-label="...">
-                            <ul class="pagination justify-content-end mb-0">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">
-                                        <i class="fas fa-angle-left"></i>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                                <!-- Card footer -->
+                                <div class="card-footer py-4">
+                                    <nav aria-label="...">
+                                        <ul class="pagination justify-content-end mb-0">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1">
+                                                    <i class="fas fa-angle-left"></i>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">2 <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    <i class="fas fa-angle-right"></i>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/chart.js/dist/Chart.min.js"></script>
-<script src="${pageContext.request.contextPath}/Admin/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-<!-- Argon JS -->
-<script src="${pageContext.request.contextPath}/Admin/assets/js/argon.js?v=1.2.0"></script>
-<script src="../JS/Admin.js"></script>
+            <!-- Argon Scripts -->
+            <!-- Core -->
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery/dist/jquery.min.js"></script>
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/js-cookie/js.cookie.js"></script>
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+            <!-- Optional JS -->
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/chart.js/dist/Chart.min.js"></script>
+            <script src="${pageContext.request.contextPath}/Admin/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+            <!-- Argon JS -->
+            <script src="${pageContext.request.contextPath}/Admin/assets/js/argon.js?v=1.2.0"></script>
+            <script src="../JS/Admin.js"></script>
 </body>
 
 

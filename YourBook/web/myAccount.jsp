@@ -18,7 +18,7 @@
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <img class="masthead-avatar mb-5" src="Immagini/avataaars.svg" alt="magine di profilo/>
-        <h1 class="masthead-heading text-uppercase mb-0">Serena D'Urso</h1>
+        <h1 class=" masthead-heading text-uppercase mb-0">Serena D'Urso</h1>
     </div>
 </header>
 

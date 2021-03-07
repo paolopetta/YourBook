@@ -4,12 +4,12 @@ body, html {
     padding: 0;
     height: 100%;
     background-image: url("../Immagini/bookBackground.jpg");
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-position:center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .user_card {
@@ -29,6 +29,7 @@ body, html {
     border-radius: 5px;
 
 }
+
 .brand_logo_container {
     position: absolute;
     height: 170px;
@@ -40,34 +41,41 @@ body, html {
     text-align: center;
     border: solid #0c85d0 3px;
 }
+
 .brand_logo {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     border: 0px;
 }
+
 .form_container {
     margin-top: 100px;
 }
+
 .login_btn {
     width: 100%;
     background: #44d3fb !important;
     color: white !important;
 }
+
 .login_btn:focus {
     box-shadow: none !important;
     outline: 0px !important;
 }
+
 .login_container {
     padding: 0 2rem;
 }
+
 .input-group-text {
     background: #44d3fb !important;
     color: white !important;
     border: 0 !important;
     border-radius: 0.25rem 0 0 0.25rem !important;
 }
-.input_user,.input_pass:focus {
+
+.input_user, .input_pass:focus {
     box-shadow: none !important;
     outline: 0px !important;
 }
@@ -86,14 +94,14 @@ body, html {
     margin-top: 0px;
 }
 
-.d-flex  > p {
+.d-flex > p {
     text-align: center;
     width: fit-content;
     height: fit-content;
     margin: 0px;
 }
 
-.d-flex  > a > p {
+.d-flex > a > p {
     text-align: center;
     width: fit-content;
     height: fit-content;
@@ -109,6 +117,6 @@ a:hover {
     color: #0c85d0;
 }
 
-.custom-checkbox .custom-control-input:checked ~.custom-control-label::before {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #44d3fb !important
 }

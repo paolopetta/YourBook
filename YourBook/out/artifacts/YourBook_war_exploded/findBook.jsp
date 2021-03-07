@@ -9,42 +9,44 @@
     <title>Trova il tuo libro</title>
 </head>
 <body>
-<%@ include file= "navBar.jsp" %>
+<%@ include file="navBar.jsp" %>
 <header class="testata"></header>
 
 <%
-    Collection<LibriBean> libri= (Collection<LibriBean>) request.getAttribute("ricerca");
+    Collection<LibriBean> libri = (Collection<LibriBean>) request.getAttribute("ricerca");
 
-    if(libri != null && libri.size() > 0) {
+    if (libri != null && libri.size() > 0) {
 
-        Iterator<?> it  = libri.iterator();
+        Iterator<?> it = libri.iterator();
 %>
 <div class="row row-cols-1 row-cols-md-4" id="libriUser">
 
     <%
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             LibriBean bean = (LibriBean) it.next();
     %>
 
     <div class="col mb-4">
-        <div class="card" >
+        <div class="card">
             <img src="<%=bean.getImmagine()%>" class="card-img-top" alt="..." width="500" height="300">
             <div class="card-body">
-                <h5 class="card-title" align="center"><%=bean.getTitolo()%></h5>
+                <h5 class="card-title" align="center"><%=bean.getTitolo()%>
+                </h5>
                 <p class="card-text" align="center"><strong>Isbn:</strong><br><%=bean.getIsbn()%><br>
                     <strong>Anno pubblicazione:</strong><br><%=bean.getAnno_pubb()%><br>
                     <strong>Autore:</strong><br><%=bean.getAutore()%>
                 </p>
-                <a href="WishlistServlet?action=addBook&id=<%=bean.getIsbn()%>" class="btn btn-primary" align="center">Aggiungi alla wishlist</a>
+                <a href="WishlistServlet?action=addBook&id=<%=bean.getIsbn()%>" class="btn btn-primary" align="center">Aggiungi
+                    alla wishlist</a>
             </div>
         </div>
     </div>
 
-    <% 		} %>
+    <% } %>
 </div>
 <% }%>
 
-<%@ include file= "footer.jsp" %>
+<%@ include file="footer.jsp" %>
 <!-- Bootstrap core JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

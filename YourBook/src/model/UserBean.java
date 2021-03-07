@@ -24,11 +24,11 @@ public class UserBean extends Bean implements Serializable, Cloneable {
         this.id_utente = id_utente;
         this.email = email;
         this.nome = nome;
-        this.eta= eta;
+        this.eta = eta;
         this.nazionalita = nazionalita;
         this.auth = auth; //false = utente normale
     }
-    
+
     public UserBean() {
         id_utente = -1;
         eta = -1;
@@ -139,7 +139,7 @@ public class UserBean extends Bean implements Serializable, Cloneable {
 
     @Override
     public int compareKey(Bean otherBean) {
-        if(this.getClass() != otherBean.getClass())
+        if (this.getClass() != otherBean.getClass())
             return 1;
         UserBean other = (UserBean) otherBean;
         return email.compareTo(other.email);

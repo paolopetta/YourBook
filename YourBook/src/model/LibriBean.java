@@ -15,12 +15,12 @@ public class LibriBean implements Serializable {
     int anno_pubb;
 
     public LibriBean() {
-        isbn= "";
-        titolo= "";
-        autore= "";
-        immagine= "";
-        genere= "";
-        anno_pubb= -1;
+        isbn = "";
+        titolo = "";
+        autore = "";
+        immagine = "";
+        genere = "";
+        anno_pubb = -1;
     }
 
     public String getIsbn() {
@@ -47,9 +47,13 @@ public class LibriBean implements Serializable {
         this.autore = autore;
     }
 
-    public String getCasaEditrice(){return casaEditrice;}
+    public String getCasaEditrice() {
+        return casaEditrice;
+    }
 
-    public void setCasaEditrice(String casaEditrice){this.casaEditrice= casaEditrice;}
+    public void setCasaEditrice(String casaEditrice) {
+        this.casaEditrice = casaEditrice;
+    }
 
     public String getImmagine() {
         return immagine;
@@ -92,5 +96,7 @@ public class LibriBean implements Serializable {
     }
 
     @Override
-    public boolean equals(Object other){ return (this.getIsbn() == ((LibriBean)other).getIsbn());}
+    public boolean equals(Object other) {
+        return (this.getIsbn() == ((LibriBean) other).getIsbn());
+    }
 }

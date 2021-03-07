@@ -1,12 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 28/02/2021
-  Time: 17:44
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html> <head>
+<html>
+<head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
 
@@ -19,25 +13,29 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        window.alert = function(){};
+        window.alert = function () {
+        };
         var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+
+        function changeCSS(css) {
+            if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
             else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
-        $( document ).ready(function() {
+
+        $(document).ready(function () {
             var iframe_height = parseInt($('html').height());
-            window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+            window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
         });
     </script>
 </head>
 <body>
-<%@ include file= "navBar.jsp" %>
+<%@ include file="navBar.jsp" %>
 <header class="testata"></header>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6 pb-5">
+        <div class="col-12 col-md-8 col-lg-6 p-3">
 
             <form action="mail.php" method="post">
                 <div class="card border-primary rounded-0">
@@ -53,7 +51,8 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
                                 </div>
-                                <input type="text" class="form-control" autore="autore" placeholder="Nome Autore" required="">
+                                <input type="text" class="form-control" autore="autore" placeholder="Nome Autore"
+                                       required="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -61,7 +60,8 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
                                 </div>
-                                <input type="text" class="form-control" titolo="titolo" placeholder="Titolo del Libro" required="">
+                                <input type="text" class="form-control" titolo="titolo" placeholder="Titolo del Libro"
+                                       required="">
                             </div>
                         </div>
 
@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<%@ include file= "footer.jsp" %>
-<script type="text/javascript"> </script>
-  </body>
+<%@ include file="footer.jsp" %>
+<script type="text/javascript"></script>
+</body>
 </html>

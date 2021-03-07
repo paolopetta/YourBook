@@ -1,6 +1,5 @@
 package control.servlet;
 
-
 import manager.LibroDao;
 import model.LibriBean;
 import model.WishlistBean;
@@ -22,7 +21,7 @@ public class WishlistServlet extends HttpServlet {
     static LibroDao model = new LibroDao();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,45 +29,45 @@ public class WishlistServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         WishlistBean wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
-    //}}//chiusura temporanea per prova
-        if(wishlist == null){
-            wishlist= new WishlistBean();
+        //}}//chiusura temporanea per prova
+        if (wishlist == null) {
+            wishlist = new WishlistBean();
             request.getSession().setAttribute("wishlist", wishlist);
         }
 
         String action = request.getParameter("action");
 
-       try {
-            if(action != null) {
-                if(action.equals("addBook")) {
+        try {
+            if (action != null) {
+                if (action.equals("addBook")) {
                     String id = request.getParameter("id");
                     LibriBean bean = model.doRetrieveByKey(id);
-                    if(bean != null && !bean.isEmpty()) {
-                        if(wishlist.alReadyIn(bean)) {}
-                        else
+                    if (bean != null && !bean.isEmpty()) {
+                        if (wishlist.alReadyIn(bean)) {
+                        } else
                             wishlist.addItem(bean);
-                        request.setAttribute("message", "Product "+ bean.getTitolo()+" added to Wishlist");
+                        request.setAttribute("message", "Product " + bean.getTitolo() + " added to Wishlist");
                     }
-                } else if(action.equals("clearWishlist")) {
+                } else if (action.equals("clearWishlist")) {
                     wishlist.deleteAll();
                     System.out.println("svuota");
                     request.setAttribute("message", "wishlist cleaned");
-                } else if(action.equals("deleteBook")) {
+                } else if (action.equals("deleteBook")) {
                     String id = request.getParameter("id");
                     LibriBean bean = model.doRetrieveByKey(id);
-                    if(bean != null && !bean.isEmpty()) {
+                    if (bean != null && !bean.isEmpty()) {
                         wishlist.deleteItem(bean);
-                        request.setAttribute("message", "Product "+ bean.getTitolo()+" deleted from Wishlist");
+                        request.setAttribute("message", "Product " + bean.getTitolo() + " deleted from Wishlist");
                     }
                 }
             }
-        } catch(NumberFormatException | SQLException e) {
-            System.out.println("Error: "+ e.getMessage());
+        } catch (NumberFormatException | SQLException e) {
+            System.out.println("Error: " + e.getMessage());
             request.setAttribute("error", e.getMessage());
         }
 
         session.setAttribute("wishlistTemp", wishlist);
-        response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/myWishList.jsp"));
+        response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/myWishList.jsp"));
 
     }
 }
