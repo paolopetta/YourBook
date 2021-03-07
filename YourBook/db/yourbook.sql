@@ -5,7 +5,7 @@ CREATE DATABASE YourBook;
 USE YourBook;
 
 DROP user IF EXISTS 'yourbook'@'localhost';
-CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Admin00';
+CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Password';
 GRANT ALL ON YourBook.* TO 'yourbook'@'localhost';
 
 -- Creazione tabelle
@@ -383,5 +383,4 @@ INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('4
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('451526279','Emma (Signet Classics (Paperback))','Jane Austen',1996,'Signet Classics','http://images.amazon.com/images/P/0451526279.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('451526341','Animal Farm','George Orwell',2004,'Signet','http://images.amazon.com/images/P/0451526341.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('486415864','Great Expectations (Dover Thrift Editions)','Charles Dickens',2001,'Dover Publications','http://images.amazon.com/images/P/0486415864.01.LZZZZZZZ.jpg');
-INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('553280589','Eva Luna','Isabel Allende',1989,'Bantam Books','http://images.amazon.com/images/P/0553280589.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('571197639','Poisonwood Bible Edition Uk','Barbara Kingsolver',0,'Faber Faber Inc','http://images.amazon.com/images/P/0571197639.01.LZZZZZZZ.jpg');
