@@ -52,7 +52,7 @@ public class Register extends HttpServlet {
         }
 
         UserBean utente = new UserBean();
-        utente.setPasswordhash(password);
+        utente.setPassword(password);
         utente.setNome(nome);
         utente.setEmail(email);
         utente.setNazionalita(nazionalita);

@@ -1,4 +1,9 @@
+<%@ page import="model.UserBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    UserBean user = (UserBean) session.getAttribute("utente");
+%>
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -25,9 +30,12 @@
                 <div class="container h-100">
                     <div class="d-flex justify-content-center h-100">
                         <div class="searchbar">
-                            <input class="search_input" type="text" name="" placeholder="Cerca...">
-                            <a href="${pageContext.request.contextPath}/RicercaServlet.java" class="search_icon"><i
-                                    class="fas fa-search"></i></a>
+                            <!--<input class="search_input" type="text" name="" placeholder="Cerca...">
+                            <a href="\${pageContext.request.contextPath}/RicercaServlet" class="search_icon"><i class="fas fa-search"></i></a>-->
+                            <form action="${pageContext.request.contextPath}/RicercaServlet?action=findbook">
+                                <input class="search_input" type="text" id="titolo" name="titolo">
+                                <input type="submit" value="Submit" class="search_icon">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -50,9 +58,19 @@
                 <a class="nav-link js-scroll-trigger"
                    href="${pageContext.request.contextPath}/myWishList.jsp">Wishlist</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
-            </li>
+            <%if (user != null){%>
+                <li class="nav-item">
+                    <a class="nav-link js scroll-trigger">Ciao <%=user.getNome()%></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js scroll-trigger" href="${pageContext.request.contextPath}/login?action=logout">Logout</a>
+                </li>
+            <%}
+            else{%>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
+                </li>
+            <%}%>
         </ul>
 
     </div>
@@ -61,3 +79,4 @@
 <script src="JS/HomePage.js"></script>
 </body>
 </html>
+
