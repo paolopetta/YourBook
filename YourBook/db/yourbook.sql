@@ -63,7 +63,7 @@ CREATE TABLE UtenteLibro (
 );
 
 -- Inserimento Utenti
-INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Franco@gmail.com',sha1("prova"),'Franco','nyc, new york, usa',NULL,0);
+INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Franco@gmail.com',sha1("Serena99"),'Franco','nyc, new york, usa',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Gianluca@gmail.com',sha1("prova"),'Gianluca','stockton, california, usa',18,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Smith@gmail.com',sha1("prova"),'Smith','moscow, yukon territory, russia',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Frank@gmail.com',sha1("prova"),'Frank','porto, v.n.gaia, portugal',17,0);
