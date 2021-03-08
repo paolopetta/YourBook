@@ -12,8 +12,23 @@ body {
     background-position: center;
 }
 
-button {
-    display: inline-block;
+.cont {
+    border: 0px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column ;
+    -ms-flex-align: center;
+    width: 600px;
+    border-radius: 15px;
+}
+
+.bottone {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
     font-weight: 400;
     color: #212529;
     text-align: center;
