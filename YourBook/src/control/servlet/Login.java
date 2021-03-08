@@ -2,6 +2,7 @@ package control.servlet;
 
 import model.UserBean;
 import manager.UtenteDao;
+import model.WishlistBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,8 +27,8 @@ public class Login extends HttpServlet {
 
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        UserBean userBean = new UserBean();
-        userBean = (UserBean) session.getAttribute("user");
+        UserBean userBean = (UserBean) session.getAttribute("utente");
+        WishlistBean wishlist = (WishlistBean) session.getAttribute("wishlist");
 
         if (action.equals("login")) {
             if (userBean == null) { // non c'é nessun utente loggato
@@ -59,13 +60,13 @@ public class Login extends HttpServlet {
                     if (userRequested.getPassword().equals(passHash)) {
                         userBean = new UserBean();
                         userBean.setAuth(userRequested.isAdmin());
+                        userBean.setNome(userRequested.getNome());
                         userBean.setEmail(userRequested.getEmail());
                         userBean.setPasswordhash(userRequested.getPassword());
 
                         //assegno l'user alla sessione
-                        session.setAttribute("user", userBean);
-                        // dopo che si é loggato lo rimando ad home
-                        //response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/home.jsp"));
+                        session.setAttribute("utente", userBean);
+
                     } else { //passw sbagliata
                         RequestDispatcher requestDispatcher = request.getServletContext().getRequestDispatcher("/login.jsp");
                         request.setAttribute("error", "password");
@@ -79,13 +80,13 @@ public class Login extends HttpServlet {
                 }
             }
 
-            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/home.jsp"));
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index.jsp"));
 
         } else if (action.equals("logout")) {
             if (userBean != null) {
-                session.removeAttribute("user");
+                session.removeAttribute("utente");
             }
-            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/home.jsp"));
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index.jsp"));
         }
 
     }
@@ -93,12 +94,12 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        UserBean userBean = (UserBean) session.getAttribute("user");
+        UserBean userBean = (UserBean) session.getAttribute("utente");
 
         if (action.equals("logout")) {
 
             if (userBean != null) {
-                session.removeAttribute("user");
+                session.removeAttribute("utente");
             }
 
             response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index.jsp"));

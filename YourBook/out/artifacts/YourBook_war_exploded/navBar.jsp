@@ -21,8 +21,7 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand js-scroll-trigger" href="#"><img src="https://i.imgur.com/o5ODS7P.png"
-                                                            alt="logo YourBook"></a>
+    <a class="navbar-brand js-scroll-trigger" href="#"><img src="https://i.imgur.com/o5ODS7P.png" alt="logo YourBook"></a>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
@@ -52,7 +51,7 @@
                 <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri?action=retrieveAll">Libri</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger"
