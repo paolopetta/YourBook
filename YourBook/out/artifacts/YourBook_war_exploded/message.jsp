@@ -4,8 +4,8 @@
     <title>Registrato! | YourBook</title>
     <link rel="stylesheet" href="CSS/message.css">
 </head>
-    <body>
-        <%@ include file="navBar.jsp" %>
+<body>
+<%@ include file="navBar.jsp" %>
 
         <div class="cont">
             <p id="message"><%=request.getAttribute("message")%></p>
@@ -15,6 +15,6 @@
             </div>
         </div>
 
-        <%@ include file="footer.jsp" %>
-    </body>
+<%@ include file="footer.jsp" %>
+</body>
 </html>

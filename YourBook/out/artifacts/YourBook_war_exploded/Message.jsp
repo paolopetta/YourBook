@@ -7,14 +7,11 @@
 <body>
 <%@ include file="navBar.jsp" %>
 
-        <div class="cont">
-            <p id="message"><%=request.getAttribute("message")%></p>
+<p id="message"><%=request.getAttribute("message")%></p>
 
-            <div id="tasto">
-                <a class="bottone" href="login.jsp" role="button">Accedi</a>
-            </div>
-        </div>
-
+<div id="tasto">
+    <a class="btn btn-secondary btn-sm" href="login.jsp" role="button">Accedi</a>
+</div>
 
 <%@ include file="footer.jsp" %>
 </body>

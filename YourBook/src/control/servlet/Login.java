@@ -101,7 +101,7 @@ public class Login extends HttpServlet {
                 session.removeAttribute("user");
             }
 
-            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/home.jsp"));
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index.jsp"));
         }
     }
 }

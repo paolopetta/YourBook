@@ -60,7 +60,7 @@ public class UtenteDao implements DaoModel {
         PreparedStatement ps = null;
         Connection con = null;
 
-        String insertQuery = "INSERT INTO " + TABLE_NAME + " (email, pwd, nome, nazionalita, auth) VALUES (?, SHA1(?), ?, ?, ?)";
+        String insertQuery = "INSERT INTO " + TABLE_NAME + " (email, nome, pwd, nazionalita, auth) VALUES (?, ?, SHA1(?), ?, ?)";
 
         try {
             con = pool.getConnection();
