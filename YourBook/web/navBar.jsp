@@ -59,12 +59,17 @@
             </li>
             <%if (user != null){%>
                 <li class="nav-item">
-                    <a class="nav-link js scroll-trigger">Ciao <%=user.getNome()%></a>
+                    <a class="nav-link js scroll-trigger" href="User/myAccount.jsp">Ciao <%=user.getNome()%></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js scroll-trigger" href="${pageContext.request.contextPath}/login?action=logout">Logout</a>
                 </li>
-            <%}
+            <% if(user.isAdmin()){%>
+                <li class="nav-item">
+                    <a class="nav-link js scroll-trigger" href="${pageContext.request.contextPath}/Admin/adminManagement.jsp">Dashboard</a>
+                </li>
+                <%} //parentesi if admin
+            }
             else{%>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>

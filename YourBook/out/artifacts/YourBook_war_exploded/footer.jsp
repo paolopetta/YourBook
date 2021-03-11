@@ -30,7 +30,7 @@
                 <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Profilo</h5><br>
-                    <a href="myAccount.jsp">Il mio profilo</a>
+                    <a href="User/myAccount.jsp">Il mio profilo</a>
 
                 </div>
                 <!--Grid column-->

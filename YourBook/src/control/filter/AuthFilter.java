@@ -20,7 +20,7 @@ public class AuthFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) resp;
 
         HttpSession session = request.getSession(false);
-        UserBean userBean = (UserBean) session.getAttribute("user");
+        UserBean userBean = (UserBean) session.getAttribute("utente");
 
         String uri = request.getRequestURI();
         if (session != null) {

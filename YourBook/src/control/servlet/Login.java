@@ -61,6 +61,8 @@ public class Login extends HttpServlet {
                         userBean = new UserBean();
                         userBean.setAuth(userRequested.isAdmin());
                         userBean.setNome(userRequested.getNome());
+                        userBean.setId_utente(userRequested.getId_utente());
+                        userBean.setEta(userRequested.getId_utente());
                         userBean.setEmail(userRequested.getEmail());
                         userBean.setPasswordhash(userRequested.getPassword());
 
