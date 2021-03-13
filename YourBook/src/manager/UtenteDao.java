@@ -39,7 +39,7 @@ public class UtenteDao implements DaoModel {
                 bean.setId_utente(rs.getInt("id_utente"));
                 bean.setEmail(rs.getString("email"));
                 bean.setAuth(rs.getBoolean("auth"));
-                bean.setPasswordhash(rs.getString("pwd"));
+                bean.setPassword(rs.getString("pwd"));
                 bean.setNome(rs.getString("nome"));
                 bean.setNazionalita(rs.getString("nazionalita"));
             }

@@ -2,6 +2,7 @@ package control.servlet;
 
 import manager.LibroDao;
 import model.LibriBean;
+import model.UserBean;
 import model.UtenteLibro;
 
 import javax.servlet.RequestDispatcher;
@@ -33,6 +34,8 @@ public class LibriOperation extends HttpServlet {
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
+
+        UserBean userBean = (UserBean) session.getAttribute("utente");
 
         if (action != null && action.equals("retrieveAll")) {
             //Mostrare tutti i libri
@@ -103,10 +106,11 @@ public class LibriOperation extends HttpServlet {
         if (action != null && action.equals("insRating")) {
             String isbn = request.getParameter("isbn");
             int rating = Integer.parseInt(request.getParameter("valutazione"));
-            int id_utente = Integer.parseInt(request.getParameter("id_utente"));
+            int id = Integer.parseInt(request.getParameter("id"));
+
 
             UtenteLibro utenteLibro = new UtenteLibro();
-            utenteLibro.setId_utente(id_utente);
+            utenteLibro.setId_utente(id);
             utenteLibro.setIsbn(isbn);
             utenteLibro.setValutazione(rating);
 

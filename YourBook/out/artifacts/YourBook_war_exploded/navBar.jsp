@@ -21,8 +21,7 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand js-scroll-trigger" href="#"><img src="https://i.imgur.com/o5ODS7P.png"
-                                                            alt="logo YourBook"></a>
+    <a class="navbar-brand js-scroll-trigger" href="#"><img src="https://i.imgur.com/o5ODS7P.png" alt="logo YourBook"></a>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
@@ -52,7 +51,7 @@
                 <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/libri.jsp">Libri</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri?action=retrieveAll">Libri</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger"
@@ -60,12 +59,17 @@
             </li>
             <%if (user != null){%>
                 <li class="nav-item">
-                    <a class="nav-link js scroll-trigger">Ciao <%=user.getNome()%></a>
+                    <a class="nav-link js scroll-trigger" href="User/myAccount.jsp">Ciao <%=user.getNome()%></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js scroll-trigger" href="${pageContext.request.contextPath}/login?action=logout">Logout</a>
                 </li>
-            <%}
+            <% if(user.isAdmin()){%>
+                <li class="nav-item">
+                    <a class="nav-link js scroll-trigger" href="${pageContext.request.contextPath}/Admin/adminManagement.jsp">Dashboard</a>
+                </li>
+                <%} //parentesi if admin
+            }
             else{%>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login.jsp">Accedi</a>
