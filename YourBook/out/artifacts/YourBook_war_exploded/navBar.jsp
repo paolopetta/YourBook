@@ -52,7 +52,7 @@
                 <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/Libri">Libri</a>
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/libri.jsp">Libri</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger"

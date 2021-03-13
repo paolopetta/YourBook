@@ -65,7 +65,7 @@ public class Login extends HttpServlet {
                         //assegno l'user alla sessione
                         session.setAttribute("user", userBean);
                         // dopo che si é loggato lo rimando ad home
-                        //response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/home.jsp"));
+                        //response.sendRedirect(response.encodeRedirectURL(request.getContextPath()+"/myAccount.jsp"));
                     } else { //passw sbagliata
                         RequestDispatcher requestDispatcher = request.getServletContext().getRequestDispatcher("/login.jsp");
                         request.setAttribute("error", "password");
