@@ -5,69 +5,68 @@ CREATE DATABASE YourBook;
 USE YourBook;
 
 DROP user IF EXISTS 'yourbook'@'localhost';
-CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Password';
+CREATE USER 'yourbook'@'localhost' IDENTIFIED BY 'Admin';
 GRANT ALL ON YourBook.* TO 'yourbook'@'localhost';
 
 -- Creazione tabelle
 
 -- auth, serve a identificare se un utente è un utente normale o avanzato
 -- false, significa che è un utente normale
--- eta
 CREATE TABLE Utente (
-	id_utente INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(25) NOT NULL,
-    pwd VARCHAR(255) NOT NULL,
-    nome VARCHAR(25) NOT NULL,
-    nazionalita VARCHAR(50) NULL,
-    eta INT,
-    auth BOOL NOT NULL DEFAULT FALSE,
+                        id_utente INT NOT NULL AUTO_INCREMENT,
+                        email VARCHAR(25) NOT NULL,
+                        pwd VARCHAR(255) NOT NULL,
+                        nome VARCHAR(25) NOT NULL,
+                        nazionalita VARCHAR(50) NULL,
+                        eta INT,
+                        auth BOOL NOT NULL DEFAULT FALSE,
 
-    PRIMARY KEY(id_utente)
+                        PRIMARY KEY(id_utente)
 );
 
 -- L'immagine è memorizzata come una stringa perchè facciamo uso di link, modificata la dimensione
 CREATE TABLE Libro (
-	isbn VARCHAR(255) NOT NULL,
-    titolo VARCHAR(255) NOT NULL,
-    autore VARCHAR(255) NOT NULL,
-    casaEditrice VARCHAR(255) NOT NULL,
-    immagine VARCHAR(100) NULL,
-    genere VARCHAR(100),
-    anno_pubb int NOT NULL,
+                       isbn VARCHAR(255) NOT NULL,
+                       titolo VARCHAR(255) NOT NULL,
+                       autore VARCHAR(255) NOT NULL,
+                       casaEditrice VARCHAR(255) NOT NULL,
+                       immagine VARCHAR(100) NULL,
+                       genere VARCHAR(100),
+                       anno_pubb int NOT NULL,
 
-    PRIMARY KEY(isbn)
+                       PRIMARY KEY(isbn)
 );
 
 -- Tabella con i libri che l'utente vorrebbe leggere
 -- id_wishlist e id_utente messi come chiave primaria per avere che l'utente ha solo una wishlist
 CREATE TABLE Wishlist (
-	id_wishlist INT NOT NULL,
-    id_utente INT NOT NULL,
-    isbn VARCHAR(255) NOT NULL,
+                          id_wishlist INT NOT NULL,
+                          id_utente INT NOT NULL,
+                          isbn VARCHAR(255) NOT NULL,
 
-    PRIMARY KEY(id_wishlist, id_utente),
+                          PRIMARY KEY(id_wishlist, id_utente),
 
-    FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),
-	FOREIGN KEY(isbn) REFERENCES Libro(isbn)
+                          FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),
+                          FOREIGN KEY(isbn) REFERENCES Libro(isbn)
 );
 
 -- Tabella come i libri che l'utene ha letto
 CREATE TABLE UtenteLibro (
-	id_utente INT NOT NULL,
-    isbn VARCHAR(255) NOT NULL,
-    valutazione INT NOT NULL,
+                             id_utente INT NOT NULL,
+                             isbn VARCHAR(255) NOT NULL,
+                             valutazione INT NOT NULL,
 
-    PRIMARY KEY(id_utente, isbn),
-    FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),
-    FOREIGN KEY(isbn) REFERENCES Libro(isbn)
+                             PRIMARY KEY(id_utente, isbn),
+                             FOREIGN KEY(id_utente) REFERENCES Utente(id_utente),
+                             FOREIGN KEY(isbn) REFERENCES Libro(isbn)
 );
 
 -- Inserimento Utenti
-INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Franco@gmail.com',sha1("Serena99"),'Franco','nyc, new york, usa',NULL,0);
+INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Franco@gmail.com',sha1("prova"),'Franco','nyc, new york, usa',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Gianluca@gmail.com',sha1("prova"),'Gianluca','stockton, california, usa',18,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Smith@gmail.com',sha1("prova"),'Smith','moscow, yukon territory, russia',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Frank@gmail.com',sha1("prova"),'Frank','porto, v.n.gaia, portugal',17,0);
-INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('serena@gmail.com',sha1("prova"),'Serena','farnborough, hants, united kingdom',NULL,0);
+INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Serena@gmail.com',sha1("prova"),'Serena','farnborough, hants, united kingdom',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Paolo@gmail.com',sha1("prova"),'Paolo','santa monica, california, usa',61,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Riccardo@gmail.com',sha1("prova"),'Riccardo','washington, dc, usa',NULL,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Vincenzo@gmail.com',sha1("prova"),'Vincenzo','timmins, ontario, canada',NULL,0);
@@ -92,6 +91,7 @@ INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Skyler@gmail.co
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Mary@gmail.com',sha1("prova"),'Mary','chicago, illinois, usa',32,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Hank@gmail.com',sha1("prova"),'Hank','freiburg, baden-wuerttemberg, germany',24,0);
 INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('Junior@gmail.com',sha1("prova"),'Junior','cuernavaca, alabama, mexico',19,0);
+INSERT INTO Utente(email,pwd,nome,nazionalita,eta,auth) VALUES ('admin@gmail.com',sha1("Serena99utentelibro"),'Admin','italia',19,1);
 
 
 
@@ -383,4 +383,5 @@ INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('4
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('451526279','Emma (Signet Classics (Paperback))','Jane Austen',1996,'Signet Classics','http://images.amazon.com/images/P/0451526279.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('451526341','Animal Farm','George Orwell',2004,'Signet','http://images.amazon.com/images/P/0451526341.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('486415864','Great Expectations (Dover Thrift Editions)','Charles Dickens',2001,'Dover Publications','http://images.amazon.com/images/P/0486415864.01.LZZZZZZZ.jpg');
+INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('553280589','Eva Luna','Isabel Allende',1989,'Bantam Books','http://images.amazon.com/images/P/0553280589.01.LZZZZZZZ.jpg');
 INSERT INTO Libro(isbn,titolo,autore,anno_pubb,casaEditrice,immagine) VALUES ('571197639','Poisonwood Bible Edition Uk','Barbara Kingsolver',0,'Faber Faber Inc','http://images.amazon.com/images/P/0571197639.01.LZZZZZZZ.jpg');

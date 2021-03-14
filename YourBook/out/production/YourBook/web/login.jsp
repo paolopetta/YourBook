@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center mt-3 login_container">
-                        <button type="submit" class="btn login_btn" id="logme" disabled>Login</button>
+                        <button type="submit" class="btn login_btn" id="logme">Login</button>
                         <p id="result"></p>
                     </div>
                 </form>
@@ -72,7 +72,7 @@
 <!-- Third party plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-<script src="${pageContext.servletContext.contextPath}/JS/validate.js"></script>
+
 <!-- Core theme JS-->
 <script src="JS/HomePage.js"></script>
 </body>

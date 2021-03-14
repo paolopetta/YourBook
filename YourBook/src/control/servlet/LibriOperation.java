@@ -34,9 +34,11 @@ public class LibriOperation extends HttpServlet {
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
-
-        UserBean userBean = (UserBean) session.getAttribute("utente");
-
+try{
+    UserBean userBean = (UserBean) session.getAttribute("utente");
+}catch(NullPointerException e){
+    e.printStackTrace();
+}
         if (action != null && action.equals("retrieveAll")) {
             //Mostrare tutti i libri
             try {
@@ -46,6 +48,8 @@ public class LibriOperation extends HttpServlet {
             }
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/libri.jsp");
             dispatcher.forward(request, response);
+        } else {
+            System.out.println();
         }
 
         if (action != null && action.equals("retrieveIns")) {
@@ -57,6 +61,8 @@ public class LibriOperation extends HttpServlet {
             }
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/InsertBook.jsp");
             dispatcher.forward(request, response);
+        } else {
+            System.out.println();
         }
 
         if (action != null && action.equals("Insert")) {
@@ -85,6 +91,8 @@ public class LibriOperation extends HttpServlet {
 
             request.setAttribute("message", "Libro " + bean.getTitolo() + " aggiunto");
             response.sendRedirect(request.getContextPath() + "/libri.jsp");
+        } else {
+            System.out.println();
         }
 
         if (action != null && action.equals("Delete")) {
@@ -101,6 +109,8 @@ public class LibriOperation extends HttpServlet {
             }
             request.setAttribute("message", "Prodotto " + libri.getTitolo() + " eliminato");
             response.sendRedirect(request.getContextPath() + "/libri.jsp");
+        } else {
+            System.out.println();
         }
 
         if (action != null && action.equals("insRating")) {
@@ -120,6 +130,8 @@ public class LibriOperation extends HttpServlet {
                 throwables.printStackTrace();
             }
             response.sendRedirect(request.getContextPath() + "/InsertBook.jsp");
+        } else {
+            System.out.println();
         }
     }
 }
