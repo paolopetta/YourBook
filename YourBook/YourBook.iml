@@ -29,7 +29,15 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/web/Test" isTestSource="true" />
+>>>>>>> aae5c30a4a1f54adc5256be29d2f17d2176d01dd
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="true" />
+>>>>>>> a282fa582f121961c853e262de676c3542f4a173
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
