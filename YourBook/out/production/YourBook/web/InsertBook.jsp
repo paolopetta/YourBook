@@ -5,11 +5,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Collection<?> libri = (Collection<?>) request.getAttribute("libri");
-    UserBean userBean = (UserBean) session.getAttribute("user");
+    UserBean userBean = (UserBean) session.getAttribute("utente");
     if (libri == null) {
         response.sendRedirect(response.encodeRedirectURL("./Libri?action=retrieveIns"));
         return;
     }
+
 %>
 <html>
 <head>
@@ -26,8 +27,11 @@
         valutazione</h3>
 </div>
 <form action="${pageContext.request.contextPath}/Libri?action=insRating" method="POST">
+    <select style="display: none" name="id">
+        <option selected="selected"><%=userBean.getId_utente()%></option>
+    </select>
     <div class="inserisciTitolo">
-        <select name="libro" class="form-control">
+        <select name="isbn" class="form-control">
             <%
                 if (libri != null && libri.size() > 0) {
 
@@ -35,8 +39,7 @@
                     while (it.hasNext()) {
                         LibriBean bean = (LibriBean) it.next();
             %>
-            <option value="<%=bean.getIsbn()%>"><%=bean.getTitolo()%>
-            </option>
+            <option value="<%=bean.getIsbn()%>"><%=bean.getTitolo()%></option>
 
             <%
                     }
@@ -65,6 +68,7 @@
     <div class="inserisciTitolo">
         <button type="submit" class="btn btn-primary mb-2">Valuta</button>
     </div>
+
     <%} else {%>
     <br>
     <p align="center">Per valutare accedi o registrati</p>

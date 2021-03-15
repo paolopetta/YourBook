@@ -42,10 +42,12 @@ public class RicercaServlet extends HttpServlet {
                 }
                 RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/findbook.jsp");
                 dispatcher.forward(request, response);
+            } else {
+                System.out.println();
             }
-
+        } else {
+            System.out.println();
         }
     }
-
 }
 
