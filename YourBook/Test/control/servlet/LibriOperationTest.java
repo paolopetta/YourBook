@@ -117,5 +117,19 @@ public class LibriOperationTest {
             Assertions.assertFalse(true);
         }
     }
+
+    @Test
+    public void insRating3() throws ServletException, IOException {
+
+        LibriOperation lop = new LibriOperation();
+        HttpServletRequest hsr = mock(HttpServletRequest.class);
+        HttpServletResponse hsres = mock(HttpServletResponse.class);
+        when(hsr.getParameter("action")).thenReturn("insrating");
+        try {
+            lop.doGet(hsr, hsres);
+        } catch(NumberFormatException e){
+            Assertions.assertFalse(true);
+        }
+    }
 }
 

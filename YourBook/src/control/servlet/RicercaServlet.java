@@ -3,6 +3,7 @@ package control.servlet;
 
 import manager.LibroDao;
 import model.LibriBean;
+import model.UserBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,9 +29,14 @@ public class RicercaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        LibriBean find = (LibriBean) request.getSession().getAttribute("find");
+        try{
+            LibriBean find = (LibriBean) request.getSession().getAttribute("find");
+        }catch(NullPointerException e) {
+            e.printStackTrace();
+         }
 
         String action = request.getParameter("action");
+        System.out.println(action);
 
         if (action != null) {
             if (action.equals("findBook")) {
