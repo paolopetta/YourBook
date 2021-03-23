@@ -2,6 +2,7 @@ package control.servlet;
 
 import manager.LibroDao;
 import model.LibriBean;
+import model.UserBean;
 import model.WishlistBean;
 
 import javax.persistence.SecondaryTable;
@@ -30,11 +31,18 @@ public class WishlistServlet extends HttpServlet {
 
 
         HttpSession session = request.getSession();
-        WishlistBean wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
+        WishlistBean wishlist = null;
+        try{
+            wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
+        }catch(NullPointerException e) {
+            e.printStackTrace();
+        }
         //}}//chiusura temporanea per prova
         if (wishlist == null) {
             wishlist = new WishlistBean();
             request.getSession().setAttribute("wishlist", wishlist);
+        } else {
+            System.out.println();
         }
 
         String action = request.getParameter("action");
@@ -60,9 +68,16 @@ public class WishlistServlet extends HttpServlet {
                     if (bean != null && !bean.isEmpty()) {
                         wishlist.deleteItem(bean);
                         request.setAttribute("message", "Product " + bean.getTitolo() + " deleted from Wishlist");
+                    } else {
+                        System.out.println();
                     }
+                } else {
+                    System.out.println();
                 }
+            } else {
+                System.out.println();
             }
+
         } catch (NumberFormatException | SQLException e) {
             System.out.println("Error: " + e.getMessage());
             request.setAttribute("error", e.getMessage());
