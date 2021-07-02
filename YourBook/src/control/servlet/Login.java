@@ -27,8 +27,14 @@ public class Login extends HttpServlet {
 
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        UserBean userBean = (UserBean) session.getAttribute("utente");
-        WishlistBean wishlist = (WishlistBean) session.getAttribute("wishlist");
+        UserBean userBean = null;
+
+        try{
+            userBean = (UserBean) session.getAttribute("utente");
+            WishlistBean wishlist = (WishlistBean) session.getAttribute("wishlist");
+        }catch(NullPointerException e) {
+            e.printStackTrace();
+        }
 
         if (action.equals("login")) {
             if (userBean == null) { // non c'é nessun utente loggato
@@ -96,7 +102,14 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        UserBean userBean = (UserBean) session.getAttribute("utente");
+        UserBean userBean = null;
+
+        try{
+            userBean = (UserBean) session.getAttribute("utente");
+        }catch(NullPointerException e) {
+            e.printStackTrace();
+        }
+
 
         if (action.equals("logout")) {
 
@@ -105,6 +118,8 @@ public class Login extends HttpServlet {
             }
 
             response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index.jsp"));
+        } else {
+            System.out.println();
         }
     }
 }

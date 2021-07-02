@@ -52,6 +52,8 @@ public class UsersOperation extends HttpServlet {
 
             request.setAttribute("message", "Utente " + bean.getNome() + " aggiunto");
             response.sendRedirect(request.getContextPath() + "/utente");
+        } else {
+            System.out.println();
         }
 
         if (action != null && action.equals("Delete")) {
@@ -68,6 +70,8 @@ public class UsersOperation extends HttpServlet {
             }
             request.setAttribute("message", "Prodotto " + user.getNome() + " eliminato");
             response.sendRedirect(request.getContextPath() + "/utenti.jsp");
+        } else {
+            System.out.println();
         }
     }
 }

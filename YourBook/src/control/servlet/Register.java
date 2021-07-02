@@ -24,9 +24,12 @@ public class Register extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("utente") != null)
-            throw new IllegalArgumentException("Utente loggato.");
-
+      try {
+          if (request.getSession().getAttribute("utente") != null)
+              throw new IllegalArgumentException("Utente loggato.");
+      } catch (NullPointerException e) {
+          e.printStackTrace();
+      }
         Integer eta = Integer.parseInt(request.getParameter("eta"));
         String nazionalita = request.getParameter("nazionalita");
 
@@ -34,21 +37,33 @@ public class Register extends HttpServlet {
         if (!(nome != null && nome.length() >= 3 && nome.matches("^[ a-zA-Z\\u00C0-\\u00ff]+$"))) {
             throw new IllegalArgumentException("Nome non valido.");
         }
+        else {
+            System.out.println();
+        }
 
         String password = request.getParameter("pwd");
         if (!(password != null && password.length() >= 8 && !password.toUpperCase().equals(password)
-                && !password.toLowerCase().equals(password) && password.matches(".*[0-9].*"))) {
+                && !password.toLowerCase().equals(password))) {
             throw new IllegalArgumentException("Password non valida.");
+        }
+        else {
+            System.out.println();
         }
 
         String passwordConferma = request.getParameter("pwdConf");
         if (!password.equals(passwordConferma)) {
             throw new IllegalArgumentException("Password e conferma differenti.");
         }
+        else {
+            System.out.println();
+        }
 
         String email = request.getParameter("email");
         if (!(email != null && email.matches("^\\w+([\\.-]?\\w+)@\\w+([\\.-]?\\w+)(\\.\\w+)+$"))) {
             throw new IllegalArgumentException("Email non valida.");
+        }
+        else {
+            System.out.println();
         }
 
         UserBean utente = new UserBean();
