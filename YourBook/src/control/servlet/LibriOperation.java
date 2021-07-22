@@ -34,10 +34,10 @@ public class LibriOperation extends HttpServlet {
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
-try{
-    UserBean userBean = (UserBean) session.getAttribute("utente");
-}catch(NullPointerException e){
-    e.printStackTrace();
+        try{
+            UserBean userBean = (UserBean) session.getAttribute("utente");
+        }catch(NullPointerException e){
+            e.printStackTrace();
 }
         if (action != null && action.equals("retrieveAll")) {
             //Mostrare tutti i libri
@@ -53,7 +53,7 @@ try{
         }
 
         if (action != null && action.equals("retrieveIns")) {
-            //Mostrare tutti i libri
+            //Mostrare tutti i libri nella pagina di inserimento libri
             try {
                 request.setAttribute("libri", model.doRetriveAll());
             } catch (SQLException e) {

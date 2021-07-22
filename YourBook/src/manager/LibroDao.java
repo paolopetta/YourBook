@@ -237,4 +237,43 @@ public class LibroDao implements LibriModel<LibriBean> {
             e.printStackTrace();
         }
     }
+
+    public Collection<UtenteLibro> doRetriveAllRating() throws SQLException{
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        Collection<UtenteLibro> rating = new ArrayList<UtenteLibro>();
+
+        String selectSQL = "SELECT * FROM UtenteLibro";
+
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            preparedStatement = connection.prepareStatement(selectSQL);
+
+            System.out.println("doRetrieveAllRating:" + preparedStatement.toString());
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                UtenteLibro bean = new UtenteLibro();
+
+                bean.setIsbn(rs.getString("isbn"));
+                bean.setId_utente(rs.getInt("id_utente"));
+                bean.setValutazione(rs.getInt("valutazione"));
+
+                rating.add(bean);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+                DriverManagerConnectionPool.releaseConnection(connection);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return rating;
+    }
+
 }

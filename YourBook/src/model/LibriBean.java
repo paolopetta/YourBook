@@ -23,6 +23,14 @@ public class LibriBean implements Serializable {
         anno_pubb = -1;
     }
 
+    public LibriBean(String isbn, String titolo, String autore, String immagine, int anno_pubb) {
+        this.isbn = isbn;
+        this.titolo = titolo;
+        this.autore = autore;
+        this.immagine = immagine;
+        this.anno_pubb = anno_pubb;
+    }
+
     public String getIsbn() {
         return isbn;
     }

@@ -1,6 +1,7 @@
 package control.servlet;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.LinkedList;
@@ -8,29 +9,34 @@ import java.util.List;
 
 public class DriverManagerConnectionPool {
 
+    private static boolean isTest = false;
+
     private static List<Connection> freeDbConnections;
 
     static {
         freeDbConnections = new LinkedList<Connection>();
         try {
-            //Class.forName("com.mysql.cj.jdbc.Driver");
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println("DB driver not found:" + e.getMessage());
         }
     }
 
-    private static synchronized Connection createDBConnection() throws SQLException {
+    public static synchronized Connection createDBConnection() throws SQLException {
         Connection newConnection = null;
+        String db = "";
         String ip = "localhost";
         String port = "3306";
-        String db = "YourBook";
+        if(isTest)
+            db = "TestBook";
+        else
+            db = "YourBook";
         String username = "root";
         String password = "Admin";
 
-        System.out.println(DriverManager.getConnection("jdbc:mysql://localhost:3306/YourBook?serverTimezone=UTC", username, password));
         newConnection = DriverManager.getConnection("jdbc:mysql://" + ip + ":" +
-                port + "/" + db + "?serverTimezone=UTC", username, password);
+                port + "/" + db + "?useSSL=false&serverTimezone=UTC", username, password);
 
         System.out.println("Create a new DB connection"); //set Transaction
         newConnection.setAutoCommit(false);
@@ -67,4 +73,13 @@ public class DriverManagerConnectionPool {
             if (c != null && c.isClosed())
                 c.close();
     }
+
+    public synchronized static void setTest(boolean bool){
+        DriverManagerConnectionPool.isTest = bool;
+    }
+
+    public static boolean isTest(){
+        return isTest;
+    }
+
 }
