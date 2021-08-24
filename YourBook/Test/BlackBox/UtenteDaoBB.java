@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import test.DatabaseHelper;
 
+
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
@@ -35,6 +36,8 @@ public class UtenteDaoBB {
         assertTrue(utenteDao.doRetrieveByEmail("Franco@gmail.com").getEmail().compareTo("Franco@gmail.com") == 0);
     }
 
+
+
     @Test
     public void doSaveTest() throws SQLException{
         //devo vedere se salva l'utente
@@ -43,6 +46,12 @@ public class UtenteDaoBB {
         utenteDao.doSave(utente);
         assertTrue(utenteDao.doRetrieveByEmail("prova@prova.it").getEmail().compareTo("prova@prova.it") == 0);
     }
+
+    /*@Test
+    public void doSaveTest() throws SQLException{
+
+    }*/
+
 
     @Test
     public void doUpdateTest() throws SQLException{
