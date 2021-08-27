@@ -30,7 +30,6 @@ public class UsersOperation extends HttpServlet {
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
-        //System.out.println("Dentro UserOperation");
 
         if (action != null && action.equals("Insert")) {
             String nome = request.getParameter("nome");

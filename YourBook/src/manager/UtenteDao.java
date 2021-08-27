@@ -140,6 +140,7 @@ public class UtenteDao implements DaoModel {
             ps.setString(4, userBean.getNazionalita());
             ps.setInt(5, userBean.getEta());
             ps.setBoolean(6, userBean.isAdmin());
+            ps.setInt(7, userBean.getId_utente());
 
             int result = ps.executeUpdate();
 

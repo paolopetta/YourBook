@@ -1,4 +1,4 @@
-package test;
+package BlackBox;
 
 import control.servlet.DriverManagerConnectionPool;
 import org.apache.ibatis.jdbc.ScriptRunner;
