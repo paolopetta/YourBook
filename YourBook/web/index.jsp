@@ -29,7 +29,7 @@
     <div class="container">
         <div class="masthead-subheading">Benvenuto su YourBook!</div>
         <div class="masthead-heading text-uppercase">Siamo felici di averti sul nostro sito</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Vai ai Libri</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="libri.jsp">Vai ai Libri</a>
     </div>
 </header>
 <!-- Services-->

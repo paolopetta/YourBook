@@ -171,9 +171,6 @@ public class LibroDao implements LibriModel<LibriBean> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        /*String updateSQL = "UPDATE Libro " +
-                "SET isbn= ?, titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? " +
-                "WHERE isbn=?;";*/
         String updateSQL = "UPDATE Libro SET titolo= ?, autore= ?, immagine= ?, genere= ?, anno_pubb= ? WHERE isbn= ?;";
 
         try {
@@ -210,11 +207,17 @@ public class LibroDao implements LibriModel<LibriBean> {
             String sql = "DELETE FROM Libro WHERE isbn=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
-            ps.executeUpdate();
+
+            if(ps.executeUpdate() == 0) {
+                System.out.println("Nessun libro trovato");
+                throw new Exception("errore");
+            }
             con.commit();
             ps.close();
 
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

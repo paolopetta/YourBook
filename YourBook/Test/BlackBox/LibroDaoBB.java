@@ -6,6 +6,7 @@ import model.LibriBean;
 import model.UtenteLibro;
 import org.junit.jupiter.api.AfterEach;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -51,16 +52,72 @@ public class LibroDaoBB {
         assertTrue(libroDao.doRetrieveByKey("9788817156462").getIsbn().compareTo("9788817156462") == 0);
     }
 
-
+    @Test
+    public void doSaveNomeLungo() throws SQLException{
+        LibriBean libro = new LibriBean("9788817156462", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna.", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
+        libro.setCasaEditrice("provaCasa");
+        assertThrows(SQLException.class, () -> libroDao.doSave(libro));
+    }
 
     @Test
-    public void doUpdateTest() throws SQLException{
+    public void doSaveIdVuoto() throws SQLException{
+        LibriBean libro = new LibriBean(null, "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
+        libro.setCasaEditrice("provaCasa");
+        assertThrows(SQLException.class, () -> libroDao.doSave(libro));
+    }
+
+    @Test
+    public void doSaveAutoreLungo() throws SQLException{
+        LibriBean libro = new LibriBean("9788817156462", "I promessi sposi", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna.", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
+        libro.setCasaEditrice("provaCasa");
+        assertThrows(SQLException.class, () -> libroDao.doSave(libro));
+    }
+
+    @Test
+    public void doSaveGenereLungo() throws SQLException{
+        LibriBean libro = new LibriBean(null, "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
+        libro.setCasaEditrice("provaCasa");
+        libro.setGenere("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna.");
+        assertThrows(SQLException.class, () -> libroDao.doSave(libro));
+    }
+
+    @Test
+    public void doUpdateTestNomeLungo() throws SQLException{
+        LibriBean libro= libroDao.doRetrieveByKey("195153448");
+        libro.setTitolo("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. vehicula magna. Phasellus ac vehicula magna.");
+        assertThrows(SQLException.class, () -> libroDao.doUpdate(libro));
+    }
+
+    @Test
+    public void doUpdateTestAutoreLungo() throws SQLException{
+        LibriBean libro= libroDao.doRetrieveByKey("195153448");
+        libro.setAutore("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. vehicula magna. Phasellus ac vehicula magna.");
+        assertThrows(SQLException.class, () -> libroDao.doUpdate(libro));
+    }
+
+    @Test
+    public void doUpdateTestGenereLungo() throws SQLException{
+        LibriBean libro= libroDao.doRetrieveByKey("195153448");
+        libro.setGenere("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In un ultricies nisl. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. Aliquam a tristique turpis. Phasellus ac vehicula magna. Phasellus ac vehicula magna. vehicula magna. Phasellus ac vehicula magna.");
+        assertThrows(SQLException.class, () -> libroDao.doUpdate(libro));
+    }
+
+    @Test
+    public void doUpdateTestValid() throws SQLException{
         //gli passo un libro giá presente con l'autore modificato e verifico se lo ha modificato
         LibriBean libro= libroDao.doRetrieveByKey("195153448");
         libro.setAutore("Prova");
         libroDao.doUpdate(libro);
         assertTrue(libroDao.doRetrieveByKey("195153448").getAutore().compareTo("Prova") == 0);
     }
+
+    /*@Test
+    public void doDeleteTestID() throws Exception{
+        LibriBean libro = new LibriBean("978881715646523344634", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
+        assertThrows(Exception.class, () -> libroDao.doDelete(libro));
+    }*/
+
+
 
     @Test
     public void doDeleteTest() throws SQLException{
