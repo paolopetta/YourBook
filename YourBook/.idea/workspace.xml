@@ -24,15 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/BlackBox/UtenteDaoBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BlackBox/UtenteDaoBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/navBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/LibroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/LibroDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navBar.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,12 +283,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
       <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
       <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestEmailVuota" />
       <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswVuota" />
       <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswNoFormat" />
       <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
     </list>
     <recent_temporary>
       <list>
@@ -308,6 +300,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -321,11 +314,12 @@
       <workItem from="1630056757052" duration="102000" />
       <workItem from="1630056881235" duration="893000" />
       <workItem from="1630057797977" duration="11021000" />
+      <workItem from="1630690466252" duration="2843000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

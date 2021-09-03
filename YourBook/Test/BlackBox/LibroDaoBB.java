@@ -113,11 +113,8 @@ public class LibroDaoBB {
 
     /*@Test
     public void doDeleteTestID() throws Exception{
-        LibriBean libro = new LibriBean("978881715646523344634", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827);
         assertThrows(Exception.class, () -> libroDao.doDelete(libro));
     }*/
-
-
 
     @Test
     public void doDeleteTest() throws SQLException{
@@ -143,7 +140,4 @@ public class LibroDaoBB {
         assertTrue(libroDao.doRetriveAllRating().size() == 1);
 
     }
-
-
-
 }
