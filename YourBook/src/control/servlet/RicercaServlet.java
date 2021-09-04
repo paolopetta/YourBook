@@ -29,11 +29,11 @@ public class RicercaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        try{
+        try {
             LibriBean find = (LibriBean) request.getSession().getAttribute("find");
-        }catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
-         }
+        }
 
         String action = request.getParameter("action");
         System.out.println(action);

@@ -208,7 +208,7 @@ public class LibroDao implements LibriModel<LibriBean> {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, isbn);
 
-            if(ps.executeUpdate() == 0) {
+            if (ps.executeUpdate() == 0) {
                 System.out.println("Nessun libro trovato");
                 throw new Exception("errore");
             }
@@ -241,7 +241,7 @@ public class LibroDao implements LibriModel<LibriBean> {
         }
     }
 
-    public Collection<UtenteLibro> doRetriveAllRating() throws SQLException{
+    public Collection<UtenteLibro> doRetriveAllRating() throws SQLException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
@@ -278,5 +278,4 @@ public class LibroDao implements LibriModel<LibriBean> {
         }
         return rating;
     }
-
 }

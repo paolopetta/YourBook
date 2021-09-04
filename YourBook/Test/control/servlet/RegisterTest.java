@@ -19,18 +19,18 @@ class RegisterTest {
     @Test
     void doGet() throws ServletException, IOException {
 
-            Register reg = new Register();
-            HttpSession ses = mock(HttpSession.class);
-            HttpServletRequest hsr = mock(HttpServletRequest.class);
-            HttpServletResponse hsres = mock(HttpServletResponse.class);
-            when(hsr.getParameter("nome")).thenReturn("Riccardo");
-            when(hsr.getParameter("eta")).thenReturn("21");
-            when(hsr.getParameter("nazionalita")).thenReturn("Italia");
-            Exception ex = Assertions.assertThrows(exception.IllegalArgumentException.class, () -> {
-                reg.doGet(hsr, hsres);
-            });
-            Assertions.assertEquals("exception.IllegalArgumentException", ex.getClass().getName());
-        }
+        Register reg = new Register();
+        HttpSession ses = mock(HttpSession.class);
+        HttpServletRequest hsr = mock(HttpServletRequest.class);
+        HttpServletResponse hsres = mock(HttpServletResponse.class);
+        when(hsr.getParameter("nome")).thenReturn("Riccardo");
+        when(hsr.getParameter("eta")).thenReturn("21");
+        when(hsr.getParameter("nazionalita")).thenReturn("Italia");
+        Exception ex = Assertions.assertThrows(exception.IllegalArgumentException.class, () -> {
+            reg.doGet(hsr, hsres);
+        });
+        Assertions.assertEquals("exception.IllegalArgumentException", ex.getClass().getName());
+    }
 
     @Test
     void doGet2() throws ServletException, IOException {
@@ -254,4 +254,4 @@ class RegisterTest {
         });
         Assertions.assertEquals("exception.IllegalArgumentException", ex.getClass().getName());
     }
-    }
+}

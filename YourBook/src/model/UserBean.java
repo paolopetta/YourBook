@@ -79,7 +79,9 @@ public class UserBean extends Bean implements Serializable, Cloneable {
         }
     }
 
-    public void setPassword(String password){this.password= password;}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getPassword() {
         return this.password;

@@ -28,7 +28,7 @@ public class DriverManagerConnectionPool {
         String db = "";
         String ip = "localhost";
         String port = "3306";
-        if(isTest)
+        if (isTest)
             db = "TestBook";
         else
             db = "YourBook";
@@ -74,11 +74,11 @@ public class DriverManagerConnectionPool {
                 c.close();
     }
 
-    public synchronized static void setTest(boolean bool){
+    public synchronized static void setTest(boolean bool) {
         DriverManagerConnectionPool.isTest = bool;
     }
 
-    public static boolean isTest(){
+    public static boolean isTest() {
         return isTest;
     }
 
