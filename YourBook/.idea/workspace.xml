@@ -29,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" afterDir="false" />
     </list>
+    <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +79,33 @@
       <script-file value="$PROJECT_DIR$/db/testbook.sql" />
       <script-mode>FILE</script-mode>
       <method v="2" />
+  <component name="RunManager" selected="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroDaoBB.doDeleteTestIdNonTrovato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YourBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BlackBox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
+      <option name="METHOD_NAME" value="doDeleteTestIdNonTrovato" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
@@ -283,6 +311,11 @@
       <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
       <item itemvalue="JUnit.LibroDaoBB" />
       <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
+      <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestEmailVuota" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswVuota" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswNoFormat" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
     </list>
     <recent_temporary>
@@ -311,6 +344,8 @@
       <workItem from="1630057797977" duration="11021000" />
       <workItem from="1630663269971" duration="1391000" />
       <workItem from="1630664982716" duration="3123000" />
+      <workItem from="1630690466252" duration="2843000" />
+      <workItem from="1630746646966" duration="2912000" />
     </task>
     <servers />
   </component>

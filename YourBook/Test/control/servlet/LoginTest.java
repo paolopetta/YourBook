@@ -26,7 +26,7 @@ class LoginTest {
         HttpServletRequest hsr = mock(HttpServletRequest.class);
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         when(hsr.getParameter("action")).thenReturn("login");
-        when(ses.getAttribute("wishlist") ).thenReturn(new WishlistBean());
+        when(ses.getAttribute("wishlist")).thenReturn(new WishlistBean());
         Exception ex = Assertions.assertThrows(NullPointerException.class, () -> {
             log.doPost(hsr, hsres);
         });
@@ -57,7 +57,7 @@ class LoginTest {
         HttpServletRequest hsr = mock(HttpServletRequest.class);
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         when(hsr.getParameter("action")).thenReturn("login");
-        when(ses.getAttribute("utente") ).thenReturn(new UserBean());
+        when(ses.getAttribute("utente")).thenReturn(new UserBean());
         Exception ex = Assertions.assertThrows(NullPointerException.class, () -> {
             log.doPost(hsr, hsres);
         });
@@ -67,18 +67,18 @@ class LoginTest {
     @Test
     void doGet() throws ServletException, IOException {
 
-            Login log = new Login();
-            HttpSession ses = mock(HttpSession.class);
-            HttpServletRequest hsr = mock(HttpServletRequest.class);
-            HttpServletResponse hsres = mock(HttpServletResponse.class);
-            when(hsr.getParameter("action")).thenReturn("logout");
-            when(ses.getAttribute("wishlist") ).thenReturn(new WishlistBean());
+        Login log = new Login();
+        HttpSession ses = mock(HttpSession.class);
+        HttpServletRequest hsr = mock(HttpServletRequest.class);
+        HttpServletResponse hsres = mock(HttpServletResponse.class);
+        when(hsr.getParameter("action")).thenReturn("logout");
+        when(ses.getAttribute("wishlist")).thenReturn(new WishlistBean());
         try {
             log.doGet(hsr, hsres);
         } catch (NullPointerException e) {
             Assertions.assertFalse(true);
         }
-        }
+    }
 
     @Test
     void doGet2() throws ServletException, IOException {
@@ -88,7 +88,7 @@ class LoginTest {
         HttpServletRequest hsr = mock(HttpServletRequest.class);
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         when(hsr.getParameter("action")).thenReturn("error");
-        when(ses.getAttribute("wishlist") ).thenReturn(new WishlistBean());
+        when(ses.getAttribute("wishlist")).thenReturn(new WishlistBean());
         try {
             log.doGet(hsr, hsres);
         } catch (NullPointerException e) {

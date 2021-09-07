@@ -29,10 +29,10 @@ public class Login extends HttpServlet {
         String action = request.getParameter("action");
         UserBean userBean = null;
 
-        try{
+        try {
             userBean = (UserBean) session.getAttribute("utente");
             WishlistBean wishlist = (WishlistBean) session.getAttribute("wishlist");
-        }catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
@@ -104,9 +104,9 @@ public class Login extends HttpServlet {
         String action = request.getParameter("action");
         UserBean userBean = null;
 
-        try{
+        try {
             userBean = (UserBean) session.getAttribute("utente");
-        }catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 

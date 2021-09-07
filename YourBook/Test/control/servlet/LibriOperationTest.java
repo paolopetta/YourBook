@@ -4,7 +4,9 @@ import model.LibriBean;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.mockito.configuration.IMockitoConfiguration;
+
 import static org.mockito.Mockito.*;
+
 import org.junit.jupiter.api.Assertions;
 
 import javax.servlet.ServletException;
@@ -30,6 +32,7 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.IllegalStateException", ex.getClass().getName());
     }
+
     @Test
     public void doGet2() throws ServletException, IOException {
 
@@ -38,7 +41,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -55,7 +58,6 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.IllegalStateException", ex.getClass().getName());
     }
-
 
     @Test
     public void insertTest() throws ServletException, IOException { //Paolo sta provando a farlo
@@ -82,7 +84,6 @@ public class LibriOperationTest {
 
         assertEquals(oracolo, )
     }*/
-
 
     @Test
     public void insert() throws ServletException, IOException { //Paolo sta provando a farlo
@@ -122,6 +123,7 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.NullPointerException", ex.getClass().getName());
     }
+
     @Test
     public void delete2() throws ServletException, IOException {
 
@@ -130,7 +132,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(NullPointerException e){
+        } catch (NullPointerException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -156,7 +158,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -170,7 +172,7 @@ public class LibriOperationTest {
         when(hsr.getParameter("action")).thenReturn("insrating");
         try {
             lop.doGet(hsr, hsres);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             Assertions.assertFalse(true);
         }
     }

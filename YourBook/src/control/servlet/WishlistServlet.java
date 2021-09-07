@@ -32,9 +32,9 @@ public class WishlistServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         WishlistBean wishlist = null;
-        try{
+        try {
             wishlist = (WishlistBean) request.getSession().getAttribute("wishlist");
-        }catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         //}}//chiusura temporanea per prova

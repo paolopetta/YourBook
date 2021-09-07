@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-
 public class DatabaseHelper {
     private static Connection connection;
 
