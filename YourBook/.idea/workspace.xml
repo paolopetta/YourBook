@@ -25,13 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/BlackBox/UtenteDaoBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BlackBox/UtenteDaoBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/navBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/LibroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/LibroDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navBar.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,18 +60,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ibatis-core-3.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/BlackBox" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18060201" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\YourBook\YourBook\Test\BlackBox" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pavil\OneDrive\Desktop\Github\YourBook\YourBook\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto">
-    <configuration name="LibroDaoBB.doDeleteTestIdNonTrovato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibroDaoBB">
+    <configuration name="testbook.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/db/testbook.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -85,13 +89,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="BlackBox" />
       <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
-      <option name="METHOD_NAME" value="doDeleteTestIdNonTrovato" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtenteDaoBB.doUpdateTestEmailVuota" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibroDaoBB.doRetrieveByAllFragmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +103,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
-      <option name="METHOD_NAME" value="doUpdateTestEmailVuota" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
+      <option name="METHOD_NAME" value="doRetrieveByAllFragmentTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroDaoBB.doRetriveAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YourBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BlackBox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
+      <option name="METHOD_NAME" value="doRetriveAllTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,38 +137,6 @@
       <option name="PACKAGE_NAME" value="BlackBox" />
       <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
       <option name="METHOD_NAME" value="doUpdateTestNomeVuoto" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtenteDaoBB.doUpdateTestPswNoFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BlackBox.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
-      <option name="METHOD_NAME" value="doUpdateTestPswNoFormat" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtenteDaoBB.doUpdateTestPswVuota" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BlackBox.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
-      <option name="METHOD_NAME" value="doUpdateTestPswVuota" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -291,23 +278,24 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
-      <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
-      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestEmailVuota" />
-      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswVuota" />
-      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswNoFormat" />
+      <item itemvalue="Database Script.testbook.sql" />
       <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
+      <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
+      <item itemvalue="JUnit.LibroDaoBB" />
+      <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibroDaoBB" />
+        <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
+        <item itemvalue="Database Script.testbook.sql" />
+        <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
         <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
-        <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswNoFormat" />
-        <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswVuota" />
-        <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestEmailVuota" />
-        <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -321,11 +309,13 @@
       <workItem from="1630056757052" duration="102000" />
       <workItem from="1630056881235" duration="893000" />
       <workItem from="1630057797977" duration="11021000" />
+      <workItem from="1630663269971" duration="1391000" />
+      <workItem from="1630664982716" duration="3123000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -339,117 +329,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="248" y="0" key="#Project_Structure" timestamp="1630057211424">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="248" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1630057211424" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630057779224">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1630057779224" />
-    <state x="564" y="283" key="DetectedRootsChooserDialog" timestamp="1630057268309">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="564" y="283" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1630057268309" />
-    <state x="592" y="0" key="FileChooserDialogImpl" timestamp="1630057601721">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="592" y="0" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1630057601721" />
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom" timestamp="1630342649448">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630342649448" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630232099655" />
-    <state width="1877" height="210" key="GridCell.Tab.0.center" timestamp="1630342649447">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630342649447" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630232099655" />
-    <state width="1877" height="210" key="GridCell.Tab.0.left" timestamp="1630342649447">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630342649447" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630232099655" />
-    <state width="1877" height="210" key="GridCell.Tab.0.right" timestamp="1630342649448">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630342649448" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630232099655" />
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1630341708900">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341708900" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630230531964" />
-    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1630341708900">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341708900" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1630230531964" />
-    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1630341708900">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341708900" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1630230531964" />
-    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1630341708900">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341708900" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1630230531964" />
-    <state width="1293" height="281" key="GridCell.Tab.2.bottom" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.2.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.2.center" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.2.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.2.left" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.2.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.2.right" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.2.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.3.bottom" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.3.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.3.center" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.3.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.3.left" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.3.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state width="1293" height="281" key="GridCell.Tab.3.right" timestamp="1630340426461">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="281" key="GridCell.Tab.3.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630340426461" />
-    <state width="1024" height="210" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1630230462355" />
-    <state x="311" y="-1080" key="SettingsEditor" timestamp="1630333465653">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state x="311" y="-1080" key="SettingsEditor/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630333465653" />
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1630057603376" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1630056963098">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1630056963098" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1630341243168">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341243168" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -462,6 +341,32 @@
           <url>file://$PROJECT_DIR$/src/control/servlet/Login.java</url>
           <line>97</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>35</line>
+          <properties class="BlackBox.LibroDaoBB" method="doRetriveAllTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>24</line>
+          <properties class="BlackBox.LibroDaoBB" method="setUpDb">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,6 +23,7 @@ public class LibroDaoBB {
 
     @BeforeEach
     public void setUpDb() throws FileNotFoundException, SQLException {
+        DriverManagerConnectionPool.setTest(true);
        DatabaseHelper.createDb();
     }
 
@@ -144,6 +145,14 @@ public class LibroDaoBB {
 
     }
 
+    @Test
+    public void doRetrieveByAllFragmentTest() throws SQLException{
+        //Mostra info libro
+        LibriBean libro = new LibriBean("195153440", "Harry Potter e la Pietra Filosofale", "J.K. Rowling", "https://images-eu.ssl-images-amazon.com/images/I/51q5l-TtOUL._SY264_BO1,204,203,200_QL40_ML2_.jpg", 2001);
+        libro.setCasaEditrice("Bloomsbury Publishing Plc");
+        libroDao.doSave(libro);
+        assertTrue(libroDao.doRetriveByAllFragment("Harry Potter e la Pietra Filosofale").size() == 1);
+    }
 
 
 }
