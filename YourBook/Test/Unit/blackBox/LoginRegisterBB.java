@@ -1,4 +1,4 @@
-package BlackBox;
+package Unit.blackBox;
 
 public class LoginRegisterBB {
 }

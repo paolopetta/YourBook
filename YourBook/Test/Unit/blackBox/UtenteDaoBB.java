@@ -1,4 +1,4 @@
-package BlackBox;
+package Unit.blackBox;
 
 import control.servlet.DriverManagerConnectionPool;
 import manager.UtenteDao;

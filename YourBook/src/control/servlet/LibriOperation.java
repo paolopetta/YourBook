@@ -29,7 +29,7 @@ public class LibriOperation extends HttpServlet {
         doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
 
@@ -38,7 +38,7 @@ public class LibriOperation extends HttpServlet {
             UserBean userBean = (UserBean) session.getAttribute("utente");
         }catch(NullPointerException e){
             e.printStackTrace();
-}
+        }
         if (action != null && action.equals("retrieveAll")) {
             //Mostrare tutti i libri
             try {

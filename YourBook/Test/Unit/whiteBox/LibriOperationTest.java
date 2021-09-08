@@ -1,9 +1,8 @@
-package control.servlet;
+package Unit.whiteBox;
 
-import model.LibriBean;
+import control.servlet.LibriOperation;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.mockito.configuration.IMockitoConfiguration;
+
 import static org.mockito.Mockito.*;
 import org.junit.jupiter.api.Assertions;
 
@@ -13,8 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.sql.SQLException;
 
 public class LibriOperationTest {
 
@@ -69,20 +66,6 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.NumberFormatException", ex.getClass().getName());
     }
-
-    /*@Test
-    public void insertPaolo() throws  ServletException, IOException{
-
-        //genero un libro valido
-        LibriBean libro = new LibriBean("9788817156462", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827)
-        //Scrivo l'oracolo
-        LibriBean oracolo= new LibriBean("9788817156462", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827)
-
-        Mockito.when()
-
-        assertEquals(oracolo, )
-    }*/
-
 
     @Test
     public void insert() throws ServletException, IOException { //Paolo sta provando a farlo

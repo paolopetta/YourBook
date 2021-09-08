@@ -23,7 +23,7 @@ public class Register extends HttpServlet {
         doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       try {
           if (request.getSession().getAttribute("utente") != null)
               throw new IllegalArgumentException("Utente loggato.");

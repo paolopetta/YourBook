@@ -2,11 +2,8 @@ package control.servlet;
 
 import manager.LibroDao;
 import model.LibriBean;
-import model.UserBean;
 import model.WishlistBean;
 
-import javax.persistence.SecondaryTable;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +24,7 @@ public class WishlistServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
         HttpSession session = request.getSession();
