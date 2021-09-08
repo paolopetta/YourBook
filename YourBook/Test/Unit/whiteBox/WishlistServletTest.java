@@ -17,7 +17,6 @@ import static org.mockito.Mockito.when;
 
 class WishlistServletTest {
 
-
     @Test
     public void doGet() throws ServletException, IOException {
 
@@ -30,7 +29,7 @@ class WishlistServletTest {
         when(hsr.getSession()).thenReturn(ses);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -48,7 +47,7 @@ class WishlistServletTest {
         when(hsr.getSession()).thenReturn(ses);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -66,7 +65,7 @@ class WishlistServletTest {
         when(hsr.getSession()).thenReturn(ses);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -84,7 +83,7 @@ class WishlistServletTest {
         when(hsr.getSession()).thenReturn(ses);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -102,7 +101,7 @@ class WishlistServletTest {
         when(hsr.getSession()).thenReturn(ses);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }

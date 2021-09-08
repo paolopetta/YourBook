@@ -22,7 +22,7 @@ class RicercaServletTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -49,7 +49,7 @@ class RicercaServletTest {
         when(hsr.getParameter("action")).thenReturn("findbook");
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }

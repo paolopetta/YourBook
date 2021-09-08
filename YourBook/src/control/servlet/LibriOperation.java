@@ -34,9 +34,9 @@ public class LibriOperation extends HttpServlet {
         HttpSession session = request.getSession();
 
         String action = request.getParameter("action");
-        try{
+        try {
             UserBean userBean = (UserBean) session.getAttribute("utente");
-        }catch(NullPointerException e){
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         if (action != null && action.equals("retrieveAll")) {

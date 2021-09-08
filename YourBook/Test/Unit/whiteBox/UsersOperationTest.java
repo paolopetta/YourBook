@@ -18,16 +18,16 @@ class UsersOperationTest {
     @Test
     void doGet() throws ServletException, IOException {
 
-            UsersOperation usp = new UsersOperation();
-            HttpSession ses = mock(HttpSession.class);
-            HttpServletRequest hsr = mock(HttpServletRequest.class);
-            HttpServletResponse hsres = mock(HttpServletResponse.class);
-            when(hsr.getParameter("action")).thenReturn("Insert");
-            Exception ex = Assertions.assertThrows(java.lang.NullPointerException.class, () -> {
-                usp.doGet(hsr, hsres);
-            });
-            Assertions.assertEquals("java.lang.NullPointerException", ex.getClass().getName());
-        }
+        UsersOperation usp = new UsersOperation();
+        HttpSession ses = mock(HttpSession.class);
+        HttpServletRequest hsr = mock(HttpServletRequest.class);
+        HttpServletResponse hsres = mock(HttpServletResponse.class);
+        when(hsr.getParameter("action")).thenReturn("Insert");
+        Exception ex = Assertions.assertThrows(java.lang.NullPointerException.class, () -> {
+            usp.doGet(hsr, hsres);
+        });
+        Assertions.assertEquals("java.lang.NullPointerException", ex.getClass().getName());
+    }
 
     @Test
     void doGet2() throws ServletException, IOException {
@@ -38,7 +38,7 @@ class UsersOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             usp.doGet(hsr, hsres);
-        } catch(NullPointerException e){
+        } catch (NullPointerException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -66,7 +66,7 @@ class UsersOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             usp.doGet(hsr, hsres);
-        } catch(NullPointerException e){
+        } catch (NullPointerException e) {
             Assertions.assertFalse(true);
         }
     }

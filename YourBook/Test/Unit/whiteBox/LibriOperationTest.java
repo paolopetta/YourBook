@@ -2,8 +2,11 @@ package Unit.whiteBox;
 
 import control.servlet.LibriOperation;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+import org.mockito.configuration.IMockitoConfiguration;
 
 import static org.mockito.Mockito.*;
+
 import org.junit.jupiter.api.Assertions;
 
 import javax.servlet.ServletException;
@@ -27,6 +30,7 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.IllegalStateException", ex.getClass().getName());
     }
+
     @Test
     public void doGet2() throws ServletException, IOException {
 
@@ -35,7 +39,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(IllegalStateException e){
+        } catch (IllegalStateException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -53,7 +57,6 @@ public class LibriOperationTest {
         Assertions.assertEquals("java.lang.IllegalStateException", ex.getClass().getName());
     }
 
-
     @Test
     public void insertTest() throws ServletException, IOException { //Paolo sta provando a farlo
 
@@ -66,6 +69,19 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.NumberFormatException", ex.getClass().getName());
     }
+
+    /*@Test
+    public void insertPaolo() throws  ServletException, IOException{
+
+        //genero un libro valido
+        LibriBean libro = new LibriBean("9788817156462", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827)
+        //Scrivo l'oracolo
+        LibriBean oracolo= new LibriBean("9788817156462", "I promessi sposi", "Alessandro Manzoni", "https://upload.wikimedia.org/wikipedia/commons/7/72/Frontispiece_promessi_sposi.jpg", 1827)
+
+        Mockito.when()
+
+        assertEquals(oracolo, )
+    }*/
 
     @Test
     public void insert() throws ServletException, IOException { //Paolo sta provando a farlo
@@ -105,6 +121,7 @@ public class LibriOperationTest {
         });
         Assertions.assertEquals("java.lang.NullPointerException", ex.getClass().getName());
     }
+
     @Test
     public void delete2() throws ServletException, IOException {
 
@@ -113,7 +130,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(NullPointerException e){
+        } catch (NullPointerException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -139,7 +156,7 @@ public class LibriOperationTest {
         HttpServletResponse hsres = mock(HttpServletResponse.class);
         try {
             lop.doGet(hsr, hsres);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             Assertions.assertFalse(true);
         }
     }
@@ -153,7 +170,7 @@ public class LibriOperationTest {
         when(hsr.getParameter("action")).thenReturn("insrating");
         try {
             lop.doGet(hsr, hsres);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             Assertions.assertFalse(true);
         }
     }

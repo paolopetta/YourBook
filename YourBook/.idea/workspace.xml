@@ -53,6 +53,7 @@
       <change beforePath="$PROJECT_DIR$/src/control/servlet/WishlistServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/servlet/WishlistServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manager/UtenteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/UtenteDao.java" afterDir="false" />
     </list>
+    <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ibatis-core-3.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/BlackBox" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18060201" />
@@ -99,6 +100,8 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Unit.servlet" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\YourBook\YourBook\Test\BlackBox" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pavil\OneDrive\Desktop\Github\YourBook\YourBook\lib" />
@@ -106,6 +109,24 @@
   </component>
   <component name="RunManager" selected="JUnit.LoginIntegration">
     <configuration name="LoginIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibroDaoBB">
+    <configuration name="testbook.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/db/testbook.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+  <component name="RunManager" selected="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroDaoBB.doDeleteTestIdNonTrovato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -121,6 +142,7 @@
       </method>
     </configuration>
     <configuration name="UserOperationIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -130,12 +152,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="Integration" />
       <option name="MAIN_CLASS_NAME" value="Integration.UserOperationIntegration" />
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserOperationIntegration.DeleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibroDaoBB.doRetrieveByAllFragmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -146,12 +171,16 @@
       <option name="PACKAGE_NAME" value="Integration" />
       <option name="MAIN_CLASS_NAME" value="Integration.UserOperationIntegration" />
       <option name="METHOD_NAME" value="DeleteTest" />
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
+      <option name="METHOD_NAME" value="doRetrieveByAllFragmentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserOperationIntegration.addBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibroDaoBB.doRetriveAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -162,12 +191,16 @@
       <option name="PACKAGE_NAME" value="Integration" />
       <option name="MAIN_CLASS_NAME" value="Integration.UserOperationIntegration" />
       <option name="METHOD_NAME" value="addBookTest" />
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
+      <option name="METHOD_NAME" value="doRetriveAllTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WishlistServletIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtenteDaoBB.doUpdateTestNomeVuoto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -178,6 +211,10 @@
       <option name="PACKAGE_NAME" value="Integration" />
       <option name="MAIN_CLASS_NAME" value="Integration.WishlistServletIntegration" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
+      <option name="METHOD_NAME" value="doUpdateTestNomeVuoto" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -332,9 +369,29 @@
         <item itemvalue="JUnit.UserOperationIntegration" />
         <item itemvalue="JUnit.UserOperationIntegration.DeleteTest" />
         <item itemvalue="JUnit.UserOperationIntegration.addBookTest" />
+      <item itemvalue="Database Script.testbook.sql" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
+      <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
+      <item itemvalue="JUnit.LibroDaoBB" />
+      <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
+      <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestEmailVuota" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswVuota" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestPswNoFormat" />
+      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LibroDaoBB" />
+        <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
+        <item itemvalue="Database Script.testbook.sql" />
+        <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
+        <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -350,11 +407,16 @@
       <workItem from="1630057797977" duration="21612000" />
       <workItem from="1630568856062" duration="12220000" />
       <workItem from="1631020804895" duration="10196000" />
+      <workItem from="1630057797977" duration="11021000" />
+      <workItem from="1630663269971" duration="1391000" />
+      <workItem from="1630664982716" duration="3123000" />
+      <workItem from="1630690466252" duration="2843000" />
+      <workItem from="1630746646966" duration="2912000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -486,5 +548,46 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1630341243168" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/control/servlet/Login.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/control/servlet/Login.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>35</line>
+          <properties class="BlackBox.LibroDaoBB" method="doRetriveAllTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>24</line>
+          <properties class="BlackBox.LibroDaoBB" method="setUpDb">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
