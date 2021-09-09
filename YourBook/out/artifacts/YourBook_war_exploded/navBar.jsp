@@ -25,28 +25,11 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item" id="cercaNavbar">
-                <div class="container h-100">
-                    <div class="d-flex justify-content-center h-100">
-                        <div class="searchbar">
-                            <!--<input class="search_input" type="text" name="" placeholder="Cerca...">
-                            <a href="\${pageContext.request.contextPath}/RicercaServlet" class="search_icon"><i class="fas fa-search"></i></a>-->
-                            <form action="${pageContext.request.contextPath}/RicercaServlet?action=findbook">
-                                <input class="search_input" type="text" id="titolo" name="titolo">
-                                <input type="submit" value="Submit" class="search_icon">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/index.jsp">Home <span
                         class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp">Inserisci
-                    Titolo</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="suggestBook.jsp">Libri Suggeriti</a>
             </li>
@@ -58,6 +41,10 @@
                    href="${pageContext.request.contextPath}/myWishList.jsp">Wishlist</a>
             </li>
             <%if (user != null){%>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/InsertBook.jsp">Inserisci
+                    Titolo</a>
+            </li>
                 <li class="nav-item">
                     <a class="nav-link js scroll-trigger" href="User/myAccount.jsp">Ciao <%=user.getNome()%></a>
                 </li>

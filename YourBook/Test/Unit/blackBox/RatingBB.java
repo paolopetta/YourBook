@@ -2,6 +2,7 @@ package Unit.blackBox;
 
 import control.servlet.DriverManagerConnectionPool;
 import manager.LibroDao;
+import model.LibriBean;
 import model.UtenteLibro;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +14,7 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RatingBB {
+
     static LibroDao libroDao = new LibroDao();
 
     @BeforeEach
@@ -27,7 +29,12 @@ public class RatingBB {
 
     @Test
     public void addRatingTest() throws SQLException {
-        UtenteLibro utenteLibro = new UtenteLibro("195153448", '1', '2');
+        //LibriBean libro = new LibriBean("345417623", 'TImeline', 'MICHAEL CRICHTON',);
+
+
+        UtenteLibro utenteLibro = new UtenteLibro("345417623", 1, 2);
+
+        libroDao.doSaveRating(utenteLibro);
 
         assertTrue(libroDao.doRetriveAllRating().size() == 1);
     }

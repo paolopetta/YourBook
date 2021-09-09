@@ -84,7 +84,20 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.46">
-    <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -99,48 +112,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibroDaoBB.doDeleteTestIdNonTrovato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RatingBB" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.LoginIntegration" />
+      <option name="PACKAGE_NAME" value="Unit.blackBox" />
+      <option name="MAIN_CLASS_NAME" value="Unit.blackBox.RatingBB" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibroDaoBB.doRetrieveByAllFragmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RatingBB.addRatingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Integration.*" />
+          <option name="PATTERN" value="Unit.blackBox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
-      <option name="METHOD_NAME" value="doRetrieveByAllFragmentTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibroDaoBB.doRetriveAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
-      <option name="METHOD_NAME" value="doRetriveAllTest" />
+      <option name="PACKAGE_NAME" value="Unit.blackBox" />
+      <option name="MAIN_CLASS_NAME" value="Unit.blackBox.RatingBB" />
+      <option name="METHOD_NAME" value="addRatingTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,28 +146,6 @@
     </configuration>
     <configuration name="UserOperationIntegration.DeleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserOperationIntegration.addBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtenteDaoBB.doUpdateTestNomeVuoto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BlackBox" />
-      <option name="MAIN_CLASS_NAME" value="BlackBox.UtenteDaoBB" />
-      <option name="METHOD_NAME" value="doUpdateTestNomeVuoto" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -338,17 +308,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RatingBB" />
       <item itemvalue="JUnit.LibroDaoBB" />
-      <item itemvalue="JUnit.LibroDaoBB.doDeleteTestIdNonTrovato" />
-      <item itemvalue="JUnit.LibroDaoBB.doRetrieveByAllFragmentTest" />
-      <item itemvalue="JUnit.LibroDaoBB.doRetriveAllTest" />
-      <item itemvalue="JUnit.UtenteDaoBB.doUpdateTestNomeVuoto" />
-      <item itemvalue="JUnit.UserOperationIntegration.addBookTest" />
       <item itemvalue="JUnit.UserOperationIntegration.DeleteTest" />
       <item itemvalue="JUnit.UserOperationIntegration" />
       <item itemvalue="JUnit.WishlistServletIntegration" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.46" />
+      <item itemvalue="JUnit.RatingBB.addRatingTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RatingBB.addRatingTest" />
+        <item itemvalue="JUnit.RatingBB" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -374,6 +347,8 @@
       <workItem from="1631129438908" duration="3959000" />
       <workItem from="1631134755502" duration="5419000" />
       <workItem from="1631200579861" duration="159000" />
+      <workItem from="1631208988674" duration="673000" />
+      <workItem from="1631209900027" duration="5899000" />
     </task>
     <servers />
   </component>
