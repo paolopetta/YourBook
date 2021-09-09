@@ -1,5 +1,5 @@
-# Nosedive
-Progetto di **Tecnologie Software per lo Sviluppo Web** per il **Corso di Laurea in Informatica** dell'**Università degli Studi di
+# YourBook
+Progetto di **Ingegneria del Software** per il **Corso di Laurea in Informatica** dell'**Università degli Studi di
 Salerno**.
 
 ***
@@ -12,11 +12,23 @@ Paolo Petta    | 0512105013
 
 ***
 
-## Indice documentazione
-1. [Statement of Work]([PDF](Documentazione/SOW - YourBook.pdf))
-2. [Analisi di siti esistenti](#Analisi-di-siti-esistenti)
-3. [Funzionalità del sito](#Funzionalità-del-sito)
-4. [Utenti del sito](#Utenti-del-sito)
-5. [Diagramma navigazionale](#Diagramma-navigazionale)
-6. [Mappa dei contenuti](#Mappa-dei-contenuti)
-7. [La base di dati](#La-base-di-dati)
+Supervisore         | Ruolo
+--------------------|------
+Filomena Ferrucci   | Docente
+Carmine Gravino     | Docente
+
+***
+
+# Documenti
+
+Documento                      | Link
+-------------------------------|---------
+Team Contract                  | <a href="Documentazione/Team Contract - YourBook.pdf">TC</a>
+Statement of Work              | <a href="Documentazione/SOW - YourBook.pdf">SOW</a>
+Requirement Analisys Doc       | <a href="Documentazione/RAD - YourBook.pdf">RAD</a>
+System Design Document         | <a href="Documentazione/SDD - YourBook.pdf">SDD</a>
+Object Design Document         | <a href="Documentazione/ODD - YourBook.pdf">ODD</a>
+Test Plan                      | <a href="Documentazione/Test Plan - YourBook.pdf">TP</a>
+Test Log                       | <a href="Documentazione/ - YourBook.pdf">TL</a>
+
+
