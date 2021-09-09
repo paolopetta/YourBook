@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="YourBook:war">
+    <output-path>$PROJECT_DIR$/../../../../../Program Files/Apache Software Foundation/Tomcat 9.0/artifacts/YourBook_war</output-path>
+    <root id="archive" name="YourBook_war.war">
+      <element id="artifact" artifact-name="YourBook:war exploded" />
+    </root>
+  </artifact>
+</component>

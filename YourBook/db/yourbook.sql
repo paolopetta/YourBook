@@ -4,8 +4,7 @@ DATABASE IF EXISTS YourBook;
 CREATE
 DATABASE YourBook;
 
-USE
-YourBook;
+USE YourBook;
 
 DROP
 user IF EXISTS 'yourbook'@'localhost';
@@ -81,7 +80,7 @@ VALUES ('Smith@gmail.com', sha1("prova"), 'Smith', 'moscow, yukon territory, rus
 INSERT INTO Utente(email, pwd, nome, nazionalita, eta, auth)
 VALUES ('Frank@gmail.com', sha1("prova"), 'Frank', 'porto, v.n.gaia, portugal', 17, 0);
 INSERT INTO Utente(email, pwd, nome, nazionalita, eta, auth)
-VALUES ('Serena@gmail.com', sha1("prova"), 'Serena', 'farnborough, hants, united kingdom', NULL, 0);
+VALUES ('Serena@gmail.com', sha1("Serena99"), 'Serena', 'farnborough, hants, united kingdom', NULL, 0);
 INSERT INTO Utente(email, pwd, nome, nazionalita, eta, auth)
 VALUES ('Paolo@gmail.com', sha1("prova"), 'Paolo', 'santa monica, california, usa', 61, 0);
 INSERT INTO Utente(email, pwd, nome, nazionalita, eta, auth)

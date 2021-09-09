@@ -155,7 +155,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt=""/>
+                    <img class="mx-auto rounded-circle" src="Immagini/fotoRiccardo.jpg" alt=""/>
                     <h4>Riccardo Amaro</h4>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>

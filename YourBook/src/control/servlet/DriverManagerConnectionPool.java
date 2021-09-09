@@ -27,15 +27,16 @@ public class DriverManagerConnectionPool {
         String db = "";
         String ip = "localhost";
         String port = "3306";
+
         if (isTest)
             db = "TestBook";
         else
             db = "YourBook";
         String username = "root";
-        String password = "Admin";
+        String password = "Admin"; //da cambiare in   root
 
         newConnection = DriverManager.getConnection("jdbc:mysql://" + ip + ":" +
-                port + "/" + db + "?useSSL=false&serverTimezone=UTC", username, password);
+                port + "/" + db + "?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", username, password);
 
         System.out.println("Create a new DB connection"); //set Transaction
         newConnection.setAutoCommit(false);
