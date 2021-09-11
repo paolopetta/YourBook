@@ -29,7 +29,7 @@
     <div class="container">
         <div class="masthead-subheading">Benvenuto su YourBook!</div>
         <div class="masthead-heading text-uppercase">Siamo felici di averti sul nostro sito</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Vai ai Libri</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="libri.jsp">Vai ai Libri</a>
     </div>
 </header>
 <!-- Services-->
@@ -155,18 +155,13 @@
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt=""/>
+                    <img class="mx-auto rounded-circle" src="Immagini/fotoRiccardo.jpg" alt=""/>
                     <h4>Riccardo Amaro</h4>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-                corporis ea, alias ut unde.</p></div>
         </div>
     </div>
 </section>

@@ -46,7 +46,7 @@
                 }
             %> //chiusura parentesi if e while
         </select>
-        <a href="#">Il libro non é presente in questo elenco?</a>
+        <a href="${pageContext.request.contextPath}/RichiestaInserimento.jsp">Il libro non é presente in questo elenco?</a>
     </div>
 
     <div class="inserisciTitolo">

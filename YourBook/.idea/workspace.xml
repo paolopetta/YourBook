@@ -24,28 +24,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f32de33-d689-42f5-b85b-b482852a2b48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Unit/blackBox/RatingBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Unit/blackBox/RatingBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Unit/whiteBox/LibriOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Unit/whiteBox/LibriOperationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/filter/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/DriverManagerConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/DriverManagerConnectionPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/LibriOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/LibriOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/RicercaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/RicercaServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/UsersOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/UsersOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/WishlistServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/control/servlet/WishlistServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/manager/LibroDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/manager/LibroDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/manager/UtenteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/manager/UtenteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/model/UserBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/YourBook_war_exploded/WEB-INF/classes/model/UserBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/servlet/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/servlet/Register.java" afterDir="false" />
-    </list>
+    <list default="true" id="a4eae931-3591-4654-ad06-6f5efd73ddae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="094ecc70-9017-42f4-af94-5192190b3c04" value="Orange" />
+    </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -63,13 +58,44 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Program Files/Apache Software Foundation/Tomcat 9.0/artifacts/YourBook_war" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.18060201" />
   </component>
-  <component name="RunManager" selected="JUnit.WishlistServletIntegration">
-    <configuration name="LibriOperationIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\YourBook\YourBook\Test\BlackBox" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pavil\OneDrive\Desktop\Github\YourBook\YourBook\lib" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY" />
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.46">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
@@ -77,75 +103,59 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.LibriOperationIntegration" />
+      <option name="PACKAGE_NAME" value="BlackBox" />
+      <option name="MAIN_CLASS_NAME" value="BlackBox.LibroDaoBB" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RatingBB" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.LoginIntegration" />
+      <option name="PACKAGE_NAME" value="Unit.blackBox" />
+      <option name="MAIN_CLASS_NAME" value="Unit.blackBox.RatingBB" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RatingBB.addRatingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Integration.*" />
+          <option name="PATTERN" value="Unit.blackBox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.RegisterIntegration" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Unit.blackBox" />
+      <option name="MAIN_CLASS_NAME" value="Unit.blackBox.RatingBB" />
+      <option name="METHOD_NAME" value="addRatingTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserOperationIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.UserOperationIntegration" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserOperationIntegration.DeleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WishlistServletIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YourBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Integration" />
-      <option name="MAIN_CLASS_NAME" value="Integration.WishlistServletIntegration" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/YourBook_war_exploded/" />
+    <configuration name="Tomcat 9.0.46" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.46" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/YourBook_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="YourBook:war exploded">
@@ -155,7 +165,8 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_YourBook" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_YourBook_3" />
+        <option name="HTTP_PORT" value="80" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -195,6 +206,21 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -218,20 +244,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat" />
-      <item itemvalue="JUnit.LibriOperationIntegration" />
-      <item itemvalue="JUnit.LoginIntegration" />
-      <item itemvalue="JUnit.RegisterIntegration" />
+      <item itemvalue="JUnit.RatingBB" />
+      <item itemvalue="JUnit.LibroDaoBB" />
+      <item itemvalue="JUnit.UserOperationIntegration.DeleteTest" />
       <item itemvalue="JUnit.UserOperationIntegration" />
       <item itemvalue="JUnit.WishlistServletIntegration" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.46" />
+      <item itemvalue="JUnit.RatingBB.addRatingTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WishlistServletIntegration" />
-        <item itemvalue="JUnit.UserOperationIntegration" />
-        <item itemvalue="JUnit.RegisterIntegration" />
-        <item itemvalue="JUnit.LoginIntegration" />
-        <item itemvalue="JUnit.LibriOperationIntegration" />
+        <item itemvalue="JUnit.RatingBB.addRatingTest" />
+        <item itemvalue="JUnit.RatingBB" />
       </list>
     </recent_temporary>
   </component>
@@ -244,10 +268,22 @@
       <created>1631173158052</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631173158052</updated>
-      <workItem from="1631173162537" duration="422000" />
-      <workItem from="1631173597042" duration="343000" />
-      <workItem from="1631174348898" duration="3602000" />
+      <updated>1630056753130</updated>
+      <workItem from="1630056757052" duration="102000" />
+      <workItem from="1630056881235" duration="893000" />
+      <workItem from="1630057797977" duration="21612000" />
+      <workItem from="1630568856062" duration="12220000" />
+      <workItem from="1631020804895" duration="10196000" />
+      <workItem from="1630057797977" duration="11021000" />
+      <workItem from="1630663269971" duration="1391000" />
+      <workItem from="1630664982716" duration="3123000" />
+      <workItem from="1630690466252" duration="2843000" />
+      <workItem from="1630746646966" duration="2912000" />
+      <workItem from="1631129438908" duration="3959000" />
+      <workItem from="1631134755502" duration="5419000" />
+      <workItem from="1631200579861" duration="159000" />
+      <workItem from="1631208988674" duration="673000" />
+      <workItem from="1631209900027" duration="5899000" />
     </task>
     <servers />
   </component>
@@ -266,62 +302,49 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="-905" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631173858644">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state x="414" y="-905" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173858644" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1631370173159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="554" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631175713990" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1631370173159" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1631370173159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="554" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631175713990" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1631370173159" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1631370173159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="554" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631175713990" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1631370173159" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1631370173159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="554" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631175713990" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1631370173159" />
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.2.center" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.2.left" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
-    <state width="1293" height="282" key="GridCell.Tab.2.right" timestamp="1631173942129">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1631173942129" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/control/servlet/Login.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/control/servlet/Login.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>35</line>
+          <properties class="BlackBox.LibroDaoBB">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Test/BlackBox/LibroDaoBB.java</url>
+          <line>24</line>
+          <properties class="BlackBox.LibroDaoBB">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/YourBook$Tomcat_9_0_46.ic" NAME="Tomcat 9.0.46 Coverage Results" MODIFIED="1631138140013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

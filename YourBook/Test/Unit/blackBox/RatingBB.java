@@ -2,6 +2,7 @@ package Unit.blackBox;
 
 import control.servlet.DriverManagerConnectionPool;
 import manager.LibroDao;
+import model.LibriBean;
 import model.UtenteLibro;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RatingBB {
+
     static LibroDao libroDao = new LibroDao();
 
     @BeforeEach
