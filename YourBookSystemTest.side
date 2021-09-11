@@ -1,0 +1,832 @@
+{
+  "id": "43f2bdfd-c218-499c-b8c5-b48cfd52796c",
+  "version": "2.0",
+  "name": "YourBookSystemTest",
+  "url": "http://localhost/YourBook_war_exploded/index.jsp",
+  "tests": [{
+    "id": "684c6e68-9056-4b45-aed6-9daa5ed5f0f5",
+    "name": "RegistrazioneCompleta",
+    "commands": [{
+      "id": "276b1a3f-c3e4-4a15-9736-3642e2f4dc67",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1784b882-bba7-4823-97f8-baa3fc3445cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0390d414-17e2-435a-acfb-9e367410c4e6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrati",
+      "targets": [
+        ["linkText=Registrati", "linkText"],
+        ["css=.ml-2", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrati')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrati')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38593729-babe-4f44-9f48-6889b65f9951",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a91ff988-9804-4eb8-ab4f-e9c3d825a4b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mario rossi"
+    }, {
+      "id": "010df6d3-09e5-49ac-b94e-ae2460e62379",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "f4dd1479-5b20-4f77-aa8e-b4bcc4557199",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pwd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "0dbbeba1-7528-4ee5-bd7b-f54ddb4b904f",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwdConf",
+      "targets": [
+        ["id=pwdConf", "id"],
+        ["name=pwdConf", "name"],
+        ["css=#pwdConf", "css:finder"],
+        ["xpath=//input[@id='pwdConf']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "2ec9d8c4-6cfc-430d-825c-1f4c8b890728",
+      "comment": "",
+      "command": "select",
+      "target": "id=eta",
+      "targets": [],
+      "value": "label=23"
+    }, {
+      "id": "fbec2916-b982-4c31-903f-8efab8f64a8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=registrami",
+      "targets": [
+        ["id=registrami", "id"],
+        ["css=#registrami", "css:finder"],
+        ["xpath=//button[@id='registrami']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrati!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7b1b714c-cd7f-4de3-9a5c-c9ffd9c179b8",
+    "name": "RegistrazioneIncompleta",
+    "commands": [{
+      "id": "934115a2-31ed-4768-8c1e-7c65df0e9e89",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eea5dce5-0896-460f-b456-93cb5bc10387",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6509d504-e095-40f1-88ef-2c61b1fc853a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrati",
+      "targets": [
+        ["linkText=Registrati", "linkText"],
+        ["css=.ml-2", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrati')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrati')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "848fb59c-9d62-4ade-9e49-640b2c882e08",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mario rossi"
+    }, {
+      "id": "faea101d-526e-433a-b80d-ce6bb5900b33",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "4fb6e3d4-477c-473e-b256-02b0f16294cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pwd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "1714bf0e-b256-4e70-b4cb-91d20d40f844",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwdConf",
+      "targets": [
+        ["id=pwdConf", "id"],
+        ["name=pwdConf", "name"],
+        ["css=#pwdConf", "css:finder"],
+        ["xpath=//input[@id='pwdConf']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "6cdaf229-8431-4279-a497-b3621c957756",
+      "comment": "",
+      "command": "select",
+      "target": "id=eta",
+      "targets": [],
+      "value": "label=23"
+    }, {
+      "id": "835545da-d07e-49d9-b60a-429fd8bf5053",
+      "comment": "",
+      "command": "verifyNotEditable",
+      "target": "id=registrami",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "df81f7e5-7d4a-444a-85ff-5dc8802e5c9d",
+    "name": "LoginAccountInesistente",
+    "commands": [{
+      "id": "bc21fa7e-d147-4f34-8cd3-2500dc1a259e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1172cbac-f9ca-46b3-a68f-3c30fdcf2b44",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1473x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c69eaf7-57e3-46bc-9252-0eed7250ecf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47feb214-b926-4139-9cdc-88b64c536410",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2263a4b-a143-4b1c-8964-5bb9aaf899a9",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "carlo@rossi.cr"
+    }, {
+      "id": "98be3199-da62-479d-88eb-f489d5a4d35a",
+      "comment": "",
+      "command": "click",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "402b9b5e-1b5d-4c56-bf12-0c396963900f",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "34dbc055-07e0-42a9-9ec5-dea49348d078",
+      "comment": "",
+      "command": "click",
+      "target": "id=logme",
+      "targets": [
+        ["id=logme", "id"],
+        ["css=#logme", "css:finder"],
+        ["xpath=//button[@id='logme']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53f6eb78-69d4-4cde-84fc-e25466c98d94",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "css=.nav-item:nth-child(7) > .nav-link",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2543441b-1280-4dc4-b6f8-cd61881935c5",
+    "name": "LoginAccountEsistente",
+    "commands": [{
+      "id": "4ac7e93e-f713-4e79-99fa-e6bcdb9e2705",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9a6876c-b46f-4f79-ab5f-7cbda2522270",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1473x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "370ad162-a2cb-496a-85fd-a155dcdea315",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97a84511-2ee3-4c40-821b-a6d15e1dbf0d",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27dc9fe4-76af-4f60-940d-afbabc36a9e8",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "57488469-cdfe-4de1-9ded-71bba9dffd4c",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "0dcfc334-7c60-4910-8003-5765991308be",
+      "comment": "",
+      "command": "click",
+      "target": "id=logme",
+      "targets": [
+        ["id=logme", "id"],
+        ["css=#logme", "css:finder"],
+        ["xpath=//button[@id='logme']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cba5f47-ae95-42f2-af07-7ba19409f5bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(6) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Ciao Mario Rossi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'User/myAccount.jsp')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "757c2b7c-a169-45c5-b290-983393a66d40",
+    "name": "AggiuntaVotazione",
+    "commands": [{
+      "id": "9cecf72c-590a-4613-855b-e65d15b98d57",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36aedb3a-ed12-4366-a6d9-8f39b7c862ac",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1473x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8f51c4e-c37d-41f2-82dc-f5febe50f057",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "584d7eeb-dd63-48c6-8d8a-cce47dd1427f",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "004aabd8-1b53-4764-a723-886c2d59be40",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "cd222cb9-d422-454d-90b6-9ad558fb17e0",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "5f411bbf-36c9-475f-aaed-8ec26f0fa7f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=logme",
+      "targets": [
+        ["id=logme", "id"],
+        ["css=#logme", "css:finder"],
+        ["xpath=//button[@id='logme']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2fa224f-70d9-409a-bedc-44ea629d37ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Ciao Mario Rossi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'User/myAccount.jsp')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b3a979a-326a-46db-bad7-d1705cbbf2c7",
+      "comment": "",
+      "command": "click",
+      "target": "name=isbn",
+      "targets": [
+        ["name=isbn", "name"],
+        ["css=.inserisciTitolo:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//select[@name='isbn']", "xpath:attributes"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "917ed6f6-34f4-4e4b-a250-27af5468e8d3",
+      "comment": "",
+      "command": "select",
+      "target": "name=isbn",
+      "targets": [],
+      "value": "label=Pride and Prejudice"
+    }, {
+      "id": "7b7a15bf-3730-4406-8987-e94a7f3c9ec9",
+      "comment": "",
+      "command": "click",
+      "target": "name=valutazione",
+      "targets": [
+        ["name=valutazione", "name"],
+        ["css=.inserisciTitolo:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//select[@name='valutazione']", "xpath:attributes"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0a30998-9a2c-4f06-ab5f-fad4bc35d0a4",
+      "comment": "",
+      "command": "select",
+      "target": "name=valutazione",
+      "targets": [],
+      "value": "label=5"
+    }, {
+      "id": "28d3c1db-b0bb-404c-9cd2-fdb30a48d0e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Valuta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5b433faf-47c1-4b2f-a7e7-348de9561df0",
+    "name": "AggiungiWishList",
+    "commands": [{
+      "id": "a547f661-c8a4-4ff9-a25c-928f6d56106e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03e428dc-8530-438b-a701-d0f73087b705",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1473x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09da52e6-0b28-44ac-b33c-2eb1c1847ae7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61efdc27-08a5-4704-9867-60148fd633bf",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf77a52e-3a22-4b00-9dcb-7e2490d75016",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "9c7e6b39-7336-4c51-b436-d55b74e69e8f",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "b96c1891-b884-49bb-baff-5a1c418937e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=logme",
+      "targets": [
+        ["id=logme", "id"],
+        ["css=#logme", "css:finder"],
+        ["xpath=//button[@id='logme']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b51fa336-3e2f-4631-bb57-32b89948dd11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Libri')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/Libri?action=retrieveAll')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8e82363-00fb-4bac-a817-179c5882beee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(1) .btn",
+      "targets": [
+        ["css=.col:nth-child(1) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Aggiungi\n                    alla wishlist')]", "xpath:link"],
+        ["xpath=//div[@id='libriUser']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'WishlistServlet?action=addBook&id=006052779X')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e4e663-08f9-45ea-b5a3-d0b53882e658",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.card-text:nth-child(2)",
+      "targets": [
+        ["css=.card-text:nth-child(3) > strong", "css:finder"],
+        ["xpath=//p[2]/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Pubblicazione: ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "27c3d103-00d9-47c1-bc12-cdc48e42cddd",
+    "name": "RimozioneWishList",
+    "commands": [{
+      "id": "f6784a62-2f30-4fb7-9c3c-d1f0a2b58a59",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/YourBook_war_exploded/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e60cbde7-224b-4bba-baba-67893a3310ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1473x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d4dae4e-183c-4c93-a2e2-d0d90be6998a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accedi')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/login.jsp')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a4c57e1-4366-439e-a299-1c6a4112e52f",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14b0ae2d-0bd9-41a2-9e91-3802a02d5ae4",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input_user", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mario@rossi.mr"
+    }, {
+      "id": "586f6ec6-6274-484e-80be-b63542bc5e6e",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.input_pass", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Serena99"
+    }, {
+      "id": "c84c8463-3050-4651-9596-bf5398d3252b",
+      "comment": "",
+      "command": "click",
+      "target": "id=logme",
+      "targets": [
+        ["id=logme", "id"],
+        ["css=#logme", "css:finder"],
+        ["xpath=//button[@id='logme']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1e60339-c49b-4ae3-93bd-c03a455a2e59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Libri')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/YourBook_war_exploded/Libri?action=retrieveAll')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b6a3694-fc23-4b9a-83a1-c2c4cb843bf0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(1) .btn",
+      "targets": [
+        ["css=.col:nth-child(1) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Aggiungi\n                    alla wishlist')]", "xpath:link"],
+        ["xpath=//div[@id='libriUser']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'WishlistServlet?action=addBook&id=006052779X')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e581d3-a05d-4b47-8a06-89195e8fd835",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Elimina",
+      "targets": [
+        ["linkText=Elimina", "linkText"],
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Elimina')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'WishlistServlet?action=deleteBook&id=006052779X')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Elimina')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df92e366-b522-4db8-820d-249377e0f52b",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "css=.card-text:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c5924328-794f-4b0b-a645-6346d33f5b05",
+    "name": "Registrazione",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["684c6e68-9056-4b45-aed6-9daa5ed5f0f5", "7b1b714c-cd7f-4de3-9a5c-c9ffd9c179b8"]
+  }, {
+    "id": "dd5b3b96-97d0-48f4-88af-660d744b9a16",
+    "name": "Login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["df81f7e5-7d4a-444a-85ff-5dc8802e5c9d", "2543441b-1280-4dc4-b6f8-cd61881935c5"]
+  }, {
+    "id": "0034c54e-22ac-4b12-b51a-dde3fdd32531",
+    "name": "Funzionalità",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5b433faf-47c1-4b2f-a7e7-348de9561df0", "757c2b7c-a169-45c5-b290-983393a66d40", "27c3d103-00d9-47c1-bc12-cdc48e42cddd"]
+  }],
+  "urls": ["http://localhost/YourBook_war_exploded/index.jsp"],
+  "plugins": []
+}
