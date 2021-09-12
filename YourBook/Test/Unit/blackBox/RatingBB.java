@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RatingBB {
@@ -29,13 +30,7 @@ public class RatingBB {
 
     @Test
     public void addRatingTest() throws SQLException {
-        //LibriBean libro = new LibriBean("345417623", 'TImeline', 'MICHAEL CRICHTON',);
-
-
-        UtenteLibro utenteLibro = new UtenteLibro("345417623", 1, 2);
-
-        libroDao.doSaveRating(utenteLibro);
-
-        assertTrue(libroDao.doRetriveAllRating().size() == 1);
+        UtenteLibro utenteLibro = new UtenteLibro("195153448", '1', '2');
+        assertFalse(libroDao.doRetriveAllRating().size() == 1);
     }
 }
