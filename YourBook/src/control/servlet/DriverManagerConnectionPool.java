@@ -33,7 +33,7 @@ public class DriverManagerConnectionPool {
         else
             db = "YourBook";
         String username = "root";
-        String password = "root"; //da cambiare in Admin
+        String password = "Admin"; //da cambiare in Admin
 
         newConnection = DriverManager.getConnection("jdbc:mysql://" + ip + ":" +
                 port + "/" + db + "?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", username, password);

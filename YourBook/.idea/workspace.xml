@@ -69,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Program Files/Apache Software Foundation/Tomcat 9.0/artifacts/YourBook_war" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Nosedive" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18060201" />
@@ -84,19 +84,6 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.46">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LibroDaoBB" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="YourBook" />
       <extension name="coverage">
@@ -308,13 +295,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.RatingBB" />
       <item itemvalue="JUnit.LibroDaoBB" />
+      <item itemvalue="JUnit.RatingBB" />
       <item itemvalue="JUnit.UserOperationIntegration.DeleteTest" />
       <item itemvalue="JUnit.UserOperationIntegration" />
       <item itemvalue="JUnit.WishlistServletIntegration" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.46" />
       <item itemvalue="JUnit.RatingBB.addRatingTest" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.46" />
     </list>
     <recent_temporary>
       <list>
@@ -349,6 +336,10 @@
       <workItem from="1631200579861" duration="159000" />
       <workItem from="1631208988674" duration="673000" />
       <workItem from="1631209900027" duration="5899000" />
+      <workItem from="1631295371618" duration="69000" />
+      <workItem from="1631377140943" duration="132000" />
+      <workItem from="1631377341727" duration="919000" />
+      <workItem from="1631378964007" duration="1895000" />
     </task>
     <servers />
   </component>
